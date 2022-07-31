@@ -1,0 +1,10 @@
+{
+    "user_profile" : {
+        "name" : "Xyz",
+        "email" : "demo@gmail.com",
+        "password" : "demo123",
+        "watchlist" : [],
+        "my_list": [],
+        "recently_viewed" : []
+    }
+}
