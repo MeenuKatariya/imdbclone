@@ -1,7 +1,7 @@
 import React from 'react';
 import ShareIcon from "@mui/icons-material/Share";
 import WidgetsIcon from "@mui/icons-material/Widgets";
-import { Box, Link, Typography, Button, Divider } from "@mui/material";
+import { Box, Link, Button, Divider } from "@mui/material";
 
 export const MovieTopLinks =()=>{
     return (

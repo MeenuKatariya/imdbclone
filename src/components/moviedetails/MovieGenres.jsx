@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import React from "react";
-export const MovieGenres = () => {
+export const MovieGenres = ({genres}) => {
+  
   return (
     <Typography
       variant="div"
@@ -11,13 +12,14 @@ export const MovieGenres = () => {
         padding: "5px 20px",
         fontWeight: "500",
         cursor:"pointer",
+        marginLeft:"10px",
         "&:hover": {
           backgroundColor: "rgb(48,48,48)",
           borderColor: "#ffffff",
         },
       }}
     >
-      Action
+      {genres}
     </Typography>
   );
 };
