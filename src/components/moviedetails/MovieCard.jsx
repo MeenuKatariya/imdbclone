@@ -1,10 +1,8 @@
 import React from "react";
 import { Box } from "@mui/material";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import CollectionsIcon from "@mui/icons-material/Collections";
@@ -13,11 +11,10 @@ import BookmarkAddSharpIcon from '@mui/icons-material/BookmarkAddSharp';
 export const MovieCard = ({ movieData }) => {
   const { posters, trailer, images } = movieData;
   const poster=posters.posters[0].link;
-  const youtube=trailer.linkEmbed;
   const image=images.items;
   return (
     <Box variant="div" sx={{ display: "flex",marginTop:"10px",marginBottom:"25px" }}>
-      <Card sx={{ maxWidth: 270, position:"relative" }}>
+      <Card sx={{ maxWidth: 280, position:"relative" }}>
         <CardMedia
           component="img"
           height="100%"
@@ -28,25 +25,30 @@ export const MovieCard = ({ movieData }) => {
             color:"#585858c5"
         }}}/>
       </Card>
-      <Card sx={{ width: "60%", marginLeft: "5px" }}>
-        <CardMedia
+      <Card sx={{ width: "61%", marginLeft: "5px" }}>
+        <iframe
+          title={trailer.fullTitle}
           component="iframe"
           width="100%"
           height="100%"
-          src={`${youtube}?autoplay=1&mute=1&amp;rel=0`}
+          src={`${trailer.linkEmbed}?autoplay=false&mute=true&width=832`}
+          // src="https://www.imdb.com/video/vi315343385"
           allow="autoplay"
+          frameborder="no"
+          allowFullScreen="true"
+          scrolling="false"
           //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         />
       </Card>
 
-      <Box variant="div" sx={{ width: "16%", marginLeft: "5px" }}>
+      <Box variant="div" sx={{ width: "18%", marginLeft: "5px" }}>
         <Card
           sx={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
             width: "100%",
-            height: 200,
+            height: 215,
             cursor: "pointer",
             backgroundColor: "rgb(49,49,49)",
             "&:hover": {

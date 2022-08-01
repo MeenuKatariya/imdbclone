@@ -1,11 +1,11 @@
 body {
   margin: 0;
-  font-family: 'Roboto';
+  font-family: "Roboto",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(31,31,31);
 }
 
 code {
-  font-family: 'Roboto';
+  font-family: 'Roboto',Helvetica,Arial,sans-serif;
 }
