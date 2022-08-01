@@ -1,333 +1,582 @@
 {
   "movieDetails":[
     {
-      "id": "tt8426926",
-      "title": "Shamshera",
-      "originalTitle": "",
-      "fullTitle": "Shamshera (2022)",
-      "type": "Movie",
-      "year": "2022",
-      "image": "https://imdb-api.com/images/original/MV5BOTNhNGZkM2MtY2RlNy00MGRkLWFiZmItYTBhM2ZkZGU1ZWQzXkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_Ratio0.6751_AL_.jpg",
-      "releaseDate": "2022-07-22",
-      "runtimeMins": "178",
-      "runtimeStr": "2h 58min",
-      "plot": "",
-      "plotLocal": "",
-      "plotLocalIsRtl": false,
-      "awards": "",
-      "directors": "Karan Malhotra",
-      "directorList": [
-          {
-              "id": "nm1633551",
-              "name": "Karan Malhotra"
-          }
-      ],
-      "writers": "Aditya Chopra, Karan Malhotra, Piyush Mishra",
-      "writerList": [
-          {
-              "id": "nm0159147",
-              "name": "Aditya Chopra"
-          },
-          {
-              "id": "nm1633551",
-              "name": "Karan Malhotra"
-          },
-          {
-              "id": "nm0592795",
-              "name": "Piyush Mishra"
-          }
-      ],
-      "stars": "Tridha Choudhury, Sanjay Dutt, Ranbir Kapoor",
-      "starList": [
-          {
-              "id": "nm5992649",
-              "name": "Tridha Choudhury"
-          },
-          {
-              "id": "nm0004569",
-              "name": "Sanjay Dutt"
-          },
-          {
-              "id": "nm1633541",
-              "name": "Ranbir Kapoor"
-          }
-      ],
-      "actorList": [
-          {
-              "id": "nm5992649",
-              "image": "https://imdb-api.com/images/original/MV5BMTc1MDE2MTYyNF5BMl5BanBnXkFtZTgwNjQ0NDQ4MDI@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Tridha Choudhury",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm0004569",
-              "image": "https://imdb-api.com/images/original/MV5BNzU2NTgwNzY1OF5BMl5BanBnXkFtZTcwMjQxNzcxOA@@._V1_Ratio1.5000_AL_.jpg",
-              "name": "Sanjay Dutt",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm1633541",
-              "image": "https://imdb-api.com/images/original/MV5BMTk2ODU5Mjk2MV5BMl5BanBnXkFtZTcwODEzNDg3OA@@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Ranbir Kapoor",
-              "asCharacter": "Shamshera"
-          },
-          {
-              "id": "nm0001934",
-              "image": "https://imdb-api.com/images/original/MV5BZjY4YjUxYmItYWY5My00NDE2LWE4OGMtZjNkNmUxMmNkOGIzXkEyXkFqcGdeQXVyMjQwMDg0Ng@@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Kabir Bedi",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm5744729",
-              "image": "https://imdb-api.com/images/original/MV5BMTUyOTY5MTczMF5BMl5BanBnXkFtZTgwNTIzMjgzOTE@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Vaani Kapoor",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm0709359",
-              "image": "https://imdb-api.com/images/original/MV5BMGVjNzE2Y2EtMDI2Yy00MzVkLThiNTYtMmFmMmE4N2Y5ODEyL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Ashutosh Rana",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm1204791",
-              "image": "https://imdb-api.com/images/original/MV5BYmJiMWUzNTQtZDU3OC00MjZiLWJhYWUtMjdhZjEyMTZhNjRiXkEyXkFqcGdeQXVyNjE4MDMxMjk@._V1_Ratio1.0429_AL_.jpg",
-              "name": "Mark Bennington",
-              "asCharacter": "Governor"
-          },
-          {
-              "id": "nm0747172",
-              "image": "https://imdb-api.com/images/original/MV5BMjQzMjEyMDY1Nl5BMl5BanBnXkFtZTgwNTM3OTczOTE@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Ronit Roy",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm13260258",
-              "image": "https://imdb-api.com/images/original/nopicture.jpg",
-              "name": "Abhinay Raj Singh",
-              "asCharacter": "Shamshera (Brother)"
-          },
-          {
-              "id": "nm1778703",
-              "image": "https://imdb-api.com/images/original/MV5BZTlhZjVlNzMtMzlhOC00ZWJlLTg1NzItZTU5NDNmNzFhZWU0XkEyXkFqcGdeQXVyMjkxNzQ1NDI@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Neil Nitin Mukesh",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm8441625",
-              "image": "https://imdb-api.com/images/original/MV5BNGI3NGU4ZTAtODlhNS00Mzg0LThhMzYtM2ViNzIzZTI3OWI3XkEyXkFqcGdeQXVyNjM5NjUxODg@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Kumar Saurabh",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm0795661",
-              "image": "https://imdb-api.com/images/original/MV5BMTYzMTczOTM2Ml5BMl5BanBnXkFtZTYwNzE4Mzgy._V1_Ratio1.0000_AL_.jpg",
-              "name": "Saurabh Shukla",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm3933547",
-              "image": "https://imdb-api.com/images/original/MV5BMTBkZGMxMmUtM2ZhYS00Zjg5LTk1MGUtZTFkMmRjNDE4NjVjXkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Aahana Kumra",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm6210727",
-              "image": "https://imdb-api.com/images/original/MV5BNTI5MmNmNzItZjNhNy00OTg1LTkyMmQtMzEyODk4ZjRhNTUxXkEyXkFqcGdeQXVyNjAwMTcxNzI@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Craig McGinlay",
-              "asCharacter": "Colonel Freddy Young"
-          },
-          {
-              "id": "nm0768296",
-              "image": "https://imdb-api.com/images/original/MV5BMTgwNzc3MTI3M15BMl5BanBnXkFtZTcwNTU0NTcyMQ@@._V1_Ratio1.0000_AL_.jpg",
-              "name": "Sharat Saxena",
-              "asCharacter": ""
-          },
-          {
-              "id": "nm8789983",
-              "image": "https://imdb-api.com/images/original/nopicture.jpg",
-              "name": "Pramod Kumar",
-              "asCharacter": "Sher Khan"
-          },
-          {
-              "id": "nm13475170",
-              "image": "https://imdb-api.com/images/original/nopicture.jpg",
-              "name": "Azzy Bagria",
-              "asCharacter": "Balli's friend"
-          },
-          {
-              "id": "nm4086094",
-              "image": "https://imdb-api.com/images/original/MV5BNjhjYjYxMDAtYTNhMC00ODk3LWE2ZWItZjAzODBiYTU1ZGI2XkEyXkFqcGdeQXVyMjQ1NDkxNTA@._V1_Ratio1.5000_AL_.jpg",
-              "name": "DeVille Vannik",
-              "asCharacter": "Major"
-          }
-      ],
-      "fullCast": null,
-      "genres": "Action, Adventure",
-      "genreList": [
-          {
-              "key": "Action",
-              "value": "Action"
-          },
-          {
-              "key": "Adventure",
-              "value": "Adventure"
-          }
-      ],
-      "companies": "Yash Raj Films",
-      "companyList": [
-          {
-              "id": "co0077190",
-              "name": "Yash Raj Films"
-          }
-      ],
-      "countries": "India",
-      "countryList": [
-          {
-              "key": "India",
-              "value": "India"
-          }
-      ],
-      "languages": "Hindi",
-      "languageList": [
-          {
-              "key": "Hindi",
-              "value": "Hindi"
-          }
-      ],
-      "contentRating": null,
-      "imDbRating": 7.5,
-      "imDbRatingVotes": null,
-      "metacriticRating": null,
-      "ratings": null,
-      "wikipedia": null,
-      "posters": null,
-      "images": [
-        {
-            "title": "Sanjay Dutt, Ranbir Kapoor, and Vaani Kapoor in Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BOTNhNGZkM2MtY2RlNy00MGRkLWFiZmItYTBhM2ZkZGU1ZWQzXkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_Ratio1.0000_AL_.jpg"
+        "id": "tt8426926",
+        "title": "Shamshera",
+        "originalTitle": "",
+        "fullTitle": "Shamshera (2022)",
+        "type": "Movie",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BODVlNWNmN2EtYWJlYy00ZTc5LThjMTItYTQ0ZTlmZDYwN2VjXkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_Ratio0.7544_AL_.jpg",
+        "releaseDate": "2022-07-22",
+        "runtimeMins": "178",
+        "runtimeStr": "2h 58min",
+        "plot": "In the fictitious city of Kaza, a warrior tribe is imprisoned, enslaved and tortured by a ruthless authoritarian Shudh Singh. Shamshera is a legend for his tribe who relentlessly fights for his tribe's freedom and dignity.",
+        "plotLocal": "",
+        "plotLocalIsRtl": false,
+        "awards": "",
+        "directors": "Karan Malhotra",
+        "directorList": [
+            {
+                "id": "nm1633551",
+                "name": "Karan Malhotra"
+            }
+        ],
+        "writers": "Khila Bisht, Karan Malhotra, Piyush Mishra",
+        "writerList": [
+            {
+                "id": "nm12593738",
+                "name": "Khila Bisht"
+            },
+            {
+                "id": "nm1633551",
+                "name": "Karan Malhotra"
+            },
+            {
+                "id": "nm0592795",
+                "name": "Piyush Mishra"
+            }
+        ],
+        "stars": "Ranbir Kapoor, Sanjay Dutt, Vaani Kapoor",
+        "starList": [
+            {
+                "id": "nm1633541",
+                "name": "Ranbir Kapoor"
+            },
+            {
+                "id": "nm0004569",
+                "name": "Sanjay Dutt"
+            },
+            {
+                "id": "nm5744729",
+                "name": "Vaani Kapoor"
+            }
+        ],
+        "actorList": [
+            {
+                "id": "nm1633541",
+                "image": "https://m.media-amazon.com/images/M/MV5BMTk2ODU5Mjk2MV5BMl5BanBnXkFtZTcwODEzNDg3OA@@._V1_Ratio0.7273_AL_.jpg",
+                "name": "Ranbir Kapoor",
+                "asCharacter": "Shamshera / Bali"
+            },
+            {
+                "id": "nm0004569",
+                "image": "https://m.media-amazon.com/images/M/MV5BNzU2NTgwNzY1OF5BMl5BanBnXkFtZTcwMjQxNzcxOA@@._V1_Ratio1.5000_AL_.jpg",
+                "name": "Sanjay Dutt",
+                "asCharacter": "Daroga Shuddh Singh"
+            },
+            {
+                "id": "nm5744729",
+                "image": "https://m.media-amazon.com/images/M/MV5BMTUyOTY5MTczMF5BMl5BanBnXkFtZTgwNTIzMjgzOTE@._V1_Ratio0.7273_AL_.jpg",
+                "name": "Vaani Kapoor",
+                "asCharacter": "Sona"
+            },
+            {
+                "id": "nm0795661",
+                "image": "https://m.media-amazon.com/images/M/MV5BMTYzMTczOTM2Ml5BMl5BanBnXkFtZTYwNzE4Mzgy._V1_Ratio0.8182_AL_.jpg",
+                "name": "Saurabh Shukla",
+                "asCharacter": "Doodh Singh"
+            },
+            {
+                "id": "nm0747172",
+                "image": "https://m.media-amazon.com/images/M/MV5BMjQzMjEyMDY1Nl5BMl5BanBnXkFtZTgwNTM3OTczOTE@._V1_Ratio0.7273_AL_.jpg",
+                "name": "Ronit Roy",
+                "asCharacter": "Pir Baba"
+            },
+            {
+                "id": "nm5129212",
+                "image": "https://m.media-amazon.com/images/M/MV5BMzQ0ZmViZjUtOTBkZC00ODZkLWIyODItZTNkYmExZjM3YmYyXkEyXkFqcGdeQXVyMTExNDQ2MTI@._V1_Ratio0.7273_AL_.jpg",
+                "name": "Mahesh Balraj",
+                "asCharacter": "Upreti"
+            },
+            {
+                "id": "nm4765999",
+                "image": "https://m.media-amazon.com/images/M/MV5BYWY1YjRkZDAtMmU4My00MjVjLThmMTgtN2Y2ZjNlZjIwMGIxXkEyXkFqcGdeQXVyMjY1MjkzMjE@._V1_Ratio2.2273_AL_.jpg",
+                "name": "Chitrak Bandyopadhyay",
+                "asCharacter": "Rashoo"
+            },
+            {
+                "id": "nm13795680",
+                "image": "https://m.media-amazon.com/images/M/MV5BOWUyMWMxN2MtNDM1Ny00OWY5LThmZmMtOTBiZDhjZWQwNzY1XkEyXkFqcGdeQXVyMTU0MTAyMjg1._V1_Ratio0.7727_AL_.jpg",
+                "name": "Omkar Chaubey",
+                "asCharacter": "Om"
+            },
+            {
+                "id": "nm0366101",
+                "image": "https://m.media-amazon.com/images/M/MV5BNTczMjg3OGYtNTdlYi00ZGQ2LTk0MjMtYjNlMDY5MDQ1MmEyXkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_Ratio0.7273_AL_.jpg",
+                "name": "Iravati Harshe",
+                "asCharacter": "Shamshera's Wife & Bali's Mother"
+            },
+            {
+                "id": "nm13876851",
+                "image": "https://m.media-amazon.com/images/M/MV5BNTc1MGNmYjctZTc3NS00NDcxLThlY2EtYmY1MTViM2U2ZTAyXkEyXkFqcGdeQXVyMTU1MDAwMjYx._V1_Ratio0.7273_AL_.jpg",
+                "name": "Kartik Kathiriya",
+                "asCharacter": "Musician"
+            },
+            {
+                "id": "nm10584860",
+                "image": "https://m.media-amazon.com/images/M/MV5BNmI4Zjk3NjMtMGJmMi00NzZlLWEyYWQtMTk5MWIyM2Q2MzUwXkEyXkFqcGdeQXVyODk1OTkxNzM@._V1_Ratio0.7273_AL_.jpg",
+                "name": "Vijay Kaushik",
+                "asCharacter": "Gulfi"
+            },
+            {
+                "id": "nm6210727",
+                "image": "https://m.media-amazon.com/images/M/MV5BNTI5MmNmNzItZjNhNy00OTg1LTkyMmQtMzEyODk4ZjRhNTUxXkEyXkFqcGdeQXVyNjAwMTcxNzI@._V1_Ratio0.7273_AL_.jpg",
+                "name": "Craig McGinlay",
+                "asCharacter": "Colonel Freddy Young"
+            },
+            {
+                "id": "nm0759510",
+                "image": "https://imdb-api.com/images/original/nopicture.jpg",
+                "name": "Nagesh Salwan",
+                "asCharacter": "Dada"
+            },
+            {
+                "id": "nm8441625",
+                "image": "https://imdb-api.com/images/original/nopicture.jpg",
+                "name": "Kumar Saurabh",
+                "asCharacter": "Chooha"
+            },
+            {
+                "id": "nm10681874",
+                "image": "https://imdb-api.com/images/original/nopicture.jpg",
+                "name": "Prakhar Saxena",
+                "asCharacter": "Bhura"
+            },
+            {
+                "id": "nm10571040",
+                "image": "https://imdb-api.com/images/original/nopicture.jpg",
+                "name": "Gauransh Sharma",
+                "asCharacter": "Keshu"
+            },
+            {
+                "id": "nm7807672",
+                "image": "https://imdb-api.com/images/original/nopicture.jpg",
+                "name": "Rudra Soni",
+                "asCharacter": "Pitamber"
+            }
+        ],
+        "fullCast": null,
+        "genres": "Action, Adventure, Drama",
+        "genreList": [
+            {
+                "key": "Action",
+                "value": "Action"
+            },
+            {
+                "key": "Adventure",
+                "value": "Adventure"
+            },
+            {
+                "key": "Drama",
+                "value": "Drama"
+            }
+        ],
+        "companies": "Yash Raj Films",
+        "companyList": [
+            {
+                "id": "co0077190",
+                "name": "Yash Raj Films"
+            }
+        ],
+        "countries": "India",
+        "countryList": [
+            {
+                "key": "India",
+                "value": "India"
+            }
+        ],
+        "languages": "Hindi",
+        "languageList": [
+            {
+                "key": "Hindi",
+                "value": "Hindi"
+            }
+        ],
+        "contentRating": null,
+        "imDbRating": "7.5",
+        "imDbRatingVotes": "47849",
+        "metacriticRating": null,
+        "ratings": null,
+        "wikipedia": null,
+        "posters": {
+            "imDbId": "tt8426926",
+            "title": "Shamshera",
+            "fullTitle": "Shamshera (2022)",
+            "type": "Movie",
+            "year": "2022",
+            "posters": [
+                {
+                    "id": "rryN6GhaoovO3sM8IEqGyKgCmXf.jpg",
+                    "link": "https://image.tmdb.org/t/p/original/rryN6GhaoovO3sM8IEqGyKgCmXf.jpg",
+                    "aspectRatio": 0.6666666666666666,
+                    "language": "en",
+                    "width": 1800,
+                    "height": 2700
+                },
+                {
+                    "id": "hYNcsKCQLfJ7eRPcwxrchCBmIKU.jpg",
+                    "link": "https://image.tmdb.org/t/p/original/hYNcsKCQLfJ7eRPcwxrchCBmIKU.jpg",
+                    "aspectRatio": 0.6666666666666666,
+                    "language": "en",
+                    "width": 1800,
+                    "height": 2700
+                },
+                {
+                    "id": "4nB6ub52uQkOAQCkBZwsSkyJtSJ.jpg",
+                    "link": "https://image.tmdb.org/t/p/original/4nB6ub52uQkOAQCkBZwsSkyJtSJ.jpg",
+                    "aspectRatio": 0.66696191319752,
+                    "language": "en",
+                    "width": 1506,
+                    "height": 2258
+                }
+            ],
+            "backdrops": [
+                {
+                    "id": "uUMd6QE5zCYBnBSUz8g78Y17VE3.jpg",
+                    "link": "https://image.tmdb.org/t/p/original/uUMd6QE5zCYBnBSUz8g78Y17VE3.jpg",
+                    "aspectRatio": 1.7755555555555556,
+                    "language": "en",
+                    "width": 3196,
+                    "height": 1800
+                },
+                {
+                    "id": "o5SSbmgqxezVMhuUQ1G2ZJtFdnA.jpg",
+                    "link": "https://image.tmdb.org/t/p/original/o5SSbmgqxezVMhuUQ1G2ZJtFdnA.jpg",
+                    "aspectRatio": 1.7797552836484982,
+                    "language": "en",
+                    "width": 1600,
+                    "height": 899
+                },
+                {
+                    "id": "fjihyYlpqdk4F2ic02uATBm8Na8.jpg",
+                    "link": "https://image.tmdb.org/t/p/original/fjihyYlpqdk4F2ic02uATBm8Na8.jpg",
+                    "aspectRatio": 1.7804154302670623,
+                    "language": "en",
+                    "width": 1800,
+                    "height": 1011
+                },
+                {
+                    "id": "ugjnmAjRO6BebCVaaaxCwm1EWPW.jpg",
+                    "link": "https://image.tmdb.org/t/p/original/ugjnmAjRO6BebCVaaaxCwm1EWPW.jpg",
+                    "aspectRatio": 1.7804154302670623,
+                    "language": "en",
+                    "width": 1800,
+                    "height": 1011
+                },
+                {
+                    "id": "8tOnnS0kdhSeimVAPTdMxKEUd8U.jpg",
+                    "link": "https://image.tmdb.org/t/p/original/8tOnnS0kdhSeimVAPTdMxKEUd8U.jpg",
+                    "aspectRatio": 1.7792329279700654,
+                    "language": "en",
+                    "width": 1902,
+                    "height": 1069
+                }
+            ],
+            "errorMessage": ""
         },
-        {
-            "title": "Ranbir Kapoor in Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BMDJlZTdjMTgtYjAyMC00MmNjLTkxYzEtODVlMTA1MDQzMmU2XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio2.1200_AL_.jpg"
+        "images": {
+            "imDbId": "tt8426926",
+            "title": "Shamshera",
+            "fullTitle": "Shamshera (2022)",
+            "type": "Movie",
+            "year": "2022",
+            "items": [
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BYzc1YWU4ZTItMzI5ZC00NzEwLTkwMTUtYTUxYmU0NDU1NzllXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BOTdkMGZiNWItOGNkOS00ZmE3LTlmYTUtMzhiNWMzZDFiYTIxXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BZWJiOWZiN2EtMzg5OS00YmNjLWEwZjAtZTkyYTc3Y2I2MGFlXkEyXkFqcGdeQXVyMTA3MDk2NDg2._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt, Ranbir Kapoor, and Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BODVlNWNmN2EtYWJlYy00ZTc5LThjMTItYTQ0ZTlmZDYwN2VjXkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt, Ranbir Kapoor, and Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BZTA5MWRmMzEtODZlNy00YmEzLTk1YzktZGRlNTQyNGUyM2U0XkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt, Ranbir Kapoor, and Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BOTNhNGZkM2MtY2RlNy00MGRkLWFiZmItYTBhM2ZkZGU1ZWQzXkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Gauransh Sharma in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BNGJjMzFmMTktMWQ0Ni00MDg4LTljMjktOWE4MzNjNzNhN2I1XkEyXkFqcGdeQXVyMTA3NTQwNjA5._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Gauransh Sharma in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BMzY3NjQ3NzQtNGQzMS00MjE1LTkzNGMtZDNlZjUxMjA0NTM5XkEyXkFqcGdeQXVyMTA3NTQwNjA5._V1_Ratio1.7800_AL_.jpg"
+                },
+                {
+                    "title": "Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BZTMzZDMwNTgtZjdkYy00MmMzLWJlN2UtMmViNDM2MzMxYmY2XkEyXkFqcGdeQXVyMTIyNTU0NjU4._V1_Ratio1.7800_AL_.jpg"
+                },
+                {
+                    "title": "Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BZTgyODgyZTItNWFlMy00MmFlLTg0ZGEtYTEwZDMzNWEwYjMzXkEyXkFqcGdeQXVyMTIyNTU0NjU4._V1_Ratio1.7800_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BNTA2MzBmODMtMmQ4OS00ZTNhLWEwYTUtODdlZDM2MTg1OWNhXkEyXkFqcGdeQXVyNjc3MzU4Mzc@._V1_Ratio2.1600_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BMjIxZmJiOTUtNzg4NS00YmE4LTlhYmUtZGRmZTA5N2Q5NjRhXkEyXkFqcGdeQXVyNjc3MzU4Mzc@._V1_Ratio2.0600_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BZjYyZjg0MTktZTQ5OC00ZWNjLWE4YTQtMGE2ZmY3NjM3MTZjXkEyXkFqcGdeQXVyNjc3MzU4Mzc@._V1_Ratio2.2800_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BYTgyNGQwY2EtZmJlZS00YzY2LWFkZmEtN2MzMzA4ZmQwOGViXkEyXkFqcGdeQXVyNjc3MzU4Mzc@._V1_Ratio1.7800_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BOTA0YjY3YjctOGFjMy00MWE2LWE3NzMtMzExNmM4ZjFlYWM0XkEyXkFqcGdeQXVyNjc3MzU4Mzc@._V1_Ratio2.2000_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BMDI0MzJkZGEtNTEwNS00NThjLWEyMmEtNmQ1NjYxMzkxMGJmXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.4400_AL_.jpg"
+                },
+                {
+                    "title": "Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BY2E2ODM1ZWItOGM2OS00NjRjLWE4MDMtZGM0YTVjZGEwNTMxXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.5600_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor and Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BNjkxOTlkZDUtOWM3Ni00ODFkLTljYmEtZjMwZmZkYmRiNTUyXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.8600_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BMzgyY2Q4NWEtMmYzZS00NmZlLTk5OGYtYzNiZGUwMDI3YmViXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.4200_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BOGY3OGZiOGMtNWQzNi00YmJmLTk2MzgtZjQ2YjU2N2Y4YjU1XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.6000_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BNzdjYTI0MDgtNjQyMS00ZDkyLThhYzctMTM3ZDE4NDcxYTIwXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.6600_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BMmZmY2E4MDYtNGZkZi00ZWY3LTg4MGUtOTQyN2VkMzk2NjVjXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.7000_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BNjU4ZGYwMDctYjkzMS00NjU2LThiYWQtOTE4NDUwMDJhOGY2XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio2.0800_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BN2Q5Mjc0N2MtNDlhZC00ZGQyLWE3ZmMtZjQyMTk1ZjFiMGUxXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.7600_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BY2I0MTM5ZjktNmVlMS00MWQ2LThjM2MtM2Q2ZmI5YjRjZjEyXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.7600_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BZTBmNjYzYjctY2E3Mi00ODRhLWFhMTctNDhmMDJhNjBhYzA5XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.6400_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BYmNjNWI2NjEtMDI1ZC00YzdhLWE2OTgtZjY5MDIyMDExMTg3XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.6600_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BMDJlZTdjMTgtYjAyMC00MmNjLTkxYzEtODVlMTA1MDQzMmU2XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio2.1200_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BMzZiZjk0YmEtMWNkYS00MDIyLThiYTUtYmFjZjJmOTg1OWUxXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio2.3000_AL_.jpg"
+                },
+                {
+                    "title": "Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BZDhkMGM0Y2UtYTNkNS00ZjM0LTgzZDYtYmU5OTVhNjgwOGUxXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.9800_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BNzJhZjVlM2YtZDk2NS00YmE5LWFiZTItZTVkNzRlNjIyZWRiXkEyXkFqcGdeQXVyMTA2MDg4MzY3._V1_Ratio3.8400_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BNjY2NjVhNGQtZTAwYi00Y2JlLWE5YzUtZDk1ODdlZjBmMmJhXkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BOWM0MGUwOTktZDNhNy00ZTc1LWIyZmQtZTFjMmNjZTQ3YzcyXkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BY2YwMmFiYzktZTc1Ni00ZDEzLWE2NWQtMDhlMzY5ODhhYjc1XkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BODMxOWE5N2ItZTQ5Ni00MjM3LWJkM2ItYTUwYjU3ODIwMWRlXkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BMTFiNDk1YWYtMTkzZi00NGE0LWE1ZTEtZTI0N2UzMDUxODNiXkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BM2JkNGY2NDktNDI3Yy00YzVmLWIyMGMtNmQ0ZWQ1NzA2MzM2XkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt, Ranbir Kapoor, and Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BYjJjMWVjYjctYjFjMC00ZGNiLWFhZDItYTZlZjMxZjhlMzUzXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt, Ranbir Kapoor, and Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BYTJlZjY1NjgtMzkyNS00MDgyLTk4NzMtMmVjYTcyZmY4NTA2XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.6400_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BZTQxMGViYzYtMDgwYy00ZDRhLTlmYjMtMzBiYmMwOWFhZWM1XkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BODViY2EwNDctZTdjNi00YmI0LWIxYTUtODBiYjg5ODg5ZDMxXkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BYzNiMTViY2MtZjI0Ny00NTI2LWI4NWUtZWFkOTUzMmEyYzgwXkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BYTk2NjAzMjYtNTY3My00YmY4LTlhZTAtMGMzZmVmOWVjZWJmXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BNTI1ZWY0MDctNjE4Zi00Y2I3LWJiODgtZmRhMjQyOWNmZWU0XkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BYjU2MThkMDEtYWJiNi00NzVkLWIyMDMtMzJmZTM5ZDY5NWUxXkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BMmVjYWYwODItNjk1NS00ZmU0LWE0MjctNWI4NWYwMGFkMTNhXkEyXkFqcGdeQXVyODY3NzQyNDk@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Ranbir Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BYTJkZDBiZjItNjhmNi00Zjk3LTgxODktOGEwMzA2ZTNlMjNhXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.0000_AL_.jpg"
+                },
+                {
+                    "title": "Sanjay Dutt, Ranbir Kapoor, and Vaani Kapoor in Shamshera (2022)",
+                    "image": "https://m.media-amazon.com/images/M/MV5BNmRhYzFjNWEtZDk5Zi00ZmYxLWFiYzUtMDNiNjBiYTdlN2ExXkEyXkFqcGdeQXVyMTkzOTcxOTg@._V1_Ratio1.0000_AL_.jpg"
+                }
+            ],
+            "errorMessage": ""
         },
-        {
-            "title": "Sanjay Dutt in Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BMzZiZjk0YmEtMWNkYS00MDIyLThiYTUtYmFjZjJmOTg1OWUxXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio2.3000_AL_.jpg"
+        "trailer": {
+            "imDbId": "tt8426926",
+            "title": "Shamshera",
+            "fullTitle": "Shamshera (2022)",
+            "type": "Movie",
+            "year": "2022",
+            "videoId": "vi315343385",
+            "videoTitle": "Shamshera Official Teaser",
+            "videoDescription": "",
+            "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BODEwZDhlOTYtZjAzMy00ZWExLTg3NjctNGJhODRiZTIwOWQwXkEyXkFqcGdeQXRyYW5zY29kZS13b3JrZmxvdw@@._V1_.jpg",
+            "uploadDate": null,
+            "link": "https://www.imdb.com/video/vi315343385",
+            "linkEmbed": "https://www.imdb.com/video/imdb/vi315343385/imdb/embed",
+            "errorMessage": ""
         },
-        {
-            "title": "Vaani Kapoor in Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BZDhkMGM0Y2UtYTNkNS00ZjM0LTgzZDYtYmU5OTVhNjgwOGUxXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio1.9800_AL_.jpg"
+        "boxOffice": {
+            "budget": "$25,000,000 (estimated)",
+            "openingWeekendUSA": "",
+            "grossUSA": "",
+            "cumulativeWorldwideGross": "$440,983"
         },
-        {
-            "title": "Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BNzJhZjVlM2YtZDk2NS00YmE5LWFiZTItZTVkNzRlNjIyZWRiXkEyXkFqcGdeQXVyMTA2MDg4MzY3._V1_Ratio3.8400_AL_.jpg"
-        },
-        {
-            "title": "Sanjay Dutt, Ranbir Kapoor, and Vaani Kapoor in Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BNmRhYzFjNWEtZDk5Zi00ZmYxLWFiYzUtMDNiNjBiYTdlN2ExXkEyXkFqcGdeQXVyMTkzOTcxOTg@._V1_Ratio1.0000_AL_.jpg"
-        },
-        {
-            "title": "Ranbir Kapoor in Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BNzRmZDc4MDYtMGVmZi00OWQ4LWFmMDctZDQ5MjRkYmE1MDQwXkEyXkFqcGdeQXVyOTI3MzI4MzA@._V1_Ratio2.0600_AL_.jpg"
-        },
-        {
-            "title": "Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BNmY2NTdkOTMtMjAwZC00OTljLWI1NDItODQwOWMxMmQ3N2UxXkEyXkFqcGdeQXVyOTA0NDk0NzM@._V1_Ratio1.0000_AL_.jpg"
-        },
-        {
-            "title": "Ranbir Kapoor in Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BNTlkMTFhYjYtOGUyZi00YTVlLTkzY2UtYmZhNmYwNTI1OWExXkEyXkFqcGdeQXVyNjUwMjYwMjE@._V1_Ratio1.9000_AL_.jpg"
-        },
-        {
-            "title": "Shamshera (2022)",
-            "image": "https://imdb-api.com/images/original/MV5BM2Y5MWRkNjQtOGM3NS00NzBmLTlkYjAtOTgyOGNlNGEwNWZlXkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_Ratio1.0000_AL_.jpg"
-        }
-       ],
-      "trailer": "https://www.youtube.com/embed/UHYUeZ8JszQ",
-      "boxOffice": {
-          "budget": "$25,000,000 (estimated)",
-          "openingWeekendUSA": "",
-          "grossUSA": "",
-          "cumulativeWorldwideGross": ""
-      },
-      "tagline": null,
-      "keywords": "1800s",
-      "keywordList": [
-          "1800s"
-      ],
-      "similars": [
-          {
-              "id": "tt10295212",
-              "title": "Shershaah",
-              "image": "https://imdb-api.com/images/original/MV5BMjk1NzcwMDUtNDU4ZC00MzlhLTkzZjAtM2MxMTRjZGE0ODdhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_Ratio0.7536_AL_.jpg",
-              "imDbRating": "8.4"
-          },
-          {
-              "id": "tt20421014",
-              "title": "Ittu Si Baat",
-              "image": "https://imdb-api.com/images/original/MV5BYjBlOGQ0MzctMTQwYS00MTY5LWI2YmMtOTdkZTY3ZTM2MDFmXkEyXkFqcGdeQXVyODU1NzIxODY@._V1_Ratio0.8696_AL_.jpg",
-              "imDbRating": ""
-          },
-          {
-              "id": "tt11260832",
-              "title": "Bellbottom",
-              "image": "https://imdb-api.com/images/original/MV5BNjZjNTU2MTQtNGQ5YS00YjQ1LTgwZTctYWNjMGRjMzhkMmVhXkEyXkFqcGdeQXVyMTI1NDEyNTM5._V1_Ratio0.6957_AL_.jpg",
-              "imDbRating": "6.1"
-          },
-          {
-              "id": "tt4129428",
-              "title": "Jagga Jasoos",
-              "image": "https://imdb-api.com/images/original/MV5BMTkyMzc1MTQxNl5BMl5BanBnXkFtZTgwMDIzNzM3MjI@._V1_Ratio0.6957_AL_.jpg",
-              "imDbRating": "6.3"
-          },
-          {
-              "id": "tt2178470",
-              "title": "Yeh Jawaani Hai Deewani",
-              "image": "https://imdb-api.com/images/original/MV5BODA4MjM2ODk4OF5BMl5BanBnXkFtZTcwNDgzODk1OQ@@._V1_Ratio0.6957_AL_.jpg",
-              "imDbRating": "7.2"
-          },
-          {
-              "id": "tt13751694",
-              "title": "Animal",
-              "image": "https://imdb-api.com/images/original/MV5BMmY1OWJiY2EtNDZmNC00ZTUyLThlNmQtZWQ0NGZiMGFkMzE3XkEyXkFqcGdeQXVyMTI1NDAzMzM0._V1_Ratio2.0386_AL_.jpg",
-              "imDbRating": ""
-          },
-          {
-              "id": "tt10895576",
-              "title": "Mimi",
-              "image": "https://imdb-api.com/images/original/MV5BZTkwMDQ4ZmEtNTdhNi00MmMzLTgwNTQtMDI1NDJjZjQ5Zjg5XkEyXkFqcGdeQXVyNDAzNDk0MTQ@._V1_Ratio0.7536_AL_.jpg",
-              "imDbRating": "7.9"
-          },
-          {
-              "id": "tt11947158",
-              "title": "Ek Villain Returns",
-              "image": "https://imdb-api.com/images/original/MV5BYjVkM2E5NmYtNGVkOS00YTNmLThhZDAtMTdkZTQ5ZDIwMTRlXkEyXkFqcGdeQXVyMTI1NDEyNTM5._V1_Ratio0.8406_AL_.jpg",
-              "imDbRating": ""
-          },
-          {
-              "id": "tt15115714",
-              "title": "Veetla Vishesham",
-              "image": "https://imdb-api.com/images/original/MV5BYTE5ODU2YjEtNTEyMi00YjViLThhNDUtM2RmZjczNjY4MjZkXkEyXkFqcGdeQXVyMTQyOTA1NTMz._V1_Ratio2.2029_AL_.jpg",
-              "imDbRating": ""
-          },
-          {
-              "id": "tt9359346",
-              "title": "Udan Patolas",
-              "image": "https://imdb-api.com/images/original/MV5BNDY1ZTYyM2EtOTdlZi00MGJiLTkzNTUtOWNiNGFkMTMyZTI1XkEyXkFqcGdeQXVyMTAyMTE1MDA1._V1_Ratio0.6763_AL_.jpg",
-              "imDbRating": "5.6"
-          },
-          {
-              "id": "tt14418234",
-              "title": "State of Siege: Temple Attack",
-              "image": "https://imdb-api.com/images/original/MV5BNGNlOWEyZDgtNTZiMi00YjgxLTlkOTUtNGI3ZWM2YzU3ZTU2XkEyXkFqcGdeQXVyMTIzMzg0MTM2._V1_Ratio0.8019_AL_.jpg",
-              "imDbRating": "7.8"
-          }
-      ],
-      "tvSeriesInfo": null,
-      "tvEpisodeInfo": null,
-      "errorMessage": null
-  }
+        "tagline": null,
+        "keywords": "1800s,power,slave",
+        "keywordList": [
+            "1800s",
+            "power",
+            "slave"
+        ],
+        "similars": [
+            {
+                "id": "tt11947158",
+                "title": "Ek Villain Returns",
+                "image": "https://m.media-amazon.com/images/M/MV5BZTU5YjI3YjMtZjU4Mi00ZTM3LTlmM2MtOTA2N2EwOGIwOTE3XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_Ratio0.7536_AL_.jpg",
+                "imDbRating": "7.0"
+            },
+            {
+                "id": "tt12015102",
+                "title": "VR (Vikrant Rona)",
+                "image": "https://m.media-amazon.com/images/M/MV5BMWVlYTJhYzgtNmY5Ni00NWU5LWJmOTItM2RhODQ4MjU4ODA5XkEyXkFqcGdeQXVyMzU0ODc1MTQ@._V1_Ratio0.8019_AL_.jpg",
+                "imDbRating": "8.8"
+            },
+            {
+                "id": "tt15166394",
+                "title": "Hi Five",
+                "image": "https://m.media-amazon.com/images/M/MV5BMGVhNmU2ZmQtOTUyOC00MTA0LTgwMjUtMWQ2NWEwMDk4ZWQ5XkEyXkFqcGdeQXVyMTMzNzA4MTMx._V1_Ratio0.6763_AL_.jpg",
+                "imDbRating": "8.4"
+            },
+            {
+                "id": "tt15840614",
+                "title": "Darja",
+                "image": "https://m.media-amazon.com/images/M/MV5BNjQ3OTVlOGUtM2VmNy00ZGIyLWJhYWYtZDFmODUyMDk3NDcxXkEyXkFqcGdeQXVyOTc2MTgwNjY@._V1_Ratio0.6763_AL_.jpg",
+                "imDbRating": "8.1"
+            },
+            {
+                "id": "tt6265050",
+                "title": "Shabaash Mithu",
+                "image": "https://m.media-amazon.com/images/M/MV5BMzgwYTYxNzgtMTVhMy00YTViLTk2ODYtZDVlOWNkNDE4YWViXkEyXkFqcGdeQXVyNjkwOTg4MTA@._V1_Ratio0.8019_AL_.jpg",
+                "imDbRating": "7.4"
+            },
+            {
+                "id": "tt21296906",
+                "title": "Achena Uttam",
+                "image": "https://m.media-amazon.com/images/M/MV5BNDYwZDYzZjItMmM2ZS00YjIxLTllZjMtODgwN2UzNzUwODM2XkEyXkFqcGdeQXVyMTMzNzU0ODgx._V1_Ratio0.6763_AL_.jpg",
+                "imDbRating": "9.5"
+            },
+            {
+                "id": "tt13130760",
+                "title": "Hit the First Case",
+                "image": "https://m.media-amazon.com/images/M/MV5BZjdjOTQwY2UtZDM5Zi00YTU0LWIzOTQtMTFjZThmZDNhOWZhXkEyXkFqcGdeQXVyMTE0MTY2Mzk2._V1_Ratio0.6763_AL_.jpg",
+                "imDbRating": "8.5"
+            },
+            {
+                "id": "tt13793230",
+                "title": "Jaadugar",
+                "image": "https://m.media-amazon.com/images/M/MV5BYzY0MGMyMjYtODA2Ny00MDEwLTlkZTEtY2VmYzcwNDRiNzczXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_Ratio0.7150_AL_.jpg",
+                "imDbRating": "7.0"
+            },
+            {
+                "id": "tt13825336",
+                "title": "Good Luck Jerry",
+                "image": "https://m.media-amazon.com/images/M/MV5BNDk0NDY3YTUtZGRhZC00YTMxLWJhMjktYjUwM2E3YTMwNzVkXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_Ratio0.8019_AL_.jpg",
+                "imDbRating": "6.6"
+            },
+            {
+                "id": "tt13130532",
+                "title": "Footfairy",
+                "image": "https://m.media-amazon.com/images/M/MV5BNzgzMDNkYzQtN2RlMi00MGNlLWJlODUtZjUxNGJhOTM4NDQ0XkEyXkFqcGdeQXVyMTI0MjU5MzUw._V1_Ratio0.6957_AL_.jpg",
+                "imDbRating": "4.7"
+            },
+            {
+                "id": "tt14178824",
+                "title": "Indian Predator: The Butcher of Delhi",
+                "image": "https://m.media-amazon.com/images/M/MV5BYjc3NDMyOGItNjgxZS00NTVlLWJiMmQtNzZhMWRhZDIyZDJkXkEyXkFqcGdeQXVyMjAwNzczNTU@._V1_Ratio0.6763_AL_.jpg",
+                "imDbRating": "6.0"
+            }
+        ],
+        "tvSeriesInfo": null,
+        "tvEpisodeInfo": null,
+        "errorMessage": null
+    }
 
 ]
 }

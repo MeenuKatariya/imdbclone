@@ -11,14 +11,17 @@ import CollectionsIcon from "@mui/icons-material/Collections";
 import BookmarkAddSharpIcon from '@mui/icons-material/BookmarkAddSharp';
 
 export const MovieCard = ({ movieData }) => {
-  const { image, trailer, images } = movieData;
+  const { posters, trailer, images } = movieData;
+  const poster=posters.posters[0].link;
+  const youtube=trailer.linkEmbed;
+  const image=images.items;
   return (
     <Box variant="div" sx={{ display: "flex",marginTop:"10px",marginBottom:"25px" }}>
       <Card sx={{ maxWidth: 270, position:"relative" }}>
         <CardMedia
           component="img"
           height="100%"
-          image={image}
+          image={poster}
           alt="green iguana"
         />
         <BookmarkAddSharpIcon sx={{position:"absolute",fontSize:"50px",left:"-12px",top:"-7px", color:"#92929275",cursor:"pointer","&:hover":{
@@ -30,7 +33,7 @@ export const MovieCard = ({ movieData }) => {
           component="iframe"
           width="100%"
           height="100%"
-          src={`${trailer}?autoplay=1&mute=1&amp;rel=0`}
+          src={`${youtube}?autoplay=1&mute=1&amp;rel=0`}
           allow="autoplay"
           //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         />
@@ -97,7 +100,7 @@ export const MovieCard = ({ movieData }) => {
                 marginTop: "5px",
               }}
             >
-              {images.length} PHOTOS
+              {image.length} PHOTOS
             </Typography>
           </CardContent>
         </Card>

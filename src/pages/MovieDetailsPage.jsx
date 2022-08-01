@@ -1,5 +1,4 @@
-import { Box, Link, Typography, Button, Divider } from "@mui/material";
-
+import { Box} from "@mui/material";
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,9 +12,11 @@ import { MoviesRating } from "../components/moviedetails/MoviesRating";
 import { MovieTopLinks } from "../components/moviedetails/MovieTopLinks";
 import { MovieTitle } from "../components/moviedetails/MovieTitle";
 import { MovieGenres } from "../components/moviedetails/MovieGenres";
+import { MovieInfo } from "../components/moviedetails/MovieInfo";
 export const MovieDetailsPage = () => {
   const movieData = useSelector((state) => state.movieDetails.movieDetails);
   const dispatch = useDispatch();
+  
 
   useEffect(() => {
     dispatch(loadingMovieDetails());
@@ -45,7 +46,23 @@ export const MovieDetailsPage = () => {
           </Box>
           
           <MovieCard movieData={movieData[0]}/>
-          <MovieGenres/>
+
+          <Box variant="div">
+            <Box variant="div">
+            {
+            (movieData[0].genres.split(", ")).map((ele)=><MovieGenres genres={ele}/>)
+          }
+
+            </Box>
+
+            <Box variant="div">
+              <MovieInfo movieData={movieData[0]}/>
+
+            </Box>
+          
+          </Box>
+
+        
         </div>
       )}{" "}
     </div>
