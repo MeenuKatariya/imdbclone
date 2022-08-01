@@ -1,0 +1,103 @@
+.SigninputBox{
+    border: 1px solid grey;
+    width:300px;
+    height:20px;
+}
+.signLabel{
+    text-align: left;
+    padding-left: 8px;
+    /* margin-bottom: 0; */
+    color:#111111;
+    font-size: 12px;
+    font-weight: 600;
+    font-family:"Amazon Ember",Arial,sans-serif;
+}
+.superDiv{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /* border: 1px solid red; */
+
+}
+
+.createAccount{
+    text-align: left;
+    margin-top: -5px;
+    margin-bottom: -8px;
+    font-family:"Amazon Ember",Arial,sans-serif;
+    font-size: 27px;
+    color:#111111;
+    font-weight: 900px;
+    padding-left: 5px;
+    
+
+}
+.imdbImage{
+    width:100px;
+    height: 50px;
+
+    margin: auto;
+   
+
+
+}
+.imdbImage>img{
+    
+    height:100%;
+    
+
+
+}
+.createButton>button{
+    width:97%;
+    margin: 5px;
+    height:25px;
+    background-color:#f0c14b;
+     font-family:"Amazon Ember",Arial,sans-serif;
+     border:#a88734  ;
+     margin-right: 15px;
+     border-radius: 2px;
+     color:#111111
+    }
+
+.signBigDiv{
+
+    width: 400px;
+    margin:auto;
+    border:1px solid grey;
+    border-radius: 5px;
+    margin-top: 20px;
+
+
+}
+.inputBoxes{
+    margin-left: 40px;
+    margin-right:40px;
+    margin-top:-10px ;
+
+
+
+}
+.inputBoxes>input{
+    height: 23px;
+    margin-top: 0;
+    border-radius: 5px;
+}
+.signInLine:hover{
+color:burlywood 
+}
+.help{
+    display:flex;
+    margin:auto;
+    justify-content:space-between;
+    color:#0066c0;
+    margin-top:10px;
+    font-size:11px;
+    width:250px;
+    /* border:"1px solid red" ;  */
+    margin-bottom: 0px;
+}
+.copyright{
+    color:#555555;
+    font-family:"Amazon Ember",Arial,sans-serif;
+   font-size: 11px;
+   margin-top: 0;
+}

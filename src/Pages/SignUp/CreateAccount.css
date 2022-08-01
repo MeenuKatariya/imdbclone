@@ -1,0 +1,73 @@
+.signLeft{
+    border:1px solid red;
+    width:400px;
+}
+.signLeft>h3{
+    color:#333333; 
+    font-size: 25px;
+    font-family:"12px Verdana,Arial,sans-serif"
+}
+.signImdb{
+    border: 1px solid gray;
+      width: 240px;
+      height:40px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    border: 1px solid #555555 ;
+    border-radius: 6px;
+    
+}
+.signImdb>div>p{
+    font-size: 20px;
+    color:#555555;
+    text-align: left;
+
+    margin-top: 12px;
+    font-family:"12px Verdana,Arial,sans-serif"
+}
+.signImdb>img{
+    height: 50%;
+    width:36px;
+    margin-top: 12px;
+}
+.BigPart{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+    width:1000px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  
+}
+.createButton{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.signRight>h3{
+color:#333333;
+font-family: Verdana,Arial,sans-serif;
+margin-bottom: 2;
+font-size: 22px;
+}
+.signRight{
+    text-align: left;
+    width:480px;
+}
+.personalized>h6{
+    color:#333333;
+    font-size: 20px;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0
+
+}
+.personalized>p{
+    color:#333333;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 14px;
+    /* margin-bottom: 0; */
+    margin-top: 1
+}
