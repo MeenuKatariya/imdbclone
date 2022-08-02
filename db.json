@@ -1,10 +1,87 @@
 {
-    "user_profile" : {
-        "name" : "Xyz",
-        "email" : "demo@gmail.com",
-        "password" : "demo123",
-        "watchlist" : [],
+    "user_profile": {
+        "name": "Xyz",
+        "email": "demo@gmail.com",
+        "password": "demo123",
+        "watchlist": [{
+                "title": "Captain Marvel",
+                "year": "2019",
+                "id": "tt4154664",
+                "type": "Movie",
+                "image": "https://m.media-amazon.com/images/M/MV5BMTE0YWFmOTMtYTU2ZS00ZTIxLWE3OTEtYTNiYzBkZjViZThiXkEyXkFqcGdeQXVyODMzMzQ4OTI@._V1_SX300.jpg"
+            },
+            {
+                "title": "Ms. Marvel",
+                "year": "2022",
+                "id": "tt10857164",
+                "type": "Series",
+                "image": "https://m.media-amazon.com/images/M/MV5BZmQ3OTZkNDUtNTU0Mi00ZjE4LTgyNTUtY2E4NWRmNDUxMzkyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg"
+            },
+            {
+                "title": "Marvel One-Shot: Agent Carter",
+                "year": "2013",
+                "id": "tt3067038",
+                "type": "Movie",
+                "image": "https://m.media-amazon.com/images/M/MV5BZDIwZTM4M2QtMWFhYy00N2VmLWFlMjItMzI3NjBjYTc0OTMxXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
+            },
+            {
+                "title": "Marvel One-Shot: All Hail the King",
+                "year": "2014",
+                "id": "tt3438640",
+                "type": "Movie",
+                "image": "https://m.media-amazon.com/images/M/MV5BZGFkMTZkMDQtNzM4Yy00YWEwLTkzOWEtZTMyNDRlNmJhYWJhXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
+            },
+            {
+                "title": "Marvel One-Shot: Item 47",
+                "year": "2012",
+                "id": "tt2247732",
+                "type": "Movie",
+                "image": "https://m.media-amazon.com/images/M/MV5BMjNlMzAxNmQtOGEwZi00NTEyLWI0NWYtMTlhNmE2YTA3ZDVhXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
+            },
+            {
+                "title": "Marvel One-Shot: A Funny Thing Happened on the Way to Thor's Hammer",
+                "year": "2011",
+                "id": "tt2011109",
+                "type": "Movie",
+                "image": "https://m.media-amazon.com/images/M/MV5BYmVlYTg3N2QtMWM2OS00YWQyLWI2M2MtMDc0ZjBkZjk1MTY3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
+            },
+            {
+                "title": "Marvel One-Shot: The Consultant",
+                "year": "2011",
+                "id": "tt2011118",
+                "type": "Movie",
+                "image": "https://m.media-amazon.com/images/M/MV5BNGE4YjU5MDAtYzYzMC00M2RlLTk0NDgtNDU1MjgyMGI0MjI3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
+            },
+            {
+                "title": "Marvel Studios: Legends",
+                "year": "2021",
+                "id": "tt13650480",
+                "type": "Series",
+                "image": "https://m.media-amazon.com/images/M/MV5BMzdiNGVlZGYtMGY1Ni00OGU1LTlmYzEtZDBjYjk3OGM3YTNkXkEyXkFqcGdeQXVyNzk3NDUzNTc@._V1_SX300.jpg"
+            },
+            {
+                "title": "Marvel Studios: Assembled",
+                "year": "2021",
+                "id": "tt14094206",
+                "type": "Series",
+                "image": "https://m.media-amazon.com/images/M/MV5BNWMyNWYyMmYtZjNiZi00MzFmLTg2MjYtYWEzZWY1MzBhY2I2XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
+            }
+        ],
         "my_list": [],
-        "recently_viewed" : []
+        "recently_viewed": [{
+                "title": "Marvel One-Shot: The Consultant",
+                "year": "2011",
+                "id": "tt2011118",
+                "type": "Movie",
+                "image": "https://m.media-amazon.com/images/M/MV5BNGE4YjU5MDAtYzYzMC00M2RlLTk0NDgtNDU1MjgyMGI0MjI3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
+            },
+            {
+                "title": "Marvel Studios: Assembled",
+                "year": "2021",
+                "id": "tt14094206",
+                "type": "Series",
+                "image": "https://m.media-amazon.com/images/M/MV5BNWMyNWYyMmYtZjNiZi00MzFmLTg2MjYtYWEzZWY1MzBhY2I2XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg"
+            }
+        ]
     }
 }

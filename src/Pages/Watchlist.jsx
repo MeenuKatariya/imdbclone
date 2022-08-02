@@ -1,5 +1,5 @@
 
-import { Box, Stack, IconButton, Divider, Button } from '@mui/material';
+import { Box, Stack, IconButton, Divider, Button, List } from '@mui/material';
 import React from 'react';
 import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import ShareIcon from '@mui/icons-material/Share';
@@ -11,17 +11,61 @@ import AppsIcon from '@mui/icons-material/Apps';
 import SouthIcon from '@mui/icons-material/South';
 import NorthIcon from '@mui/icons-material/North';
 import { Link } from 'react-router-dom';
-
+import axios from "axios"
+import { useDispatch, useSelector } from 'react-redux';
+import { recentlyViewedSuccess, watchlistError, watchlistLoad, watchlistSuccess } from '../Redux/Watchlist/action';
 export const Watchlist = () => {
-    // eslint-disable-next-line
-    const [watchlist, setWatchlist] = React.useState([]);
+
+    const dispatch = useDispatch();
+    const loading = useSelector(state => state.watchlist.loading)
+    const error = useSelector(state => state.watchlist.error)
+    const watchlist = useSelector(state => state.watchlist.watchlist)
+    const recently_viewed = useSelector(state => state.watchlist.recently_viewed)
+    const [watchlistLength, setLength] =React.useState(0)
+    const [order, setOrder] =React.useState("");
+    const [sort, setSort] =React.useState()
+
+    const fetchWatchListData = () => {
+        dispatch(watchlistLoad());
+        axios.get(`http://localhost:8080/user_profile`).then(res => {
+            console.log(res.data.watchlist)
+            console.log(toggleWatchlistDisplay)
+            const payload = res.data.watchlist
+            setLength(payload.length)
+            dispatch(watchlistSuccess(payload))
+        }).catch(err => {
+            dispatch(watchlistError());
+            console.log(err)
+        })
+    }
+
+    const fetchRecentlyViewedData = () => {
+     
+        axios.get(`http://localhost:8080/user_profile`).then(res => {
+            console.log("Hello",res.data.recently_viewed)
+            const payload = res.data.recently_viewed
+            dispatch(recentlyViewedSuccess(payload))
+        }).catch(err => {
+            console.log(err)
+        })
+    }
+
+
+    
+    React.useEffect(() => {
+        fetchWatchListData()
+        fetchRecentlyViewedData()
+        // eslint-disable-next-line
+    }, [])
+
+
     const [toggleWatchlistDisplay, setToggleWatchlistDisplay] = React.useState(true);
 
     return (
         <div>
             <Box sx={{ backgroundColor: "#E3E2DD", width: "100%", display: "flex", justifyContent: "center" }}>
 
-                <Box sx={{ backgroundColor: "#EEEEEE", height: "100%", width: "1008px", display: "flex", flexDirection: "column" }}>
+                <Box sx={{ backgroundColor: "#EEEEEE", height: "100%", width: "1010px", display: "flex", flexDirection: "column" }}>
                     {/* -----------------------------------Ad Poster----------------------------- */}
                     <Box sx={{ backgroundColor: "white", display: "flex", justifyContent: "center" }}>
                         <img src="https://m.media-amazon.com/images/I/71id-Plo6eL.jpg" alt="sponsered_Ads" style={{ height: "auto", width: "97%" }} />
@@ -29,8 +73,8 @@ export const Watchlist = () => {
                     <Divider />
                     {/* -----------------------------------Main Watch list Container----------------------------- */}
                     <Box sx={{ backgroundColor: "#EEEEEE", height: "100%", width: "100%", display: "flex" }}>
-                        {/* -----------------------------------(Right) Watch list Container----------------------------- */}
-                        <Box sx={{ backgroundColor: "#EEEEEE", height: "100%", width: "66%" }}>
+                        {/* -----------------------------------(Left) Watch list Container----------------------------- */}
+                        <Box sx={{ backgroundColor: "#EEEEEE", height: "100%", width: "67%" }}>
                             {/* -----------------------------------Container 1 -(Your list & Edit & Share)----------------------------- */}
                             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 15px" }}>
                                 <Box sx={{ color: "#424242" }}>
@@ -66,7 +110,7 @@ export const Watchlist = () => {
                                     justifyContent="space-between"
                                     alignItems="center"
                                 >
-                                    <p style={{ fontSize: "12px", color: "#525252" }}>0 Titles</p>
+                                    <p style={{ fontSize: "12px", color: "#525252" }}>{watchlistLength} Titles</p>
                                     <Stack direction="row"
                                         alignItems="center"
                                         spacing={1}
@@ -97,7 +141,7 @@ export const Watchlist = () => {
                                             <SouthIcon sx={{ fontSize: "15px" }} />
                                         </IconButton>
                                         <IconButton onClick={() => { setToggleWatchlistDisplay(prev => !prev) }}>
-                                            {toggleWatchlistDisplay ? <ViewListIcon color="action" sx={{ fontSize: "30px" }} /> : <AppsIcon color="action" sx={{ fontSize: "30px" }} />}
+                                            {!toggleWatchlistDisplay ? <ViewListIcon color="action" sx={{ fontSize: "30px" }} /> : <AppsIcon color="action" sx={{ fontSize: "30px" }} />}
                                         </IconButton>
                                         <button variant="outlined" style={{ color: "#525252", border: "0.5px solid #666666", borderRadius: "3px", fontSize: "12px", padding: "3px 10px" }}>REFINE</button>
                                     </Stack>
@@ -107,7 +151,7 @@ export const Watchlist = () => {
                             <Divider />
                             {/* -----------------------------------Container 3 -(Movie List Display)----------------------------- */}
                             <Box backgroundColor={"#F8F8F8"}>
-                                {watchlist.length === 0 ?
+                                {watchlistLength === 0 ?
                                     <Box sx={{ padding: "80px 30px 300px 30px" }}>
 
                                         <Stack direction="column" spacing={0.5} justifyContent="center"
@@ -121,11 +165,56 @@ export const Watchlist = () => {
                                         </Stack>
 
                                     </Box>
-                                    : <>Hello</>}
+                                    : <Box>
+                                        {loading ? <h1>Loading...</h1> : error ? <h1>Something Went Wrong...</h1> :
+                                            <Box padding={"10px"} sx={!toggleWatchlistDisplay ? {display: "grid", gridTemplateColumns: "repeat(4,1fr)"} : "visible"} >
+                                                {watchlist.map((e) => {
+                                                    return (
+                                                       <Box margin={"10px"}>
+                                                        {toggleWatchlistDisplay ? <>
+                                                        <Stack direction="row" >
+                                                            <img src={e.image} alt="poster" style={{ height: "142px", marginRight: "8px", marginBottom: "20px" }} />
+                                                            <List sx={{padding:"0px"}} spacing={1}>
+                                                                <Link to="/" style={{textDecoration:"none", color:"#136cb2"}}><h3 style={{paddingBottom:"7px",fontWeight:"normal", color:"#136cb2", margin: "0px"}}>{e.title}</h3></Link>
+                                                                <Stack
+                                                                    direction="row"
+                                                                    divider={<Divider orientation="vertical" flexItem />}
+                                                                    spacing={1}
+                                                                >
+                                                                    <span><p style={{color:"grey", margin:"0px", fontSize:"11px", paddingBottom:"5px"}}>{e.year}</p></span>
+                                                                    <span><p style={{color:"grey", margin:"0px", fontSize:"11px", paddingBottom:"5px"}}>Runtime</p></span>
+                                                                    <span><p style={{color:"grey", margin:"0px", fontSize:"11px", paddingBottom:"5px"}}>Rated</p></span>
+                                                                    <span><p style={{color:"grey", margin:"0px", fontSize:"11px", paddingBottom:"5px"}}>Genre</p></span>
+                                                                </Stack>
+                                                                <Stack
+                                                                    direction="row"
+                                                                    divider={<Divider orientation="vertical" flexItem />}
+                                                                    spacing={1}
+                                                                >
+                                                                    <span><p style={{color:"#136cb2", margin:"0px", fontSize:"11px",paddingBottom:"7px"}}>Director</p></span>
+                                                                    <span><p style={{color:"#136cb2", margin:"0px", fontSize:"11px",paddingBottom:"7px"}}>Cast names in the movie</p></span>
+                                                                    
+                                                                </Stack>
+                                                                <p style={{color:"#3d3d3d", margin:"0px", fontSize:"12px",paddingBottom:"7px"}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, sapiente! Officiis assumenda nihil dolores odit ducimus vitae inventore incidunt similique, facilis mollitia quia dicta cumque labore. Obcaecati accusantium molestiae alias at debitis totam reiciendis facilis repellendus.</p>
+                                                            </List>
+                                                        </Stack>
+                                                        <Divider /></> :
+                                                        <Box sx={{display: 'flex', flexDirection: "column", justifyContent: 'center',alignItems: 'center', textAlign: "center"}}>
+                                                         <img src={e.image} alt="poster" style={{ height: "215px", marginBottom: "5px" }} />
+                                                         <p style={{color:"#136cb2", margin:"0px", fontSize:"11px",paddingBottom:"5px"}}>{e.title}</p>
+                                                        </Box> }
+                                                       
+                                                        </Box>
+                                                    )
+
+                                                })}
+                                            </Box>
+                                        }
+                                    </Box>}
                             </Box>
                         </Box>
-                        {/* -----------------------------------(Left) Create List Options----------------------------- */}
-                        <Box sx={{ backgroundColor: "#EEEEEE", minHeight: "500px", width: "34%" , borderLeft: "3px solid #999999"}}>
+                        {/* -----------------------------------(Right) Create List Options----------------------------- */}
+                        <Box sx={{ backgroundColor: "#EEEEEE", minHeight: "500px", width: "33%", borderLeft: "3px solid #999999" }}>
                             <Box sx={{ padding: "20px" }}>
                                 {/* -----------------------------------Discover whats trending image----------------------------- */}
                                 <Stack spacing={1}>
@@ -161,6 +250,22 @@ export const Watchlist = () => {
                             <p style={{ fontSize: "18px", color: "#5a5a5a", margin: "0px 10px" }}>Recently Viewed</p>
                             <Button variant="text" sx={{ fontSize: "10px", margin: "0px 10px" }}>Clear history</Button>
                         </Stack>
+
+                        {<Stack 
+                            direction="row"
+                            alignItems="center"
+                            spacing={1}>
+                            {recently_viewed ? 
+                        
+                            <Box padding={"10px"}>
+                                {recently_viewed.map((e) => {
+                                    return (
+                                        <img src={e.image} alt="poster" style={{ height: "142px", marginRight: "8px", marginBottom: "20px" }} />
+                                    )
+                                })
+                                }
+                            </Box> : <></>}
+                        </Stack>}
                     </Box>
                 </Box>
             </Box>
