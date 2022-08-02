@@ -3,7 +3,7 @@ import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRound
 import React from "react";
 
 export const Heading = ({headingString,arrow}) => {
-  console.log(arrow)
+
   return (
     <Box
       variant="div"

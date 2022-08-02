@@ -1,13 +1,17 @@
 import { Avatar, Box, Grid, Typography } from "@mui/material";
 import React from "react";
 
+
+
 export const Cast = ({ actorList }) => {
 
   return (
-    <div style={{width:"70%"}}>
-        <Grid container spacing={2} sx={{gap:"30px",margin:"25px 5px"}}>
+    <div style={{width:"100%", margin:"20px 0px"}}>
+        <Grid container rowSpacing={2}  columnSpacing={{ xs: 5, sm: 5, md: 5 }} sx={{justifyContent:"space-between", gap:"20px",paddingRight:"10%"}}>
         {actorList.map((el) => (
-        <Grid xs={3} md={5} sx={{display:"flex", alignItems:"center", justifyContent:"left"}}>
+        <Grid key={el.id} item xs={5}  sx={{display:"flex", alignItems:"center", justifyContent:"left"}}>
+
+        
           <Avatar
             alt={el.name}
             src={el.image}
