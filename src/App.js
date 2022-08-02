@@ -1,6 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-import CreateNewList from './Component/CreateNewList';
+
+import CreateNewList from './Pages/CreateNewList';
 
 function App() {
   return (
