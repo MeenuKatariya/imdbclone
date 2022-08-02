@@ -6,7 +6,7 @@ export const BoxOffice = ({ movieData }) => {
   return (
     <Box variant='div' sx={{width:"70%",display:"flex",justifyContent:"left", textAlign:"left", marginTop:"20px",gap:"200px"}}>
         <Box variant="div">
-        <Typography variant="div" sx={{ lineHeight: "10px", fontWeight: "600",lineHeight:"30px"}}>
+        <Typography variant="div" sx={{fontWeight: "600",lineHeight:"30px"}}>
         Budget
       </Typography>
       <br />
@@ -17,7 +17,7 @@ export const BoxOffice = ({ movieData }) => {
         </Box>
 
         <Box variant="div">
-        <Typography variant="div" sx={{ lineHeight: "10px", fontWeight: "600",lineHeight:"30px"}}>
+        <Typography variant="div" sx={{ lineHeight: "30px", fontWeight: "600"}}>
         Gross worldWide
       </Typography>
       <br />

@@ -51,6 +51,7 @@ export const MovieInfo = ({ movieData }) => {
           </Typography>{" "}
           {writer.map((el) => (
             <Typography
+            key={el}
               variant="span"
               sx={{ color: "rgb(87,153,239)", marginLeft: "20px" }}
             >
@@ -64,7 +65,7 @@ export const MovieInfo = ({ movieData }) => {
             Stars
           </Typography>
           {star.map((el) => (
-            <Typography
+            <Typography key={el}
               variant="span"
               sx={{ color: "rgb(87,153,239)", marginLeft: "20px" }}
             >

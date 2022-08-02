@@ -34,8 +34,8 @@ export const MovieCard = ({ movieData }) => {
           src={`${trailer.linkEmbed}?autoplay=false&mute=true&width=832`}
           // src="https://www.imdb.com/video/vi315343385"
           allow="autoplay"
-          frameborder="no"
-          allowFullScreen="true"
+          frameBorder="none"
+          allowFullScreen={true}
           scrolling="false"
           //   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         />

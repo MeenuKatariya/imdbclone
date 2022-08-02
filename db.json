@@ -578,5 +578,127 @@
         "errorMessage": null
     }
 
+],
+"popularMovies":[
+    {
+        "id": "tt1649418",
+        "rank": "1",
+        "rankUpDown": "0",
+        "title": "The Gray Man",
+        "fullTitle": "The Gray Man (2022)",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BOWY4MmFiY2QtMzE1YS00NTg1LWIwOTQtYTI4ZGUzNWIxNTVmXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Anthony Russo (dir.), Ryan Gosling, Chris Evans",
+        "imDbRating": "6.5",
+        "imDbRatingCount": "94830"
+    },
+    {
+        "id": "tt10954984",
+        "rank": "2",
+        "rankUpDown": "+1",
+        "title": "Nope",
+        "fullTitle": "Nope (2022)",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BMGIyNTI3NWItNTJkOS00MGYyLWE4NjgtZDhjMWQ4Y2JkZTU5XkEyXkFqcGdeQXVyNjY1MTg4Mzc@._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Jordan Peele (dir.), Daniel Kaluuya, Keke Palmer",
+        "imDbRating": "7.5",
+        "imDbRatingCount": "19978"
+    },
+    {
+        "id": "tt9114286",
+        "rank": "3",
+        "rankUpDown": "+109",
+        "title": "Black Panther: Wakanda Forever",
+        "fullTitle": "Black Panther: Wakanda Forever (2022)",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BNjMxZmI4NzEtYWNjOS00M2MwLWE4YTctMjk1YWEzOTY1NjkwXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Ryan Coogler (dir.), Letitia Wright, Lupita Nyong'o",
+        "imDbRating": "7.5",
+        "imDbRatingCount": "0"
+    },
+    {
+        "id": "tt10648342",
+        "rank": "4",
+        "rankUpDown": "-2",
+        "title": "Thor: Love and Thunder",
+        "fullTitle": "Thor: Love and Thunder (2022)",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BYmMxZWRiMTgtZjM0Ny00NDQxLWIxYWQtZDdlNDNkOTEzYTdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Taika Waititi (dir.), Chris Hemsworth, Natalie Portman",
+        "imDbRating": "6.8",
+        "imDbRatingCount": "144591"
+    },
+    {
+        "id": "tt7144666",
+        "rank": "5",
+        "rankUpDown": "-1",
+        "title": "The Black Phone",
+        "fullTitle": "The Black Phone (2021)",
+        "year": "2021",
+        "image": "https://m.media-amazon.com/images/M/MV5BOWVmNTBiYTUtZWQ3Yi00ZDlhLTgyYjUtNzBhZjM3YjRiNGRkXkEyXkFqcGdeQXVyNzYyOTM1ODI@._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Scott Derrickson (dir.), Mason Thames, Madeleine McGraw",
+        "imDbRating": "7.0",
+        "imDbRatingCount": "67625"
+    },
+    {
+        "id": "tt9411972",
+        "rank": "6",
+        "rankUpDown": "0",
+        "title": "Where the Crawdads Sing",
+        "fullTitle": "Where the Crawdads Sing (2022)",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BMTJmNGJmYTgtYjAxNy00YmMzLTk2YTYtMGIzMmUwNDMyMTY1XkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Olivia Newman (dir.), Daisy Edgar-Jones, Taylor John Smith",
+        "imDbRating": "7.1",
+        "imDbRatingCount": "7648"
+    },
+    {
+        "id": "tt1745960",
+        "rank": "7",
+        "rankUpDown": "0",
+        "title": "Top Gun: Maverick",
+        "fullTitle": "Top Gun: Maverick (2022)",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BOWQwOTA1ZDQtNzk3Yi00ZmVmLWFiZGYtNjdjNThiYjJhNzRjXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Joseph Kosinski (dir.), Tom Cruise, Jennifer Connelly",
+        "imDbRating": "8.6",
+        "imDbRatingCount": "254476"
+    },
+    {
+        "id": "tt3704428",
+        "rank": "8",
+        "rankUpDown": "0",
+        "title": "Elvis",
+        "fullTitle": "Elvis (2022)",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BYzMzNTJjYmMtZTkxNS00MjI4LWI3YmQtOTQ4MDZjZDJlZjQyXkEyXkFqcGdeQXVyNjc0NzQzNTM@._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Baz Luhrmann (dir.), Tom Hanks, Austin Butler",
+        "imDbRating": "7.8",
+        "imDbRatingCount": "54113"
+    },
+    {
+        "id": "tt1655389",
+        "rank": "9",
+        "rankUpDown": "+255",
+        "title": "Blonde",
+        "fullTitle": "Blonde (2022)",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BNDk2YTA1MGYtMGNjMi00YTJlLWI1YjItMjBjOGJlZGIwZmYzXkEyXkFqcGdeQXVyODA0MjgyNzM@._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Andrew Dominik (dir.), Ana de Armas, Bobby Cannavale",
+        "imDbRating": "7.8",
+        "imDbRatingCount": "0"
+    },
+    {
+        "id": "tt8426926",
+        "rank": "10",
+        "rankUpDown": "+50",
+        "title": "Shamshera",
+        "fullTitle": "Shamshera (2022)",
+        "year": "2022",
+        "image": "https://m.media-amazon.com/images/M/MV5BODVlNWNmN2EtYWJlYy00ZTc5LThjMTItYTQ0ZTlmZDYwN2VjXkEyXkFqcGdeQXVyNTkzNDQ4ODc@._V1_UX128_CR0,12,128,176_AL_.jpg",
+        "crew": "Karan Malhotra (dir.), Ranbir Kapoor, Sanjay Dutt",
+        "imDbRating": "7.4",
+        "imDbRatingCount": "48020"
+    }
 ]
 }
