@@ -1,5 +1,5 @@
 
-import CreateNewList from './Pages/CreateNewList';
+import CreateNewList from './Components/CreateNewList';
 
 function App() {
   return (
