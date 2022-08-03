@@ -1,4 +1,4 @@
-import { ERROR_MOVIE_DETAILS, ERROR_POPULAR_MOVIE, GET_MOVIE_DETAILS, GET_POPULAR_MOVIE, LOADING_MOVIE_DETAILS, LOADING_POPULAR_MOVIE } from "./actionType"
+import { ERROR_MOVIE_DETAILS, ERROR_POPULAR_MOVIE, GET_FILTERED_DATA, GET_MOVIE_DETAILS, GET_POPULAR_MOVIE, LOADING_MOVIE_DETAILS, LOADING_POPULAR_MOVIE } from "./actionType"
 
 export const getMovieDetails=(payload)=>{
     return{
@@ -35,6 +35,13 @@ export const loadingPopularMovie=()=>{
 export const errorPopularMovie=()=>{
     return {
         type:ERROR_POPULAR_MOVIE
+    }
+}
+
+export const getFilteredData=(payload)=>{
+    return{
+        type:GET_FILTERED_DATA,
+        payload
     }
 }
 

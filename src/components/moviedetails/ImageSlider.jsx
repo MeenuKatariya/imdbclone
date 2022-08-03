@@ -1,12 +1,8 @@
-import { Box } from '@mui/material';
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
+
 import Slider from "react-slick";
 import React from 'react';
 import KeyboardArrowLeftRoundedIcon from '@mui/icons-material/KeyboardArrowLeftRounded';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
-import Carousel from 'react-material-ui-carousel';
-import { height } from '@mui/system';
 import styled from 'styled-components';
 
 function SampleNextArrow(props) {

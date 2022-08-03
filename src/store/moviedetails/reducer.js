@@ -1,6 +1,7 @@
 import {
   ERROR_MOVIE_DETAILS,
   ERROR_POPULAR_MOVIE,
+  GET_FILTERED_DATA,
   GET_MOVIE_DETAILS,
   GET_POPULAR_MOVIE,
   LOADING_MOVIE_DETAILS,
@@ -11,7 +12,8 @@ const init = {
   loading: false,
   error: false,
   movieDetails: [],
-  movies:[]
+  movies:[],
+  filterData:[]
 };
 
 export const reducer = (state = init, { type, payload }) => {
@@ -56,6 +58,14 @@ export const reducer = (state = init, { type, payload }) => {
         ...state,
         loading: false,
         error: true,
+      };
+
+      case GET_FILTERED_DATA:
+      return {
+        ...state,
+        loading: false,
+        error: false,
+        filterData: payload,
       };
 
     default:

@@ -19,6 +19,7 @@ import { Details } from "../components/moviedetails/Detaisl";
 import { BoxOffice } from "../components/moviedetails/BoxOffice";
 import { RightPanel } from "../components/moviedetails/RightPanel";
 import { ImageSlider } from "../components/moviedetails/ImageSlider";
+import { Loading } from "../components/Loading";
 export const MovieDetailsPage = () => {
   const {loading,error,movieDetails} = useSelector((state) => state.movieDetails);
   const dispatch = useDispatch();
@@ -43,7 +44,7 @@ export const MovieDetailsPage = () => {
         />
       </Box>
       {movieDetails.length === 0 ? (
-        <div style={{ color: "white" }}>loading.....</div>
+        <Loading/>
       ) : (
         <div style={{ width: "100%" }}>
           <Box
