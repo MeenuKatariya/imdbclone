@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box} from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -7,9 +7,10 @@ import Typography from "@mui/material/Typography";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import CollectionsIcon from "@mui/icons-material/Collections";
 import BookmarkAddSharpIcon from '@mui/icons-material/BookmarkAddSharp';
+import {Link} from 'react-router-dom';
 
 export const MovieCard = ({ movieData }) => {
-  const { posters, trailer, images } = movieData;
+  const { posters, trailer, images,id } = movieData;
   const poster=posters.posters[0].link;
   const image=images.items;
   return (
@@ -89,7 +90,8 @@ export const MovieCard = ({ movieData }) => {
             },
           }}
         >
-          <CardContent sx={{}}>
+          <CardContent>
+            <Link to={`/photogallary/${id}`}>
             <CollectionsIcon sx={{ color: "white", fontSize: "30px" }} />
             <br />
             <Typography
@@ -100,10 +102,12 @@ export const MovieCard = ({ movieData }) => {
                 color: "white",
                 letterSpacing: "2px",
                 marginTop: "5px",
+                cursor:"pointer"
               }}
             >
               {image.length} PHOTOS
             </Typography>
+            </Link>
           </CardContent>
         </Card>
       </Box>

@@ -46,7 +46,7 @@ export const MovieDetailsPage = () => {
       {movieDetails.length === 0 ? (
         <Loading/>
       ) : (
-        <div style={{ width: "100%" }}>
+        <div style={{ width: "100%",backgroundColor:"rgb(31,31,31)" }}>
           <Box
             variant="div"
             sx={{ width: "90%", margin: "auto", marginBottom: "50px" }}
@@ -101,7 +101,7 @@ export const MovieDetailsPage = () => {
             >
               <Box
                 variant="div"
-                sx={{ width: "62%", border: "2px solid black" }}
+                sx={{ width: "62%"}}
               >
               <Heading headingString={"Photos"} arrow={true}/>
 
@@ -131,7 +131,7 @@ export const MovieDetailsPage = () => {
 
               <Box
               variant="div"
-              sx={{ width: "28%", border: "2px solid black", padding:"0px 40px" }}
+              sx={{ width: "28%", padding:"0px 40px" }}
             >
               <RightPanel/>
 

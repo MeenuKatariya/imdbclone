@@ -7,14 +7,12 @@
   pointer-events: none;
 }
 
-
-
-.slick-prev:before,.slick-next:before{
-  content:"!important";
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;
 }
 
-
-.photo-gallary{
-  background-color: rgb(212,211,207);
-  width:"100%";
+.photo-gallary {
+  background-color: rgb(212, 211, 207);
+  width: "100%";
 }
