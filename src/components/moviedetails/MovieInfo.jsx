@@ -85,6 +85,7 @@ export const MovieInfo = ({ movieData }) => {
             fontWeight: "700",
             textTransform: "none",
             width: "80%",
+            maxWidth:"460px",
             backgroundColor: "rgb(245,197,24)",
             "&:hover": {
                 backgroundColor: "#b8971f"
@@ -105,6 +106,7 @@ export const MovieInfo = ({ movieData }) => {
             textTransform: "none",
             color: "white",
             width: "68%",
+            maxWidth:"410px",
             borderColor: "rgb(49,49,49)",
             backgroundColor:"rgb(49,49,49)",
             "&:hover": {
@@ -123,7 +125,6 @@ export const MovieInfo = ({ movieData }) => {
             fontWeight: "700",
             textTransform: "none",
             color: "white",
-            width: "8%",
             flex:"right",
             marginLeft:"4px",
             borderColor: "rgb(49,49,49)",
