@@ -146,6 +146,7 @@ export const ImageSlider = ({ images }) => {
         width: "100%",
         height: "190px",
         marginTop: "20px",
+        marginBottom:"50px",
         position: "relative",
       }}
     >

@@ -26,7 +26,7 @@ export const MovieCard = ({ movieData }) => {
             color:"#585858c5"
         }}}/>
       </Card>
-      <Card sx={{ width: "61%", marginLeft: "5px" }}>
+      <Card sx={{ width: "61%",maxWidth:"835px", marginLeft: "5px" }}>
         <iframe
           title={trailer.fullTitle}
           component="iframe"
@@ -42,7 +42,7 @@ export const MovieCard = ({ movieData }) => {
         />
       </Card>
 
-      <Box variant="div" sx={{ width: "18%", marginLeft: "5px" }}>
+      <Box variant="div" sx={{ width: "18%",maxWidth:"250px", marginLeft: "5px" }}>
         <Card
           sx={{
             display: "flex",

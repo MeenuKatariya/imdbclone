@@ -111,7 +111,9 @@ export const RightPanel = () => {
           cursor: "pointer",
         }}
       >
-        <img src="https://m.media-amazon.com/images/M/MV5BYjAzMDBlMmMtMGNlYy00OTUxLThlMjYtZjAwZmVlNjI2ZmZhXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_QL75_UX380_CR0,36,380,214_.jpg%22" />
+        <img 
+        style={{maxWidth:"400px"}}
+        src="https://m.media-amazon.com/images/M/MV5BYjAzMDBlMmMtMGNlYy00OTUxLThlMjYtZjAwZmVlNjI2ZmZhXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_QL75_UX380_CR0,36,380,214_.jpg%22" />
         <div
           style={{
             color: "rgb(33,33,33)",
@@ -180,6 +182,7 @@ export const RightPanel = () => {
         <img
           width="100%"
           height="240px"
+          style={{maxWidth:"400px"}}
           src="https://m.media-amazon.com/images/M/MV5BYTZhOTEzYjgtNzljMy00M2IyLThkZmMtNjdiN2Y5MDEwMWE5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_QL75_UX760_CR0,71,760,428_.jpg"
         />
         <div
@@ -250,6 +253,7 @@ export const RightPanel = () => {
       >
         <img
           width="100%"
+          style={{maxWidth:"400px"}}
           height="210px"
           src="https://m.media-amazon.com/images/M/MV5BMTA0MDlkMGYtMTEwYS00YTc2LTk2YzMtYWQzZmMxYmUxZmY1XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_QL75_UX760_CR0,71,760,428_.jpg"
         />

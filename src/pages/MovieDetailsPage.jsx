@@ -24,11 +24,13 @@ export const MovieDetailsPage = () => {
   const {loading,error,movieDetails} = useSelector((state) => state.movieDetails);
   const dispatch = useDispatch();
 
+  let id="tt8426926";
+
   useEffect(() => {
     dispatch(loadingMovieDetails());
     axios({
       method: "get",
-      url: "http://localhost:8080/movieDetails",
+      url: `http://localhost:8080/movieDetails?id=${id}`,
     })
       .then((res) => {
         dispatch(getMovieDetails(res.data));

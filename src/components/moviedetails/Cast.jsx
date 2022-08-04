@@ -19,8 +19,10 @@ export const Cast = ({ actorList }) => {
               width: "100px",
               height: "100px",
               
+              
               ".MuiAvatar-img": {
-                margin: "10px",
+                margin:"8px",
+                objectFit:"cover"
               },
             }}
           />
