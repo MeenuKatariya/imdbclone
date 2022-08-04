@@ -23,7 +23,8 @@ import { grey } from "@mui/material/colors";
 import {useNavigate} from "react-router-dom"
 import { Link } from "@mui/material";
 import { IMDbProImage } from "../Pages/IMDbProImage";
-import {SearchBar} from "../Pages/Search"
+import {SearchBar} from "../Pages/Search";
+import axios from 'axios';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -128,10 +129,8 @@ export const Navbar = () => {
     // console.log(output)
 
     fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
-    .then((res)=>res.json()).then((res)=>{console.log(res,res.Response);
-                                           res.Response ?   setInputSearch(res.Search) :setInputSearch([])  })
-          
-    // setInputSearch(res)
+    .then((res)=>res.json()).then((res)=>setInputSearch(res))
+
 }
 
 React.useEffect(()=>{
