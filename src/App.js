@@ -15,7 +15,7 @@ function App() {
 
     {/* <TrailerShow/> */}
     {/* <PhotoGallary/> */}
-    <ImageShow/>
+    {/* <ImageShow/> */}
   
 <Pages/>
 
