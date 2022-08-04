@@ -1,4 +1,5 @@
-import { GET_USER_DATA, GET_USER_ERROR, GET_USER_LOADING } from "./actionTypes"
+
+import {Auth_DATA,Auth_ERROR,Auth_LOADING } from "./ActionType"
 
 const initState = {
     user: [],
@@ -6,32 +7,37 @@ const initState = {
     isError: false
 }
 
-const loginReducer = (state = initState, { type, payload }) => {
+   export const loginReducer = (state = initState, { type, payload }) => {
     switch (type) {
-        case GET_USER_LOADING:
+
+       
+
+
+
+
+                     
+        case Auth_LOADING:
             return {
                 ...state,
                 user: [],
                 isLoading: true,
                 isError: false
             }
-        case GET_USER_ERROR:
+        case Auth_ERROR:
             return {
                 ...state,
                 user: [],
                 isLoading: false,
                 isError: true
             }
-        case GET_USER_DATA:
+        case Auth_DATA:
             return {
                 ...state,
-                user: [...payload],
+                user: payload,
                 isLoading: false,
                 isError: true
             }
         default:
             return state;
+        }
     }
-}
-
-export default loginReducer;

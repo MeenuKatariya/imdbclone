@@ -1,0 +1,6 @@
+.para>p:hover{
+  text-decoration: underline;
+}
+.para>p{
+    cursor: pointer;
+}

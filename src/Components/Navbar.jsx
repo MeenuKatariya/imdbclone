@@ -22,6 +22,8 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { grey } from "@mui/material/colors";
 import {useNavigate} from "react-router-dom"
 import { Link } from "@mui/material";
+import { IMDbProImage } from "../Pages/IMDbProImage";
+import {SearchBar} from "../Pages/Search"
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -52,9 +54,11 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "#121212",
 
   "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
+    padding: theme.spacing(0.3, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    paddingLeft: '15px',
+    padding:"5px",
+
     transition: theme.transitions.create("width"),
     // width: '100%',
     [theme.breakpoints.up("md")]: {
@@ -69,7 +73,12 @@ export const Navbar = () => {
   const navigate=useNavigate()
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-
+  const [divHover,setDivHover]=React.useState(false)
+  const [searchMovie,setSearchMovie] =React.useState("");
+  const [inputSearch,setInputSearch]=React.useState("")
+  const[timer,setTimer]=React.useState(0)
+  const [loginBox,setLoginBox]=React.useState(false)
+// console.log(search)
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -109,10 +118,49 @@ export const Navbar = () => {
     </Menu>
   );
 
+ 
+
+  const searchData=()=>{
+    
+    // let res=await fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
+    // let output=await res.json()
+    // setInputSearch(output.Search)
+    // console.log(output)
+
+    fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
+    .then((res)=>res.json()).then((res)=>setInputSearch(res))
+
+}
+
+React.useEffect(()=>{
+  searchData()
+},[searchMovie])
+// function change(){
+//     debounce(500)
+// }
+
+// function debounce(d){
+//     if(timer>0){
+//         clearTimeout(timer)
+//     }
+//     setTimer(setTimeout(()=>{
+//         searchData(search)
+//     }))
+// }
+
+// change()
+
+
+// searchData();
+
+
   const handleSign=()=>{
     // console.log("1")
     // return
-    navigate("/sign")
+    navigate("/createaccount")
+  }
+  const handleMenu=()=>{
+    navigate("/menu")
   }
 
   const mobileMenuId = "primary-search-account-menu-mobile";
@@ -168,9 +216,20 @@ export const Navbar = () => {
   );
 
   return (
-    <Box className="mainBox" style={{}}>
+    <Box className="mainBox" style={{position:"relative"}}>
       <AppBar className="appBar" style={{ backgroundColor: "#121212" }}>
         <Toolbar style={{ marginLeft: 40 }}>
+          {/* <div className="loginBox">
+           <div>
+            <p>Your Activity</p>
+            <p>Your Watchlist</p>
+            <p>Your ratings</p>
+            <p>Your lists</p>
+            <p>Account settings</p>
+            <p>Sign out</p>
+
+           </div>
+          </div> */}
           <div
             style={{
               display: "flex",
@@ -185,6 +244,7 @@ export const Navbar = () => {
             />
 
             <div
+            className="menuDiv"
               style={{
                 display: "flex",
                 width: 80,
@@ -197,6 +257,7 @@ export const Navbar = () => {
 
               <p
                 className="menu"
+                onClick={handleMenu}
                 style={{ textAlign: "center", marginTop: 10, fontWeight: 700 }}
               >
                 Menu
@@ -216,7 +277,7 @@ export const Navbar = () => {
                 style={{
                   fontSize: 15,
                   color: "black",
-                  marginTop: 2,
+                  marginTop: 3,
                   textAlign: "center",
                   marginLeft: 5,
                   fontWeight: 700,
@@ -224,25 +285,28 @@ export const Navbar = () => {
               >
                 All
               </p>
-              <ArrowDropDownIcon style={{ color: "black" }} />
+              <ArrowDropDownIcon style={{ color: "black", borderRadius:10 ,marginTop:1,alignItems:"center" }} />
 
-              <hr
-                style={{ height: 28, marginTop: 0, backgroundColor: "black" }}
+              <hr 
+                style={{width:"0", height: 28, marginTop:0.5, opacity:"50%",  backgroundColor: "black"}}
               />
             </div>
 
             <StyledInputBase
               placeholder="Search IMDb"
               inputProps={{ "aria-label": "search" }}
+              value={searchMovie}
+              onChange={(e)=>{setSearchMovie(e.target.value)}}
             />
 
             <div className="searchIcon">
               <SearchIcon
                 style={{
-                  marginLeft: "280",
+                  marginLeft: "300",
                   color: "grey",
                   margon: "auto",
                   marginTop: "3",
+
                 }}
               />
             </div>
@@ -250,10 +314,15 @@ export const Navbar = () => {
 
           <div
             className="imdbPro"
+            onMouseEnter={()=>setDivHover(true)}
+            onMouseLeave={()=>setDivHover(false)}
             style={{
               height: 35,
               marginLeft: 2,
-              width: 150,
+              width: 130,
+              marginRight:15,
+              borderRight:"2px solid rgba(128, 128, 128, 0.40)",
+              
               display: "flex",
               justifyContent: "space-between",
             }}
@@ -262,16 +331,19 @@ export const Navbar = () => {
               src="./imdb.jpg"
               alt=""
               height={15}
+
+    
               style={{ margin: "auto" }}
             />
-            <hr
+            {/* <hr
               style={{
-                height: 35,
+                // height: 0,
+
                 marginTop: 0,
                 backgroundColor: "black",
-                width: 0,
+                // width: 0,
               }}
-            />
+            /> */}
           </div>
 
           <Box
@@ -354,6 +426,8 @@ export const Navbar = () => {
               <MoreIcon />
             </IconButton>
           </Box>
+          <IMDbProImage  prop={divHover} />
+          <SearchBar prop={inputSearch} />
         </Toolbar>
       </AppBar>
       {renderMobileMenu}

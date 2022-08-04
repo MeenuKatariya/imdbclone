@@ -1,10 +1,40 @@
 .imdbImage{
-  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+.menu{
+  cursor: pointer;
+}
+.watchList{
+  cursor: pointer;
+}
+.signIn{
+  cursor: pointer;
+}
+.EN{
+  cursor: pointer;
+}
+.menuDiv{
+  cursor: pointer;
+}
+.imdbPro{
+  cursor: pointer;
 }
 .meenuIcon{
   border: 1px solid blue;
 }
-
+.menuDiv:hover{
+  background-color:#1f1f1f ;
+}
+.watchList:hover{
+  background-color:#1f1f1f ;
+}
+.signIn:hover{
+  background-color:#1f1f1f ;
+}
+.EN:hover{
+  background-color:#1f1f1f ;
+}
 
 @media all and (min-width:1243px)  and (max-width:1446px){
    /* .imdbImage>img{
@@ -68,7 +98,6 @@
        .watchlistSignIn{
         width:100;
         font-size: 10;
-       
        }
        .EN{
         visibility: hidden;

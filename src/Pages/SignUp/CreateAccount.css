@@ -1,11 +1,33 @@
 .signLeft{
-    border:1px solid red;
+    /* border:1px solid red; */
     width:400px;
 }
 .signLeft>h3{
     color:#333333; 
     font-size: 25px;
+    font-weight: 1200;
     font-family:"12px Verdana,Arial,sans-serif"
+}
+.recenttview{
+    /* border: 1px solid red;; */
+    display: flex;
+    width:1000px;
+    justify-content: space-between;
+    margin: auto;
+    /* margin-top: 0; */
+}
+.viewed_p{
+    color:#136Cb2;
+    font-size: 11px;
+}
+.Recently_Viewed{
+    /* border: 1px solid blue; */
+    color:#666666;
+    font-weight: 700;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 0;
+    font-family: " Verdana, Arial,sans-serif";
 }
 .signImdb{
     border: 1px solid gray;
@@ -18,23 +40,122 @@
     border-radius: 6px;
     
 }
+.some_message>p{
+    font-size: 10px;
+    /* border: 1px solid blue; */
+    width: 230px;
+    margin: auto;
+    margin-top: 10px;
+  }
+  .some_message span{
+      color: blue;
+  }
 .signImdb>div>p{
-    font-size: 20px;
+    font-size: 14px;
     color:#555555;
     text-align: left;
 
     margin-top: 12px;
-    font-family:"12px Verdana,Arial,sans-serif"
+    font-family: 'Verdana',Arial,sans-serif;
+    
+
 }
+.imdb{
+    /* border: 1px solid red; */
+    display: flex;
+    width:220px;
+    font-weight: bold;
+    align-items: center;
+    height: 40px;
+    font-size: 15px;
+    font-family:" Verdana,Arial,sans-serif";
+    margin: auto;
+    color:#555555;
+    justify-content: space-around;
+    /* margin-left: 30px; */
+     border:0.5px solid  grey;
+     border-radius: 5px;
+
+}
+
+.amazon{
+    /* border: 1px solid red; */
+    display: flex;
+    width:220px;
+    font-weight: bold;
+    align-items: center;
+    height: 40px;
+    font-size: 14.5px;
+    font-family:" Verdana,Arial,sans-serif";
+    margin: auto;
+    color:#555555;
+    justify-content: space-around;
+    /* margin-left: 30px; */
+     border:0.5px solid  grey;
+     border-radius: 5px;
+
+}
+
+.goggle{
+    /* border: 1px solid red; */
+    display: flex;
+    width:220px;
+    font-weight: bold;
+    align-items: center;
+    height: 40px;
+    font-size: 15px;
+    font-family:" Verdana,Arial,sans-serif";
+    margin: auto;
+    color:#555555;
+    justify-content: space-around;
+    /* margin-left: 30px; */
+     border:0.5px solid  grey;
+     border-radius: 5px;
+
+}
+.apple{
+    /* border: 1px solid red; */
+    display: flex;
+    width:220px;
+    font-weight: bold;
+    align-items: center;
+    height: 40px;
+    font-size: 15px;
+    font-family:" Verdana,Arial,sans-serif";
+    margin: auto;
+    color:#555555;
+    justify-content: space-around;
+    /* margin-left: 30px; */
+     border:0.5px solid  grey;
+     border-radius: 5px;
+
+}
+.paraDiv{
+    /* border: 1px solid red; */
+    height: 100%;
+    width:76%;
+    text-align: center;
+    
+}
+.paraDiv>p{
+    font-weight: bold;
+    text-align: left;
+    margin-top: 10px;
+
+}
+
+
 .signImdb>img{
-    height: 50%;
-    width:36px;
-    margin-top: 12px;
+    height: 60%;
+    width:25px;
+    margin-top: 6px;
 }
 .BigPart{
     display: flex;
     justify-content: space-between;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    font-family: Verdana,Arial,sans-serif;
+    height: 510px;
     width:1000px;
     margin: auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;

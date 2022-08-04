@@ -6,6 +6,8 @@ import { CreateAccount } from './Pages/SignUp/CreateAccount';
 import {Sign} from "./Pages/SignUp/Sign"
 import {Login} from "./Pages/Login/Login"
 import {Pages} from "./Pages/Pages"
+import {Menu} from './Pages/Menu';
+import { IMDbProImage } from './Pages/IMDbProImage';
 function App() {
   return (
     <div className="App">
@@ -14,7 +16,9 @@ function App() {
       {/* <Sign/> */}
       <Navbar/>
       <Pages/>
+      {/* <Menu/> */}
      {/* <Footer/> */}
+     {/* <IMDbProImage/> */}
     </div>
   );
 }

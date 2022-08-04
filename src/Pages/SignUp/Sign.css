@@ -30,20 +30,24 @@
     
 
 }
-.imdbImage{
+.imdbImageFirst{
     width:100px;
     height: 50px;
-
+   border: none;
     margin: auto;
    
 
 
 }
-.imdbImage>img{
+.imdbImageFirst>img{
     
     height:100%;
     
 
+
+}
+.createButton{
+    border-radius: 10px;
 
 }
 .createButton>button{
@@ -54,8 +58,11 @@
      font-family:"Amazon Ember",Arial,sans-serif;
      border:#a88734  ;
      margin-right: 15px;
-     border-radius: 2px;
-     color:#111111
+     outline:0.2px solid #a88734;
+     /* border-radius: 14px; */
+     color:#111111;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+     
     }
 
 .signBigDiv{
@@ -65,6 +72,8 @@
     border:1px solid grey;
     border-radius: 5px;
     margin-top: 20px;
+    /* height: 800px; */
+    
 
 
 }
@@ -80,10 +89,9 @@
     height: 23px;
     margin-top: 0;
     border-radius: 5px;
+    
 }
-.signInLine:hover{
-color:burlywood 
-}
+
 .help{
     display:flex;
     margin:auto;
@@ -100,4 +108,12 @@ color:burlywood
     font-family:"Amazon Ember",Arial,sans-serif;
    font-size: 11px;
    margin-top: 0;
+}
+
+/* .signInLine:hover{
+    color:#111111
+} */
+
+.signInLine:hover{
+    border:1 px solid black;
 }

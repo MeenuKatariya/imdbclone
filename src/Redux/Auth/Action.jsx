@@ -1,24 +1,29 @@
-import { GET_USER_DATA, GET_USER_ERROR, GET_USER_LOADING } from "./actionTypes"
 
-export const getUserLoading = () => {
+import { Auth_DATA, Auth_ERROR, Auth_LOADING } from "./ActionType"
+
+
+
+export const authLoading = () => {
     return {
 
-        type: GET_USER_LOADING
+        type: Auth_LOADING
     };
 
 }
 
-export const getUserError = () => {
+export const authError = () => {
     return {
 
-        type: GET_USER_ERROR
+        type: Auth_ERROR
     };
 }
 
-export const getUserData = (payload) => {
+export const authData = (payload) => {
     return {
 
-        type: GET_USER_DATA,
+        type: Auth_DATA,
         payload
-    };
+    }
 }
+
+

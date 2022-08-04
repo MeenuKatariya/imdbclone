@@ -1,10 +1,78 @@
 {
-  "users":[
+  "user_profile": [
     {
-      "id":"1",
-      "name":"meenu@gmail.com",
-      "password":"123"
-
+      "name": "meenu",
+      "email": "meenu@gmail.com",
+      "password": "123456789",
+      "watchlist": [],
+      "my_list": [],
+      "recently_viewed": [],
+      "id": 1
+    },
+    {
+      "name": "meenu",
+      "email": "meenu123@gmail.com",
+      "password": "1234567890",
+      "watchlist": [],
+      "my_list": [],
+      "recently_viewed": [],
+      "id": 2
+    },
+    {
+      "name": "hg",
+      "email": "dd",
+      "password": "1234567890",
+      "watchlist": [],
+      "my_list": [],
+      "recently_viewed": [],
+      "id": 3
+    },
+    {
+      "name": "mer",
+      "email": "mer@gmail.com",
+      "password": "1234567890",
+      "watchlist": [],
+      "my_list": [],
+      "recently_viewed": [],
+      "id": 4
+    },
+    {
+      "name": "mk",
+      "email": "mk@gmail.com",
+      "password": "123456789o",
+      "watchlist": [],
+      "my_list": [],
+      "recently_viewed": [],
+      "id": 5
+    },
+    {
+      "name": "zxc",
+      "email": "zxc@gmail.com",
+      "password": "zxcvbnml",
+      "watchlist": [],
+      "my_list": [],
+      "recently_viewed": [],
+      "id": 6
+    },
+    {
+      "name": "qwerty",
+      "email": "qwerty@gmail.com",
+      "password": "asdasdasd",
+      "login": true,
+      "watchlist": [],
+      "my_list": [],
+      "recently_viewed": [],
+      "id": 7
+    },
+    {
+      "name": "meenu",
+      "email": "meenu@gmail.com",
+      "password": "1234567890",
+      "login": true,
+      "watchlist": [],
+      "my_list": [],
+      "recently_viewed": [],
+      "id": 8
     }
   ]
 }
