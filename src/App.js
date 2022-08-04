@@ -5,10 +5,23 @@ import { Pages } from "./pages/Pages";
 
 function App() {
   return (
+<<<<<<< HEAD
     <div>
       <Navbar />
       <Pages />
       <Footer />
+=======
+    <div className="App">
+    {/* <MovieDetailsPage/> */}
+
+    {/* <TrailerShow/> */}
+    {/* <PhotoGallary/> */}
+    {/* <ImageShow/> */}
+  
+<Pages/>
+
+
+>>>>>>> b4e5cdd (.)
     </div>
   );
 }

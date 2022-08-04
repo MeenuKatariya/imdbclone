@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {
   errorPopularMovie,
   getFilteredData,
@@ -21,7 +21,8 @@ export const PhotoGallary = () => {
   if (movieDetails.length != 0) {
     poster = movieDetails[0].posters.posters[0].link;
   }
-  const id  ="tt8426926";
+  const {id}=useParams();
+
   const dispatch = useDispatch();
  
   useEffect(() => {
@@ -86,6 +87,7 @@ export const PhotoGallary = () => {
                 cols={5}
               >
                 {movieDetails[0].images.items.map((el) => (
+                  <Link to={`/image/${id}`}>
                   <ImageListItem
                     key={el.image}
                     sx={{
@@ -103,6 +105,7 @@ export const PhotoGallary = () => {
                       loading="lazy"
                     />
                   </ImageListItem>
+                  </Link>
                 ))}
               </ImageList>
             </Box>

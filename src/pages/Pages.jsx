@@ -9,9 +9,9 @@ export const Pages=()=>{
 
     return(<div>
         <Routes>
-            <Route path='/trailer' element={<TrailerShow/>}></Route>
-            <Route path='/photogallary/id' element={<PhotoGallary/>}></Route>
-            <Route path='/image' element={<ImageShow/>}></Route>
+            <Route path='/trailer/:id' element={<TrailerShow/>}></Route>
+            <Route path='/photogallary/:id' element={<PhotoGallary/>}></Route>
+            <Route path='/image/:id' element={<ImageShow/>}></Route>
             <Route path="/" element={<MovieDetailsPage />} />
         </Routes>
     </div>)

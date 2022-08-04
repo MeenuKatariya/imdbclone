@@ -25,7 +25,7 @@ export const TrailerShow = () => {
     trailer = movieDetails[0].trailer;
   }
   const dispatch = useDispatch();
-  const id = "tt8426926";
+  const {id}=useParams(); 
   useEffect(() => {
     dispatch(loadingPopularMovie());
     axios({
