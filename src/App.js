@@ -5,12 +5,9 @@ import { Pages } from "./pages/Pages";
 
 function App() {
   return (
-<<<<<<< HEAD
-    <div>
-      <Navbar />
-      <Pages />
-      <Footer />
-=======
+
+
+ 
     <div className="App">
     {/* <MovieDetailsPage/> */}
 
@@ -21,9 +18,9 @@ function App() {
 <Pages/>
 
 
->>>>>>> b4e5cdd (.)
+
     </div>
-  );
+  )
 }
 
 export default App;
