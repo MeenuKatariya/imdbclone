@@ -23,7 +23,8 @@ import { grey } from "@mui/material/colors";
 import {useNavigate} from "react-router-dom"
 import { Link } from "@mui/material";
 import { IMDbProImage } from "../Pages/IMDbProImage";
-import {SearchBar} from "../Pages/Search"
+import {SearchBar} from "../Pages/Search";
+import axios from 'axios';
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -75,7 +76,7 @@ export const Navbar = () => {
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
   const [divHover,setDivHover]=React.useState(false)
   const [searchMovie,setSearchMovie] =React.useState("");
-  const [inputSearch,setInputSearch]=React.useState("")
+  const [inputSearch,setInputSearch]=React.useState([])
   const[timer,setTimer]=React.useState(0)
   const [loginBox,setLoginBox]=React.useState(false)
 // console.log(search)
@@ -127,8 +128,13 @@ export const Navbar = () => {
     // setInputSearch(output.Search)
     // console.log(output)
 
-    fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
-    .then((res)=>res.json()).then((res)=>setInputSearch(res))
+
+    axios({
+      method:"get",
+      url:`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`
+    }).then((res)=>setInputSearch(res.data)).catch((err)=>console.log(err));
+    // fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
+    // .then((res)=>res.json()).then((res)=>setInputSearch(res))
 
 }
 
