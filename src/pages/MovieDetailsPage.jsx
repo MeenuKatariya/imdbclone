@@ -20,11 +20,16 @@ import { BoxOffice } from "../components/moviedetails/BoxOffice";
 import { RightPanel } from "../components/moviedetails/RightPanel";
 import { ImageSlider } from "../components/moviedetails/ImageSlider";
 import { Loading } from "../components/Loading";
+import { MovieSlider } from "../components/moviedetails/MovieSlider";
 export const MovieDetailsPage = () => {
-  const {loading,error,movieDetails} = useSelector((state) => state.movieDetails);
+  const { loading, error, movieDetails } = useSelector(
+    (state) => state.movieDetails
+  );
+
+  const movieData = movieDetails[0];
   const dispatch = useDispatch();
 
-  let id="tt8426926";
+  let id = "tt8426926";
 
   useEffect(() => {
     dispatch(loadingMovieDetails());
@@ -46,9 +51,9 @@ export const MovieDetailsPage = () => {
         />
       </Box>
       {movieDetails.length === 0 ? (
-        <Loading/>
+        <Loading />
       ) : (
-        <div style={{ width: "100%",backgroundColor:"rgb(31,31,31)" }}>
+        <div style={{ width: "100%", backgroundColor: "rgb(31,31,31)" }}>
           <Box
             variant="div"
             sx={{ width: "90%", margin: "auto", marginBottom: "50px" }}
@@ -64,29 +69,27 @@ export const MovieDetailsPage = () => {
                 alignContent: "space-between",
               }}
             >
-              <MovieTitle movieData={movieDetails[0]} />
+              <MovieTitle movieData={movieData} />
 
-              <MoviesRating movieData={movieDetails[0]} />
+              <MoviesRating movieData={movieData} />
             </Box>
 
-            <MovieCard movieData={movieDetails[0]} />
+            <MovieCard movieData={movieData} />
 
             <Box variant="div" sx={{}}>
               <Box
                 variant="div"
                 sx={{ textAlign: "left", display: "flex", gap: "10px" }}
               >
-                {movieDetails[0].genres.split(", ").map((ele) => (
+                {movieData.genres.split(", ").map((ele) => (
                   <MovieGenres genres={ele} key={ele} />
                 ))}
               </Box>
 
               <Box variant="div">
-                <MovieInfo movieData={movieDetails[0]} />
+                <MovieInfo movieData={movieData} />
               </Box>
             </Box>
-
-            
           </Box>
 
           <Box
@@ -99,19 +102,27 @@ export const MovieDetailsPage = () => {
           >
             <Box
               variant="div"
-              sx={{ width: "90%", margin: "auto", paddingTop: "20px" ,display:"flex"}}
+              sx={{
+                width: "90%",
+                margin: "auto",
+                paddingTop: "20px",
+                display: "flex",
+              }}
             >
-              <Box
-                variant="div"
-                sx={{ width: "62%"}}
-              >
-              <Heading headingString={"Photos"} arrow={true}/>
+              <Box variant="div" sx={{ width: "62%" }}>
+                <Heading headingString={"Photos"} arrow={true} />
 
-              <ImageSlider images={movieDetails[0].images.items}/>
+                <ImageSlider images={movieData.images.items} />
                 <Box variant="div" sx={{ width: "100%" }}>
                   <Heading headingString={"Top Cast"} arrow={true} />
 
-                  <Cast actorList={movieDetails[0].actorList} />
+                  <Cast actorList={movieData.actorList} />
+                </Box>
+
+                <Box variant="div" sx={{width:"100%", marginTop:"50px"}}>
+                <Heading headingString={"More like this"} arrow={false}/>
+                <MovieSlider data={movieData.similars}/>
+
                 </Box>
                 <Box
                   variant="div"
@@ -119,7 +130,7 @@ export const MovieDetailsPage = () => {
                 >
                   <Heading headingString={"Details"} arrow={false} />
 
-                  <Details movieData={movieDetails[0]} />
+                  <Details movieData={movieData} />
                 </Box>
                 <Box
                   variant="div"
@@ -127,23 +138,16 @@ export const MovieDetailsPage = () => {
                 >
                   <Heading headingString={"Box Office"} arrow={false} />
 
-                  <BoxOffice movieData={movieDetails[0]} />
+                  <BoxOffice movieData={movieData} />
                 </Box>
+
+                
               </Box>
 
-              <Box
-              variant="div"
-              sx={{ width: "28%", padding:"0px 40px" }}
-            >
-              <RightPanel/>
-
+              <Box variant="div" sx={{ width: "28%", padding: "0px 40px" }}>
+                <RightPanel />
+              </Box>
             </Box>
-
-
-            
-            </Box>
-
-            
           </Box>
         </div>
       )}{" "}
