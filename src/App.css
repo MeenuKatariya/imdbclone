@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -15,4 +15,8 @@
 .photo-gallary {
   background-color: rgb(212, 211, 207);
   width: "100%";
+}
+
+.slick-prev:before, .slick-next:before  {
+  content: '' !important;
 }
