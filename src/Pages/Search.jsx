@@ -43,7 +43,7 @@ export const  SearchBar=({prop})=> {
 }
 </div>
 
-    </>
+  
   )
 }
 
