@@ -75,7 +75,7 @@ export const Navbar = () => {
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
   const [divHover,setDivHover]=React.useState(false)
   const [searchMovie,setSearchMovie] =React.useState("");
-  const [inputSearch,setInputSearch]=React.useState("")
+  const [inputSearch,setInputSearch]=React.useState([])
   const[timer,setTimer]=React.useState(0)
   const [loginBox,setLoginBox]=React.useState(false)
 // console.log(search)
@@ -128,8 +128,10 @@ export const Navbar = () => {
     // console.log(output)
 
     fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
-    .then((res)=>res.json()).then((res)=>setInputSearch(res))
-
+    .then((res)=>res.json()).then((res)=>{console.log(res,res.Response);
+                                           res.Response ?   setInputSearch(res.Search) :setInputSearch([])  })
+          
+    // setInputSearch(res)
 }
 
 React.useEffect(()=>{

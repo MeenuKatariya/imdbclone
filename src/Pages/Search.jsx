@@ -4,7 +4,7 @@ export const  SearchBar=({prop})=> {
     // console.log(prop)
     let data=prop;
 
-    console.log(data)
+    console.log(data,"data")
   return (
     <>
      {/* <p>{data.Title}</p> */}
@@ -16,8 +16,8 @@ export const  SearchBar=({prop})=> {
         
       ))
      }
-     </div>
-      */}
+     </div> */}
+     
 
 <div>
   
