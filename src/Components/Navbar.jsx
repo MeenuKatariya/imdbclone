@@ -129,9 +129,9 @@ export const Navbar = () => {
     // console.log(output)
 
 
-    fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
-    .then((res)=>res.json()).then((res)=>{console.log(res,res.Response);
-                                           res.Response ?   setInputSearch(res.Search) :setInputSearch([])  })
+    // fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
+    // .then((res)=>res.json()).then((res)=>{console.log(res,res.Response);
+    //                                        res.Response ?   setInputSearch(res.Search) :setInputSearch([])  })
           
     // setInputSearch(res)
 
