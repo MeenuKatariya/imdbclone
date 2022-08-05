@@ -26,7 +26,7 @@ export const RightPanel = () => {
       .then((res) => {
         dispatch(getPopularMovie(res.data));
       })
-      .then((err) => dispatch(errorPopularMovie()));
+      .catch((err) => dispatch(errorPopularMovie()));
   }, [dispatch]);
 
   return (

@@ -11,10 +11,13 @@ import { Button } from "@mui/material";
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 import ShareIcon from "@mui/icons-material/Share";
-import {useParams} from 'react-router-dom';
+import {useParams,useNavigate} from 'react-router-dom';
+
 
 function SampleNextArrow(props) {
   const { className, style, onClick, currentSlide, slideCount } = props;
+  
+
   return (
     <div
       className={
@@ -87,6 +90,8 @@ function SamplePrevArrow(props) {
 
 export const ImageShow = () => {
 
+  const navigate=useNavigate();
+
   const { loading, error, movieDetails } = useSelector(
     (state) => state.movieDetails
   );
@@ -125,6 +130,7 @@ export const ImageShow = () => {
       <div style={{width:"80%",height:"60px",paddingTop:"10px 0px",margin:"auto",display:"flex",alignItems:"center",justifyContent:"space-between"}}>
       <Button
           variant="outlined"
+          onClick={()=>{navigate(`/photogallary/${id}`)}}
           startIcon={<CloseRoundedIcon sx={{color:"rgb(137,137,137)",fontSize:"40px","&:hover":{
             color:"white"
           }}} />}

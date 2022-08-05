@@ -156,6 +156,7 @@ export const MoviesRating = ({ movieData }) => {
               fontSize: "20px",
               fontWeight: "600",
               letterSpacing: "2px",
+              marginLeft:"5px"
             }}
           >
             60
