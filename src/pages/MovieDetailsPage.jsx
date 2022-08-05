@@ -26,6 +26,7 @@ export const MovieDetailsPage = () => {
     (state) => state.movieDetails
   );
 
+
   const movieData = movieDetails[0];
   const dispatch = useDispatch();
 
@@ -40,7 +41,7 @@ export const MovieDetailsPage = () => {
       .then((res) => {
         dispatch(getMovieDetails(res.data));
       })
-      .then((err) => dispatch(errorMovieDetails()));
+      .catch((err) => dispatch(errorMovieDetails()));
   }, [dispatch]);
   return (
     <div style={{ width: "100%", margin: "auto" }}>
