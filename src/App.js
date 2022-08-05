@@ -1,14 +1,14 @@
-import './App.css';
-import { Footer } from './Components/TempFooter';
-import { Navbar } from './Components/TempNavbar';
-import { Pages } from './Pages/Pages';
+import "./App.css";
+import { Footer } from "./Components/component_jasmine/TempFooter";
+import { Navbar } from "./Components/component_jasmine/TempNavbar";
+import { Pages } from "./Pages/Pages";
 
 function App() {
   return (
-    <div >
-    <Navbar/>
-    <Pages/>
-    <Footer/>
+    <div>
+      <Navbar />
+      <Pages />
+      <Footer />
     </div>
   );
 }
