@@ -1,18 +1,18 @@
-import React from 'react';
+import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { ImageShow } from '../components/moviedetails/ImageShow';
-import { TrailerShow } from '../components/moviedetails/TrailerShow';
-import { PhotoGallary } from '../components/moviedetails/PhotoGallary';
-import { MovieDetailsPage } from './MovieDetailsPage';
+import { Home } from "./TempHome";
+import { Watchlist } from "../Pages/Watchlist";
+import { EditWatchlist } from "../Pages/EditWatchlist";
 
-export const Pages=()=>{
+export const Pages = () => {
 
-    return(<div>
+    return (
+        <>
         <Routes>
-            <Route path='/trailer/:id' element={<TrailerShow/>}></Route>
-            <Route path='/photogallary/:id' element={<PhotoGallary/>}></Route>
-            <Route path='/image/:id' element={<ImageShow/>}></Route>
-            <Route path="/" element={<MovieDetailsPage />} />
+            <Route path="/" element={<Home/>}/> 
+            <Route path="/watchlist" element={<Watchlist/>}/>
+            <Route path="/edit_watchlist" element={<EditWatchlist/>}/>
         </Routes>
-    </div>)
+        </>
+    )
 }
