@@ -147,7 +147,7 @@ export const MovieDetailsPage = () => {
                 </Box>
 
                 
-              </Box>
+              </Box >
 
               <Box variant="div" sx={{ width: "28%", padding: "0px 40px" }}>
                 <RightPanel />
