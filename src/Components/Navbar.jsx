@@ -135,8 +135,21 @@ export const Navbar = () => {
     // setInputSearch(output.Search)
     // console.log(output)
 
-    fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
-    .then((res)=>res.json()).then((res)=>setInputSearch(res))
+    // fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
+    // .then((res)=>res.json()).then((res)=>{console.log(res,res.Response);
+    //                                        res.Response ?   setInputSearch(res.Search) :setInputSearch([])  })
+
+    // setInputSearch(res)
+
+    axios({
+      method: "get",
+      url: `http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`,
+    })
+      .then((res) => setInputSearch(res.data))
+      .catch((err) => console.log(err));
+    // fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
+    // .then((res)=>res.json()).then((res)=>setInputSearch(res))
+  };
 
   React.useEffect(() => {
     searchData();

@@ -1,22 +1,17 @@
 import React from 'react'
 import "./Search.css"
 export const  SearchBar=({prop})=> {
-    // console.log(prop)
+  
     const {Search}=prop;
-
-
-    console.log(data,"data")
+  
   return (
     
-   
-
 <div >
-  
 
 {
   (Search==null)?<div></div>:<div  className='superPart'>
     {
-     Search.map((el)=>(<div className="parentDiv">jsd
+     Search.map((el)=>(<div className="parentDiv">
     
       <div>
       <img src={el.Poster} alt="" />
