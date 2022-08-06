@@ -1,0 +1,37 @@
+.parentDiv{
+    /* border: 1px solid red; */
+    display: flex;
+    width:480px;
+    gap:20px;
+    z-index:  20px ; 
+   
+    background-color: #1f1f1f;
+
+   
+
+    
+}
+.superPart{
+    /* border: 1px solid red; */
+    left:300px;
+    top:60px;
+    position:absolute;
+    height:280px;
+    overflow-y: scroll;
+
+}
+
+.parentDiv>div>img{
+    width: 50px;
+    padding: 6px;
+}
+.parentDiv>div>p{
+    text-align: left;
+    margin: 3px;
+    /* color:#1f1f1f */
+
+
+}
+.parentDiv:hover{
+    background-color: #1f1f1f;
+}

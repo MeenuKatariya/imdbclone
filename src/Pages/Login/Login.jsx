@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { authData, authError, authLoading } from "../../Redux/Auth/Action";
 import { Alert, Button } from '@mui/material'
 
+
 export const Login = () => {
   const[email,setEmail]=React.useState("")
   const[password,setPassword]=React.useState("")
@@ -21,12 +22,12 @@ export const Login = () => {
     dispatch(authLoading())
    let res=await fetch(`http://localhost:8000/user_profile`)
    let output=await res.json()
-   console.log(output)
+  //  console.log(output)
    let userExist=false;
    output.forEach((element,i) => {
     if(element.password==password && element.email==email)
     {
-      dispatch(authData(element[i]))
+      dispatch(authData(element))
       // alert("Login Successful")
       setAlertEmail(true)
       setTimeout(()=>{
@@ -64,8 +65,11 @@ export const Login = () => {
 const handleLogin=()=>{
    fetchUserData()
 
+  }
 
-}
+
+
+
 
   return (
     <div style={{ marginBottom: 10,marginTop:120 }}>

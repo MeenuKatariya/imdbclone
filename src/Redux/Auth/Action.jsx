@@ -1,5 +1,5 @@
 
-import { Auth_DATA, Auth_ERROR, Auth_LOADING } from "./ActionType"
+import { Auth_DATA, Auth_ERROR, Auth_LOADING, SIGN_OUT } from "./ActionType"
 
 
 
@@ -7,6 +7,14 @@ export const authLoading = () => {
     return {
 
         type: Auth_LOADING
+    };
+
+}
+
+export const signOut = () => {
+    return {
+
+        type: SIGN_OUT
     };
 
 }

@@ -1,5 +1,5 @@
 
-import {Auth_DATA,Auth_ERROR,Auth_LOADING } from "./ActionType"
+import {Auth_DATA,Auth_ERROR,Auth_LOADING, SIGN_OUT } from "./ActionType"
 
 const initState = {
     user: [],
@@ -9,14 +9,7 @@ const initState = {
 
    export const loginReducer = (state = initState, { type, payload }) => {
     switch (type) {
-
-       
-
-
-
-
-                     
-        case Auth_LOADING:
+       case Auth_LOADING:
             return {
                 ...state,
                 user: [],
@@ -37,6 +30,12 @@ const initState = {
                 isLoading: false,
                 isError: true
             }
+
+            case SIGN_OUT:
+                return {
+                    user:[]
+    
+                }
         default:
             return state;
         }

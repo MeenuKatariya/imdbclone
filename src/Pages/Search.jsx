@@ -22,7 +22,7 @@ export const  SearchBar=({prop})=> {
      </div> */}
      
 
-<div>
+<div >
   
   {/* {
     !data.Response?<div></div>:<div>
@@ -32,11 +32,23 @@ export const  SearchBar=({prop})=> {
     </div>
 } */}
 
+  {/* {
+    !data.Response?<div></div>:<div>
 {
-  (Search==null)?<div></div>:<div>
+  (Search==null)?<div></div>:<div  className='superPart'>
     {
-     Search.map((el)=>(<div>
-      {console.log(el.Title)}
+     Search.map((el)=>(<div className="parentDiv">
+    
+      <div>
+      <img src={el.Poster} alt="" />
+      </div>
+       <div>
+       <p>{el.Title}</p>
+      <p>{el.Year}</p>
+      <p>{el.Type}</p>
+
+       </div>
+    
      </div>))
     }
   </div>
