@@ -87,7 +87,7 @@ export const Navbar = () => {
   const login = useSelector((state) => state.user.user);
   const name = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
-   const [loginBoxShow,setLoginBoxshow]=React.useState(false)
+  const [loginBoxShow, setLoginBoxshow] = React.useState(false);
   console.log(login);
   // console.log(search)
   const handleProfileMenuOpen = (event) => {
@@ -236,37 +236,43 @@ export const Navbar = () => {
     <Box className="mainBox" style={{ position: "relative" }}>
       <AppBar className="appBar" style={{ backgroundColor: "#121212" }}>
         <Toolbar style={{ marginLeft: 40 }}>
-          {
-          login.name ? 
-         
-         (
-          //  {
-          //   loginBoxShow? (
-          //     <div className="loginBox"
-          
-          //   style={{
-          //     position: "absolute",
-          //     top: 63,
-              
-          //     height:250,
-          //     marginLeft: 1070,
-          //     backgroundColor: "#1f1f1f",
-          //     width: 150,
-          //   }}
-          // >
+          {login.name ? (
+            //  {
+            //   loginBoxShow? (
+            //     <div className="loginBox"
+
+            //   style={{
+            //     position: "absolute",
+            //     top: 63,
+
+            //     height:250,
+            //     marginLeft: 1070,
+            //     backgroundColor: "#1f1f1f",
+            //     width: 150,
+            //   }}
+            // >
             <div style={{ textAlign: "center" }}>
               <p>Your Activity</p>
               <p>Your Watchlist</p>
               <p>Your ratings</p>
               <p>Your lists</p>
               <p>Account settings</p>
-              <button className="signOutButton" style={{backgroundColor:"#1f1f1f",color:"white",border:"none", fontSize:14}} onClick={() => dispatch(signOut())}>SignOut</button>
+              <button
+                className="signOutButton"
+                style={{
+                  backgroundColor: "#1f1f1f",
+                  color: "white",
+                  border: "none",
+                  fontSize: 14,
+                }}
+                onClick={() => dispatch(signOut())}
+              >
+                SignOut
+              </button>
             </div>
-          // </div>
-           
-              ) : null
-          
-          }
+          ) : // </div>
+
+          null}
           <div
             style={{
               display: "flex",
@@ -485,7 +491,6 @@ export const Navbar = () => {
                   Sign In
                 </Typography>
               )}
-
               {/* <p style={{fontSize:14}} >Sign In</p> */}
             </div>
 
