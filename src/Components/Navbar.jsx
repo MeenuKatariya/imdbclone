@@ -517,5 +517,6 @@ export const Navbar = () => {
       {renderMobileMenu}
       {renderMenu}{" "}
     </Box>
-  );
-};
+  )
+  }
+}

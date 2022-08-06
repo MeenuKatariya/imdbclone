@@ -4,40 +4,19 @@ export const  SearchBar=({prop})=> {
     // console.log(prop)
     const {Search}=prop;
 
-<<<<<<< HEAD
-    console.log(data,"data")
-=======
->>>>>>> 7263f93 (.)
-  return (
-    <>
-     {/* <p>{data.Title}</p> */}
-     {/* data.length==0?<div></div>:<div>
-     {
-     data.prop.map(e=>(
 
-          console.log(e)
-        
-      ))
-     }
-     </div> */}
-     
+    console.log(data,"data")
+  return (
+    
+   
 
 <div >
   
-  {/* {
-    !data.Response?<div></div>:<div>
-        {
-            (data.Search).map((el)=>(<div>{console.log(el)}</div>))
-        }
-    </div>
-} */}
 
-  {/* {
-    !data.Response?<div></div>:<div>
 {
   (Search==null)?<div></div>:<div  className='superPart'>
     {
-     Search.map((el)=>(<div className="parentDiv">
+     Search.map((el)=>(<div className="parentDiv">jsd
     
       <div>
       <img src={el.Poster} alt="" />

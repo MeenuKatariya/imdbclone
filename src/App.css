@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -7,10 +7,9 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;
 }
 
 .App-header {
@@ -35,4 +34,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.slick-prev:before, .slick-next:before  {
+  content: '' !important;
 }
