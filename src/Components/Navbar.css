@@ -17,6 +17,10 @@
 .menuDiv{
   cursor: pointer;
 }
+.signOutButton:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
 .imdbPro{
   cursor: pointer;
 }
@@ -35,6 +39,27 @@
 .EN:hover{
   background-color:#1f1f1f ;
 }
+.loginBox>div>p:hover{
+text-decoration: underline;
+cursor: pointer;
+}
+.loginBox>div>button:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* .loginBox{
+  display: none;
+}
+.imgName:hover+.loginBox{
+ display: block;
+} */
+
+
+
+
+
+
 
 @media all and (min-width:1243px)  and (max-width:1446px){
    /* .imdbImage>img{
@@ -152,3 +177,5 @@
       }
 
     }
+
+   

@@ -9,6 +9,7 @@ import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
 import MenuItem from "@mui/material/MenuItem";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
@@ -20,11 +21,15 @@ import { borderRadius } from "@mui/system";
 import "./Navbar.css";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { grey } from "@mui/material/colors";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 import { Link } from "@mui/material";
 import { IMDbProImage } from "../Pages/IMDbProImage";
-import {SearchBar} from "../Pages/Search";
-import axios from 'axios';
+import { SearchBar } from "../Pages/Search";
+import axios from "axios";
+import { useSelector } from "react-redux/es/hooks/useSelector";
+import { useDispatch } from "react-redux/es/exports";
+import { signOut } from "../Redux/Auth/Action";
+import { notInitialized } from "react-redux/es/utils/useSyncExternalStore";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -57,8 +62,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   "& .MuiInputBase-input": {
     padding: theme.spacing(0.3, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: '15px',
-    padding:"5px",
+    paddingLeft: "15px",
+    padding: "5px",
 
     transition: theme.transitions.create("width"),
     // width: '100%',
@@ -71,15 +76,20 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export const Navbar = () => {
   const [anchorEl, setAnchorEl] = React.useState();
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState();
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
-  const [divHover,setDivHover]=React.useState(false)
-  const [searchMovie,setSearchMovie] =React.useState("");
-  const [inputSearch,setInputSearch]=React.useState([])
-  const[timer,setTimer]=React.useState(0)
-  const [loginBox,setLoginBox]=React.useState(false)
-// console.log(search)
+  const [divHover, setDivHover] = React.useState(false);
+  const [searchMovie, setSearchMovie] = React.useState("");
+  const [inputSearch, setInputSearch] = React.useState([]);
+  const [timer, setTimer] = React.useState(0);
+  const [loginBox, setLoginBox] = React.useState(false);
+  const login = useSelector((state) => state.user.user);
+  const name = useSelector((state) => state.user.user);
+  const dispatch = useDispatch();
+   const [loginBoxShow,setLoginBoxshow]=React.useState(false)
+  console.log(login);
+  // console.log(search)
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -119,61 +129,56 @@ export const Navbar = () => {
     </Menu>
   );
 
- 
-
-  const searchData=()=>{
-    
+  const searchData = () => {
     // let res=await fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
     // let output=await res.json()
     // setInputSearch(output.Search)
     // console.log(output)
 
-
     // fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
     // .then((res)=>res.json()).then((res)=>{console.log(res,res.Response);
     //                                        res.Response ?   setInputSearch(res.Search) :setInputSearch([])  })
-          
+
     // setInputSearch(res)
 
     axios({
-      method:"get",
-      url:`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`
-    }).then((res)=>setInputSearch(res.data)).catch((err)=>console.log(err));
+      method: "get",
+      url: `http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`,
+    })
+      .then((res) => setInputSearch(res.data))
+      .catch((err) => console.log(err));
     // fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
     // .then((res)=>res.json()).then((res)=>setInputSearch(res))
+  };
 
-}
+  React.useEffect(() => {
+    searchData();
+  }, [searchMovie]);
+  // function change(){
+  //     debounce(500)
+  // }
 
-React.useEffect(()=>{
-  searchData()
-},[searchMovie])
-// function change(){
-//     debounce(500)
-// }
+  // function debounce(d){
+  //     if(timer>0){
+  //         clearTimeout(timer)
+  //     }
+  //     setTimer(setTimeout(()=>{
+  //         searchData(search)
+  //     }))
+  // }
 
-// function debounce(d){
-//     if(timer>0){
-//         clearTimeout(timer)
-//     }
-//     setTimer(setTimeout(()=>{
-//         searchData(search)
-//     }))
-// }
+  // change()
 
-// change()
+  // searchData();
 
-
-// searchData();
-
-
-  const handleSign=()=>{
+  const handleSign = () => {
     // console.log("1")
     // return
-    navigate("/createaccount")
-  }
-  const handleMenu=()=>{
-    navigate("/menu")
-  }
+    navigate("/createaccount");
+  };
+  const handleMenu = () => {
+    navigate("/menu");
+  };
 
   const mobileMenuId = "primary-search-account-menu-mobile";
   const renderMobileMenu = (
@@ -228,20 +233,40 @@ React.useEffect(()=>{
   );
 
   return (
-    <Box className="mainBox" style={{position:"relative"}}>
+    <Box className="mainBox" style={{ position: "relative" }}>
       <AppBar className="appBar" style={{ backgroundColor: "#121212" }}>
         <Toolbar style={{ marginLeft: 40 }}>
-          {/* <div className="loginBox">
-           <div>
-            <p>Your Activity</p>
-            <p>Your Watchlist</p>
-            <p>Your ratings</p>
-            <p>Your lists</p>
-            <p>Account settings</p>
-            <p>Sign out</p>
-
-           </div>
-          </div> */}
+          {
+          login.name ? 
+         
+         (
+          //  {
+          //   loginBoxShow? (
+          //     <div className="loginBox"
+          
+          //   style={{
+          //     position: "absolute",
+          //     top: 63,
+              
+          //     height:250,
+          //     marginLeft: 1070,
+          //     backgroundColor: "#1f1f1f",
+          //     width: 150,
+          //   }}
+          // >
+            <div style={{ textAlign: "center" }}>
+              <p>Your Activity</p>
+              <p>Your Watchlist</p>
+              <p>Your ratings</p>
+              <p>Your lists</p>
+              <p>Account settings</p>
+              <button className="signOutButton" style={{backgroundColor:"#1f1f1f",color:"white",border:"none", fontSize:14}} onClick={() => dispatch(signOut())}>SignOut</button>
+            </div>
+          // </div>
+           
+              ) : null
+          
+          }
           <div
             style={{
               display: "flex",
@@ -256,7 +281,7 @@ React.useEffect(()=>{
             />
 
             <div
-            className="menuDiv"
+              className="menuDiv"
               style={{
                 display: "flex",
                 width: 80,
@@ -297,10 +322,23 @@ React.useEffect(()=>{
               >
                 All
               </p>
-              <ArrowDropDownIcon style={{ color: "black", borderRadius:10 ,marginTop:1,alignItems:"center" }} />
+              <ArrowDropDownIcon
+                style={{
+                  color: "black",
+                  borderRadius: 10,
+                  marginTop: 1,
+                  alignItems: "center",
+                }}
+              />
 
-              <hr 
-                style={{width:"0", height: 28, marginTop:0.5, opacity:"50%",  backgroundColor: "black"}}
+              <hr
+                style={{
+                  width: "0",
+                  height: 28,
+                  marginTop: 0.5,
+                  opacity: "50%",
+                  backgroundColor: "black",
+                }}
               />
             </div>
 
@@ -308,7 +346,9 @@ React.useEffect(()=>{
               placeholder="Search IMDb"
               inputProps={{ "aria-label": "search" }}
               value={searchMovie}
-              onChange={(e)=>{setSearchMovie(e.target.value)}}
+              onChange={(e) => {
+                setSearchMovie(e.target.value);
+              }}
             />
 
             <div className="searchIcon">
@@ -318,7 +358,6 @@ React.useEffect(()=>{
                   color: "grey",
                   margon: "auto",
                   marginTop: "3",
-
                 }}
               />
             </div>
@@ -326,15 +365,15 @@ React.useEffect(()=>{
 
           <div
             className="imdbPro"
-            onMouseEnter={()=>setDivHover(true)}
-            onMouseLeave={()=>setDivHover(false)}
+            onMouseEnter={() => setDivHover(true)}
+            onMouseLeave={() => setDivHover(false)}
             style={{
               height: 35,
               marginLeft: 2,
               width: 130,
-              marginRight:15,
-              borderRight:"2px solid rgba(128, 128, 128, 0.40)",
-              
+              marginRight: 15,
+              borderRight: "2px solid rgba(128, 128, 128, 0.40)",
+
               display: "flex",
               justifyContent: "space-between",
             }}
@@ -343,8 +382,6 @@ React.useEffect(()=>{
               src="./imdb.jpg"
               alt=""
               height={15}
-
-    
               style={{ margin: "auto" }}
             />
             {/* <hr
@@ -364,6 +401,7 @@ React.useEffect(()=>{
               display: "flex",
               width: 300,
               marginLeft: 0,
+              alignItems: "center",
               marginTop: 3,
               color: "ffffff",
               fontSize: "8px",
@@ -394,18 +432,60 @@ React.useEffect(()=>{
               </Typography>
             </div>
             <div className="signIn">
-              <Typography
-                fontSize={15}
-                color="ffffff"
-                textAlign="auto"
-                fontFamily="Roboto,Helvetica,Arial,sans-serif"
-                noWrap
-                component="div"
-              onClick={handleSign}
-                sx={{ display: { xs: "none", sm: "block" } }}
-              >
-                Sign In
-              </Typography>
+              onClick={setLoginBoxshow(true)}
+              {login.imgUrl ? (
+                <div
+                  className="imgName"
+                  // onMouseOver={() => setLoginBoxshow(prev =>!prev)}
+                  // onMouseLeave={() => setLoginBoxshow(false)}
+
+                  style={{ display: "flex", width: 100, height: 40, gap: 8 }}
+                >
+                  <img
+                    style={{
+                      width: 25,
+                      height: 25,
+                      borderRadius: "50%",
+                      marginTop: 5,
+                    }}
+                    src={login.imgUrl}
+                    alt=""
+                  />
+                  <p style={{ fontSize: 14, marginTop: 0 }}>{login.name}</p>
+                </div>
+              ) : login.login ? (
+                <div
+                  style={{
+                    fontSize: 17,
+                    display: "flex",
+                    overFlow: "hidden",
+                    textOverflow: "ellipsis",
+                    width: "50px",
+                    gap: 4,
+                    color: "#ffffff",
+
+                    marginTop: 0,
+                    textAlign: "center",
+                    fontFamily: "Roboto,Helvetica,Arial,sans-serif",
+                  }}
+                >
+                  <AccountCircleIcon /> {login.name}
+                </div>
+              ) : (
+                <Typography
+                  fontSize={15}
+                  color="ffffff"
+                  textAlign="auto"
+                  fontFamily="Roboto,Helvetica,Arial,sans-serif"
+                  noWrap
+                  component="div"
+                  onClick={handleSign}
+                  sx={{ display: { xs: "none", sm: "block" } }}
+                >
+                  Sign In
+                </Typography>
+              )}
+
               {/* <p style={{fontSize:14}} >Sign In</p> */}
             </div>
 
@@ -438,7 +518,7 @@ React.useEffect(()=>{
               <MoreIcon />
             </IconButton>
           </Box>
-          <IMDbProImage  prop={divHover} />
+          <IMDbProImage prop={divHover} />
           <SearchBar prop={inputSearch} />
         </Toolbar>
       </AppBar>

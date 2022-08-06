@@ -6,7 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import {authLoading} from "../../Redux/Auth/Action"
 import {authError} from  "../../Redux/Auth/Action"
-import { Alert, Button } from '@mui/material'
+import { Alert, Button } from '@mui/material';
+
+
 
 
 export const Sign=()=> {
@@ -57,6 +59,11 @@ export const Sign=()=> {
     console.log(error)
   }
   }
+
+
+
+
+
 
   
   
@@ -136,7 +143,7 @@ export const Sign=()=> {
        </div>
        <div style={{display:"flex" ,marginLeft:40,fontSize:14,fontFamily:"Amazon Ember,Arial,sans-serif", width:215,justifyContent:"space-between"}} className="alreadyAccount">
         <p style={{fontSize:14,  marginLeft:4,fontFamily:"Amazon Ember,Arial,sans-serif"}}>Already have an account?</p>
-        <p className='signInLine'  onClick={handleLogin} style={{color:"#0066c0"}}>Sign-In</p>
+        <p className='signInLine'  onClick={handleLogin} style={{color:"#0066c0", cursor:"pointer"}}>Sign-In</p>
        </div>
 
 
