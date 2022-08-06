@@ -1,4 +1,7 @@
 import './App.css';
+import { Footer } from "./Components/component_jasmine/TempFooter";
+import { Navbar } from "./Components/component_jasmine/TempNavbar";
+import { Pages } from "./Pages/Pages";
 import { MovieDetailsPage } from './Pages/MovieDetailsPage';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
