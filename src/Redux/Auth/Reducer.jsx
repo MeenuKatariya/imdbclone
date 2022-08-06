@@ -7,7 +7,7 @@ const initState = {
     isError: false
 }
 
-   export const loginReducer = (state = initState, { type, payload }) => {
+   export const LoginReducer = (state = initState, { type, payload }) => {
     switch (type) {
        case Auth_LOADING:
             return {

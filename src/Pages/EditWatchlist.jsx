@@ -9,6 +9,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { useDispatch, useSelector } from 'react-redux';
 import { recentlyViewedSuccess, watchlistError, watchlistLoad, watchlistSuccess } from '../Redux/Watchlist/action';
+import {Navbar} from "../Components/components_meenu/Navbar"
+import {Footer} from "../Components/components_meenu/Footer"
 export const EditWatchlist = () => {
 
     const dispatch = useDispatch();
@@ -62,6 +64,7 @@ export const EditWatchlist = () => {
     const navigate = useNavigate()
     return (
         <div>
+            <Navbar/>
             <Box sx={{ backgroundColor: "#E3E2DD", width: "100%", display: "flex", justifyContent: "center" }}>
 
                 <Box sx={{ backgroundColor: "#EEEEEE", height: "100%", width: "1010px", display: "flex", flexDirection: "column" }}>
@@ -259,6 +262,7 @@ export const EditWatchlist = () => {
                     </Box>
                 </Box>
             </Box>
+            <Footer/>
         </div>
     );
 }

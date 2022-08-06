@@ -20,7 +20,7 @@ export const Login = () => {
  const fetchUserData=async()=>{
   try{
     dispatch(authLoading())
-   let res=await fetch(`http://localhost:8000/user_profile`)
+   let res=await fetch(`http://localhost:8080/user_profile`)
    let output=await res.json()
   //  console.log(output)
    let userExist=false;

@@ -23,12 +23,12 @@ import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { grey } from "@mui/material/colors";
 import { useNavigate } from "react-router-dom";
 import { Link } from "@mui/material";
-import { IMDbProImage } from "../Pages/IMDbProImage";
-import { SearchBar } from "../Pages/Search";
+import { IMDbProImage } from "../components_meenu/IMDbProImage";
+import { SearchBar } from "./Search";
 import axios from "axios";
 import { useSelector } from "react-redux/es/hooks/useSelector";
 import { useDispatch } from "react-redux/es/exports";
-import { signOut } from "../Redux/Auth/Action";
+import { signOut } from "../../Redux/Auth/Action";
 import { notInitialized } from "react-redux/es/utils/useSyncExternalStore";
 
 const Search = styled("div")(({ theme }) => ({
@@ -74,163 +74,133 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export const Navbar = () => {
-  const [anchorEl, setAnchorEl] = React.useState();
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState();
+  // const [anchorEl, setAnchorEl] = React.useState();
+  // const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState();
   const navigate = useNavigate();
-  const isMenuOpen = Boolean(anchorEl);
-  const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+  // const isMenuOpen = Boolean(anchorEl);
+  // const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
   const [divHover, setDivHover] = React.useState(false);
   const [searchMovie, setSearchMovie] = React.useState("");
   const [inputSearch, setInputSearch] = React.useState([]);
   const [timer, setTimer] = React.useState(0);
   const [loginBox, setLoginBox] = React.useState(false);
-  const login = useSelector((state) => state.user.user);
-  const name = useSelector((state) => state.user.user);
+  const login = useSelector((state) => state.auth.user);
+  console.log(login)
+  const name = useSelector((state) => state.auth.user);
   const dispatch = useDispatch();
   const [loginBoxShow, setLoginBoxshow] = React.useState(false);
   console.log(login);
   // console.log(search)
-  const handleProfileMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  // const handleProfileMenuOpen = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
 
-  const handleMobileMenuClose = () => {
-    setMobileMoreAnchorEl(null);
-  };
+  // const handleMobileMenuClose = () => {
+  //   setMobileMoreAnchorEl(null);
+  // };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-    handleMobileMenuClose();
-  };
+  // const handleMenuClose = () => {
+  //   setAnchorEl(null);
+  //   handleMobileMenuClose();
+  // };
 
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
-  };
+  // const handleMobileMenuOpen = (event) => {
+  //   setMobileMoreAnchorEl(event.currentTarget);
+  // };
 
-  const menuId = "primary-search-account-menu";
-  const renderMenu = (
-    <Menu
-      anchorEl={anchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      id={menuId}
-      keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      open={isMenuOpen}
-      onClose={handleMenuClose}
-    >
-      <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-      <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-    </Menu>
-  );
+  // const menuId = "primary-search-account-menu";
+  // const renderMenu = (
+  //   <Menu
+  //     anchorEl={anchorEl}
+  //     anchorOrigin={{
+  //       vertical: "top",
+  //       horizontal: "right",
+  //     }}
+  //     id={menuId}
+  //     keepMounted
+  //     transformOrigin={{
+  //       vertical: "top",
+  //       horizontal: "right",
+  //     }}
+  //     open={isMenuOpen}
+  //     onClose={handleMenuClose}
+  //   >
+  //     <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+  //     <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+  //   </Menu>
+  // );
 
   const searchData = () => {
-    // let res=await fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
-    // let output=await res.json()
-    // setInputSearch(output.Search)
-    // console.log(output)
-
-    // fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
-    // .then((res)=>res.json()).then((res)=>{console.log(res,res.Response);
-    //                                        res.Response ?   setInputSearch(res.Search) :setInputSearch([])  })
-
-    // setInputSearch(res)
-
     axios({
       method: "get",
       url: `http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`,
     })
       .then((res) => setInputSearch(res.data))
       .catch((err) => console.log(err));
-    // fetch(`http://www.omdbapi.com/?s=${searchMovie}&apikey=3040a61a`)
-    // .then((res)=>res.json()).then((res)=>setInputSearch(res))
   };
 
   React.useEffect(() => {
     searchData();
   }, [searchMovie]);
-  // function change(){
-  //     debounce(500)
-  // }
-
-  // function debounce(d){
-  //     if(timer>0){
-  //         clearTimeout(timer)
-  //     }
-  //     setTimer(setTimeout(()=>{
-  //         searchData(search)
-  //     }))
-  // }
-
-  // change()
-
-  // searchData();
 
   const handleSign = () => {
-    // console.log("1")
-    // return
     navigate("/createaccount");
   };
   const handleMenu = () => {
     navigate("/menu");
   };
 
-  const mobileMenuId = "primary-search-account-menu-mobile";
-  const renderMobileMenu = (
-    <Menu
-      anchorEl={mobileMoreAnchorEl}
-      anchorOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      id={mobileMenuId}
-      keepMounted
-      transformOrigin={{
-        vertical: "top",
-        horizontal: "right",
-      }}
-      open={isMobileMenuOpen}
-      onClose={handleMobileMenuClose}
-    >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
-      </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
-      </MenuItem>
-    </Menu>
-  );
+  // const mobileMenuId = "primary-search-account-menu-mobile";
+  // const renderMobileMenu = (
+  //   <Menu
+  //     anchorEl={mobileMoreAnchorEl}
+  //     anchorOrigin={{
+  //       vertical: "top",
+  //       horizontal: "right",
+  //     }}
+  //     id={mobileMenuId}
+  //     keepMounted
+  //     transformOrigin={{
+  //       vertical: "top",
+  //       horizontal: "right",
+  //     }}
+  //     open={isMobileMenuOpen}
+  //     onClose={handleMobileMenuClose}
+  //   >
+  //     <MenuItem>
+  //       <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+  //         <Badge badgeContent={4} color="error">
+  //           <MailIcon />
+  //         </Badge>
+  //       </IconButton>
+  //       <p>Messages</p>
+  //     </MenuItem>
+  //     <MenuItem>
+  //       <IconButton
+  //         size="large"
+  //         aria-label="show 17 new notifications"
+  //         color="inherit"
+  //       >
+  //         <Badge badgeContent={17} color="error">
+  //           <NotificationsIcon />
+  //         </Badge>
+  //       </IconButton>
+  //       <p>Notifications</p>
+  //     </MenuItem>
+  //     <MenuItem onClick={handleProfileMenuOpen}>
+  //       <IconButton
+  //         size="large"
+  //         aria-label="account of current user"
+  //         aria-controls="primary-search-account-menu"
+  //         aria-haspopup="true"
+  //         color="inherit"
+  //       >
+  //         <AccountCircle />
+  //       </IconButton>
+  //       <p>Profile</p>
+  //     </MenuItem>
+  //   </Menu>
+  // );
 
   return (
     <Box className="mainBox" style={{ position: "relative" }}>
@@ -300,7 +270,7 @@ export const Navbar = () => {
 
               <p
                 className="menu"
-                onClick={handleMenu}
+                onClick={()=>handleMenu}
                 style={{ textAlign: "center", marginTop: 10, fontWeight: 700 }}
               >
                 Menu
@@ -390,15 +360,7 @@ export const Navbar = () => {
               height={15}
               style={{ margin: "auto" }}
             />
-            {/* <hr
-              style={{
-                // height: 0,
-
-                marginTop: 0,
-                backgroundColor: "black",
-                // width: 0,
-              }}
-            /> */}
+          
           </div>
 
           <Box
@@ -438,7 +400,7 @@ export const Navbar = () => {
               </Typography>
             </div>
             <div className="signIn">
-              onClick={setLoginBoxshow(true)}
+              onClick={()=>setLoginBoxshow(true)}
               {login.imgUrl ? (
                 <div
                   className="imgName"
@@ -485,7 +447,7 @@ export const Navbar = () => {
                   fontFamily="Roboto,Helvetica,Arial,sans-serif"
                   noWrap
                   component="div"
-                  onClick={handleSign}
+                  onClick={()=>handleSign}
                   sx={{ display: { xs: "none", sm: "block" } }}
                 >
                   Sign In
@@ -511,7 +473,7 @@ export const Navbar = () => {
               <ArrowDropDownIcon />
             </div>
           </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          {/* <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
               aria-label="show more"
@@ -522,14 +484,14 @@ export const Navbar = () => {
             >
               <MoreIcon />
             </IconButton>
-          </Box>
+          </Box> */}
           <IMDbProImage prop={divHover} />
           <SearchBar prop={inputSearch} />
         </Toolbar>
       </AppBar>
-      {renderMobileMenu}
-      {renderMenu}{" "}
+      {/* {renderMobileMenu}
+      {renderMenu}{" "} */}
     </Box>
-  )
-              // }
-}
+  );
+  // }
+};

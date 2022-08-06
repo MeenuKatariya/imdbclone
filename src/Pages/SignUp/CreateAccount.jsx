@@ -37,7 +37,7 @@ export const CreateAccount=() =>{
         const postData=async(data)=>{
         try{
             dispatch(authLoading())
-          let res=await fetch(`http://localhost:8000/user_profile`,{
+          let res=await fetch(`http://localhost:8080/user_profile`,{
             method:"POST",
             body:JSON.stringify(data),
             headers:{"Content-Type":"application/json"}
@@ -56,7 +56,7 @@ export const CreateAccount=() =>{
        
         try{
             dispatch(authLoading())
-        let result=await fetch("http://localhost:8000/user_profile")
+        let result=await fetch("http://localhost:8080/user_profile")
         let response=await result.json()
         console.log(response)
         response.forEach((element,i) => {

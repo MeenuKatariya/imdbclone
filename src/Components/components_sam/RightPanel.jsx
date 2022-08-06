@@ -5,8 +5,8 @@ import {
   errorPopularMovie,
   getPopularMovie,
   loadingPopularMovie,
-} from "../../store/moviedetails/action";
-import { Heading } from "./Headings";
+} from "../../Redux/MovieDetails/action";
+import { Heading } from "./Heading";
 import ArrowForwardIosRoundedIcon from "@mui/icons-material/ArrowForwardIosRounded";
 import ListRoundedIcon from "@mui/icons-material/ListRounded";
 import PlayCircleOutlineRoundedIcon from "@mui/icons-material/PlayCircleOutlineRounded";

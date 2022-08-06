@@ -20,14 +20,15 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { useDispatch, useSelector } from 'react-redux';
 import { recentlyViewedSuccess, recentlyViewedDelete, watchlistError, watchlistLoad, watchlistSuccess, sortYearDesc, sortYearAsc, sortRuntimeDesc, sortRuntimeAsc,sortImdbRatingAsc,sortImdbRatingDesc, sortDefault } from '../Redux/Watchlist/action';
-
+import {Navbar} from "../Components/components_meenu/Navbar"
+import {Footer} from "../Components/components_meenu/Footer"
 
 export const Watchlist = () => {
 
     const dispatch = useDispatch();
     const { loading } = useSelector(state => state.watchlist)
     const { error } = useSelector(state => state.watchlist)
-    const { watchlist } = useSelector(state => state.watchlist)
+    const { watchlist } = useSelector(state => state.watchlist);
     const { recently_viewed } = useSelector(state => state.watchlist)
     const [watchlistLength, setLength] = React.useState(0)
     const [order, setOrder] = React.useState(true);
@@ -75,10 +76,11 @@ export const Watchlist = () => {
 
     const fetchWatchListData = () => {
         dispatch(watchlistLoad());
-        axios.get(`http://localhost:8080/user_profile`).then(res => {
-            console.log(res.data.watchlist)
-            const payload = res.data.watchlist
+        axios.get(`http://localhost:8080/user_profile?login=true`).then(res => {
+            // console.log("first",res.data[0].watchlist)
+            const payload = res.data[0].watchlist
             setLength(payload.length)
+            console.log("payload",payload)
             dispatch(watchlistSuccess(payload))
         }).catch(err => {
             dispatch(watchlistError());
@@ -88,9 +90,9 @@ export const Watchlist = () => {
 
     const fetchRecentlyViewedData = () => {
 
-        axios.get(`http://localhost:8080/user_profile`).then(res => {
-            console.log("Hello", res.data.recently_viewed)
-            const payload = res.data.recently_viewed
+        axios.get(`http://localhost:8080/user_profile?login=true`).then(res => {
+            // console.log("Hello", res.data.recently_viewed)
+            const payload = res.data[0].recently_viewed
             dispatch(recentlyViewedSuccess(payload))
         }).catch(err => {
             console.log(err)
@@ -148,6 +150,8 @@ export const Watchlist = () => {
     const navigate = useNavigate()
 
     return (
+        <>
+       <Navbar />
         <div>
             <Box sx={{ backgroundColor: "#E3E2DD", width: "100%", display: "flex", justifyContent: "center" }}>
 
@@ -578,6 +582,8 @@ export const Watchlist = () => {
                 </Box>
             </Box>
         </div>
+        <Footer />
+        </>
     );
 }
 

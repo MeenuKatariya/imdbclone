@@ -6,21 +6,23 @@ import {
   errorMovieDetails,
   getMovieDetails,
   loadingMovieDetails,
-} from "../store/moviedetails/action";
-import { MovieCard } from "../components/moviedetails/MovieCard";
-import { MoviesRating } from "../components/moviedetails/MoviesRating";
-import { MovieTopLinks } from "../components/moviedetails/MovieTopLinks";
-import { MovieTitle } from "../components/moviedetails/MovieTitle";
-import { MovieGenres } from "../components/moviedetails/MovieGenres";
-import { MovieInfo } from "../components/moviedetails/MovieInfo";
-import { Heading } from "../components/moviedetails/Headings";
-import { Cast } from "../components/moviedetails/Cast";
-import { Details } from "../components/moviedetails/Detaisl";
-import { BoxOffice } from "../components/moviedetails/BoxOffice";
-import { RightPanel } from "../components/moviedetails/RightPanel";
-import { ImageSlider } from "../components/moviedetails/ImageSlider";
-import { Loading } from "../components/Loading";
-import { MovieSlider } from "../components/moviedetails/MovieSlider";
+} from "../Redux/MovieDetails/action"
+import { MovieCard } from "../Components/components_sam/MovieCard";
+import { MoviesRating } from "../Components/components_sam/MoviesRating";
+import { MovieTopLinks } from "../Components/components_sam/MovieTopLinks";
+import { MovieTitle } from "../Components/components_sam/MovieTitle";
+import { MovieGenres } from "../Components/components_sam/MovieGenres";
+import { MovieInfo } from "../Components/components_sam/MovieInfo";
+import { Heading } from "../Components/components_sam/Heading";
+import { Cast } from "../Components/components_sam/Cast";
+import { Details } from "../Components/components_sam/Details";
+import { BoxOffice } from "../Components/components_sam/BoxOffice";
+import { RightPanel } from "../Components/components_sam/RightPanel";
+import { ImageSlider } from "../Components/components_sam/ImageSlider";
+import { Loading } from "../Components/components_sam/Loading";
+import { MovieSlider } from "../Components/components_sam/MovieSlider";
+import {Navbar} from "../Components/components_meenu/Navbar"
+import {Footer} from "../Components/components_meenu/Footer"
 export const MovieDetailsPage = () => {
   const { loading, error, movieDetails } = useSelector(
     (state) => state.movieDetails
@@ -44,6 +46,8 @@ export const MovieDetailsPage = () => {
       .catch((err) => dispatch(errorMovieDetails()));
   }, [dispatch]);
   return (
+    <>
+    <Navbar/>
     <div style={{ width: "100%", margin: "auto" }}>
       <Box variant="div" sx={{ backgroundColor: "black", padding: "10px 0px" }}>
         <img
@@ -153,5 +157,7 @@ export const MovieDetailsPage = () => {
         </div>
       )}{" "}
     </div>
+    <Footer/>
+    </>
   );
 };

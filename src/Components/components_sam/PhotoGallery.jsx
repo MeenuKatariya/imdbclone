@@ -12,7 +12,9 @@ import {
 import { Loading } from "../Loading";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
-export const PhotoGallary = () => {
+import {Navbar} from "../Components/components_meenu/Navbar"
+import {Footer} from "../Components/components_meenu/Footer"
+export const PhotoGallery = () => {
   const { loading, error, movieDetails } = useSelector(
     (state) => state.movieDetails
   );
@@ -39,6 +41,7 @@ export const PhotoGallary = () => {
 
   return (
     <Box variant="div" className="photo-gallary">
+      <Navbar/>
       <Box
         variant="div"
         sx={{ maxWidth: "750px", margin: "auto", backgroundColor: "white" }}
@@ -112,6 +115,7 @@ export const PhotoGallary = () => {
           </Box>
         )}
       </Box>
+      <Footer/>
     </Box>
   );
 };
