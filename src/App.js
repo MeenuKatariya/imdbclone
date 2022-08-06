@@ -2,6 +2,10 @@ import './App.css';
 import { Footer } from "./Components/component_jasmine/TempFooter";
 import { Navbar } from "./Components/component_jasmine/TempNavbar";
 import { Pages } from "./Pages/Pages";
+import Home from './Components/pages/Home';
+import { Route, Routes } from 'react-router-dom';
+import {WhatToWatch} from './Components/components_vishal/WhatToWatch';
+// import TempNavbar from './Components/components_vishal/TempNavbar';
 import { MovieDetailsPage } from './Pages/MovieDetailsPage';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
@@ -17,15 +21,18 @@ function App() {
 
  
     <div className="App">
-    {/* <MovieDetailsPage/> */}
+      {/* <SwipeableTextMobileStepper/> */}
+      {/* <TempNavbar/> */}
+      {/* <MovieDetailsPage/> */}
 
     {/* <TrailerShow/> */}
     {/* <PhotoGallary/> */}
     {/* <ImageShow/> */}
-  
-<Pages/>
-
-
+      
+      <Routes>
+        <Route path='/' element={<Home />} ></Route>
+        <Route path='/what-to-watch' element={<WhatToWatch />}></Route>
+      </Routes>
     </div>
   )
 }
