@@ -1,15 +1,23 @@
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
-import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
-export const MoviesRating = ({ movieData }) => {
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import { RatingModal } from "./RatingModal";
+
+export const MoviesRating = ({ movieData,setOpen }) => {
   const { imDbRating } = movieData;
 
+  
+
+
   return (
-    <Box varient="div" sx={{display:"flex",gap:"20px", position:"absolute",right:"20px"}}>
+    <Box
+      varient="div"
+      sx={{ display: "flex", gap: "20px", position: "absolute", right: "20px" }}
+    >
       <Box variant="div">
         <Typography
           variant="div"
@@ -24,6 +32,7 @@ export const MoviesRating = ({ movieData }) => {
         </Typography>
         <Box
           variant="outlined"
+          onClick={()=>(setOpen(true))}
           startIcon={<StarIcon />}
           sx={{
             display: "flex",
@@ -37,7 +46,7 @@ export const MoviesRating = ({ movieData }) => {
             borderColor: "rgb(31,31,31)",
             cursor: "pointer",
             borderRadius: "5px",
-            marginTop:"5px",
+            marginTop: "5px",
             "&:hover": {
               backgroundColor: "rgb(48,48,48)",
               borderColor: "rgb(76,76,76)",
@@ -78,6 +87,7 @@ export const MoviesRating = ({ movieData }) => {
         </Typography>
         <Box
           variant="outlined"
+          onClick={()=>setOpen(true)}
           startIcon={<StarIcon />}
           sx={{
             display: "flex",
@@ -91,7 +101,7 @@ export const MoviesRating = ({ movieData }) => {
             borderColor: "rgb(31,31,31)",
             cursor: "pointer",
             borderRadius: "5px",
-            marginTop:"5px",
+            marginTop: "5px",
             "&:hover": {
               backgroundColor: "rgb(48,48,48)",
               borderColor: "rgb(76,76,76)",
@@ -106,7 +116,8 @@ export const MoviesRating = ({ movieData }) => {
               fontWeight: "600",
               letterSpacing: "2px",
             }}
-          >Rate
+          >
+            Rate
           </Typography>
         </Box>
       </Box>
@@ -138,17 +149,19 @@ export const MoviesRating = ({ movieData }) => {
             borderColor: "rgb(31,31,31)",
             cursor: "pointer",
             borderRadius: "5px",
-            marginTop:"5px",
+            marginTop: "5px",
             "&:hover": {
               backgroundColor: "rgb(48,48,48)",
               borderColor: "rgb(76,76,76)",
             },
           }}
         >
-          <TrendingUpIcon sx={{
-            border:"2px solid rgb(103,173,75)",
-            borderRadius:"50px"
-          }}/>
+          <TrendingUpIcon
+            sx={{
+              border: "2px solid rgb(103,173,75)",
+              borderRadius: "50px",
+            }}
+          />
           <Typography
             variant="span"
             sx={{
@@ -156,17 +169,24 @@ export const MoviesRating = ({ movieData }) => {
               fontSize: "20px",
               fontWeight: "600",
               letterSpacing: "2px",
-              marginLeft:"5px"
+              marginLeft: "5px",
             }}
           >
             60
           </Typography>
           <Typography
-              variant="div"
-              sx={{ color: "rgb(128,128,128)", fontWeight: "400",display:"flex",justifyContent:"center",alignItems:"center" }}
-            >
-              <ArrowDropUpIcon/>3,289
-            </Typography>
+            variant="div"
+            sx={{
+              color: "rgb(128,128,128)",
+              fontWeight: "400",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <ArrowDropUpIcon />
+            3,289
+          </Typography>
         </Box>
       </Box>
     </Box>

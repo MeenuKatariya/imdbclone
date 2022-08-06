@@ -4,16 +4,16 @@ import {
   errorPopularMovie,
   getMovieDetails,
   loadingPopularMovie,
-} from "../../store/moviedetails/action";
+} from "../../Redux/MovieDetails/action";
 import axios from "axios";
-import { Loading } from "../Loading";
+import { Loading } from "./Loading";
 import { Box, Button, Card, Divider, Typography } from "@mui/material";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import BookmarkAddIcon from "@mui/icons-material/BookmarkAdd";
 import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import { useParams } from "react-router-dom";
-import { Navbar } from "../Components/components_meenu/Navbar";
-import { Footer } from "../Components/components_meenu/Footer";
+import { Navbar } from "../components_meenu/Navbar";
+import { Footer } from "../components_meenu/Footer";
 import ShareIcon from "@mui/icons-material/Share";
 
 export const TrailerShow = () => {
@@ -106,7 +106,8 @@ export const TrailerShow = () => {
               display: "flex",
               margin: "auto",
               justifyContent: "space-between",
-              paddingBottom: "150px",
+              paddingBottom: "50px",
+              paddingTop:"40px"
             }}
           >
             <Card

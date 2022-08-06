@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   errorMovieDetails,
@@ -23,16 +23,20 @@ import { Loading } from "../Components/components_sam/Loading";
 import { MovieSlider } from "../Components/components_sam/MovieSlider";
 import {Navbar} from "../Components/components_meenu/Navbar"
 import {Footer} from "../Components/components_meenu/Footer"
+import { useParams } from "react-router-dom";
+import { RatingModal } from "../Components/components_sam/RatingModal";
+
+
 export const MovieDetailsPage = () => {
   const { loading, error, movieDetails } = useSelector(
     (state) => state.movieDetails
   );
-
+  const [open, setOpen] = useState(false);
 
   const movieData = movieDetails[0];
   const dispatch = useDispatch();
 
-  let id = "tt8426926";
+  let {id} = useParams();
 
   useEffect(() => {
     dispatch(loadingMovieDetails());
@@ -48,17 +52,21 @@ export const MovieDetailsPage = () => {
   return (
     <>
     <Navbar/>
+
+   
     <div style={{ width: "100%", margin: "auto" }}>
-      <Box variant="div" sx={{ backgroundColor: "black", padding: "10px 0px" }}>
+      <Box variant="div" sx={{ backgroundColor: "black", padding: "10px 0px",paddingTop:"70px",width:"100%"}}>
         <img
           src="https://m.media-amazon.com/images/I/51IfG+VoQ8L.jpg"
           alt="google ads"
+          style={{margin:"auto",marginLeft:"17%"}}
         />
       </Box>
       {movieDetails.length === 0 ? (
         <Loading />
       ) : (
         <div style={{ width: "100%", backgroundColor: "rgb(31,31,31)" }}>
+           {open && <RatingModal setOpen={setOpen} open={open} title={movieData.title}/>}
           <Box
             variant="div"
             sx={{ width: "90%", margin: "auto", marginBottom: "50px" }}
@@ -76,7 +84,7 @@ export const MovieDetailsPage = () => {
             >
               <MovieTitle movieData={movieData} />
 
-              <MoviesRating movieData={movieData} />
+              <MoviesRating movieData={movieData} setOpen={setOpen} />
             </Box>
 
             <MovieCard movieData={movieData} />
@@ -161,3 +169,4 @@ export const MovieDetailsPage = () => {
     </>
   );
 };
+

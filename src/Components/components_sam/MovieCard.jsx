@@ -58,7 +58,7 @@ export const MovieCard = ({ movieData }) => {
           }}
         >
           <Link to={`/trailer/${id}`} style={{textDecoration:"none"}}>
-          <CardContent sx={{}}>
+          <CardContent sx={{textAlign:"center"}}>
             <VideoLibraryIcon sx={{ color: "white", fontSize: "30px" }} />
             <br />
             <Typography
@@ -91,10 +91,10 @@ export const MovieCard = ({ movieData }) => {
               backgroundColor: "rgb(64,64,64)",
             },
           }}
-        ><Link to={`/photogallary/${id}`} style={{textDecoration:"none"}}>
-          <CardContent>
+        ><Link to={`/photogallery/${id}`} style={{textDecoration:"none"}}>
+          <CardContent sx={{textAlign:"center"}}>
             
-            <CollectionsIcon sx={{ color: "white", fontSize: "30px" }} />
+            <CollectionsIcon sx={{ color: "white", fontSize: "30px"}} />
             <br />
             <Typography
               variant="div"

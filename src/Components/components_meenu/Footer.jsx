@@ -7,7 +7,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import "./Footer.css"
 export const Footer=()=> {
   return (
-    <div style={{backgroundColor:"#000000",height:300,marginTop:200}}>
+    <div style={{backgroundColor:"#000000",height:300}}>
         <div style={{display:"flex", paddingTop:30,margin:'auto' ,width:300,justifyContent:"space-around",fontSize:30}}>
          <RiFacebookBoxLine  style={{color:"#ffffff"}}/>
          <AiOutlineInstagram style={{color:"#ffffff"}}/>

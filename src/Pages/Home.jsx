@@ -68,7 +68,7 @@ const Home = () => {
         </div>
       </div>
       {/* <TopPicks data={TopMovies.slice(0, 31)} /> */}
-      <Link to={'/what-to-watch'} style={{textDecoration:'none'}}><TopPicks data={TopMovies.slice(0, 31)} /></Link>
+     <TopPicks data={TopMovies.slice(0, 31)} />
       <EmptyWatchList />
       {/* {
               Watchlist[0].watchlist.length === 0 ? console.log('HERE TRUE',true):console.log('HERE FALSE',false,Watchlist[0].watchlist)
