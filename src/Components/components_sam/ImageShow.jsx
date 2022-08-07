@@ -106,7 +106,7 @@ export const ImageShow = () => {
     dispatch(loadingPopularMovie());
     axios({
       method: "get",
-      url: `http://localhost:8080/movieDetails?id=${id}`,
+      url: `https://imdb-clone-database.herokuapp.com/movieDetails?id=${id}`,
     })
       .then((res) => {
         dispatch(getMovieDetails(res.data));

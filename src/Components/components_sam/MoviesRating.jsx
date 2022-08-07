@@ -1,17 +1,24 @@
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import { RatingModal } from "./RatingModal";
+import axios from "axios";
 
 export const MoviesRating = ({ movieData,setOpen }) => {
-  const { imDbRating } = movieData;
+  let { imDbRating,ratings,id } = movieData;
+  // const [rating,setRating]=useState(ratings)
+  // useEffect(()=>{
 
-  
+  //   axios({
+  //     method: "get",
+  //     url: `https://imdb-clone-database.herokuapp.com/movieDetails?id=${id}`,
+  //   }).then((res) => setRating(res.data.ratings)).catch((err) => console.log(err));
 
+  // },[rating])
 
   return (
     <Box
@@ -85,7 +92,8 @@ export const MoviesRating = ({ movieData,setOpen }) => {
         >
           YOUR RATING
         </Typography>
-        <Box
+        {
+          ratings===null?  <Box
           variant="outlined"
           onClick={()=>setOpen(true)}
           startIcon={<StarIcon />}
@@ -119,7 +127,50 @@ export const MoviesRating = ({ movieData,setOpen }) => {
           >
             Rate
           </Typography>
+        </Box>: <Box
+          variant="outlined"
+          onClick={()=>(setOpen(true))}
+          startIcon={<StarIcon />}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "20px",
+            gap: "2px",
+            padding: "5px 0px",
+            textTransform: "none",
+            color: "rgb(87,153,239)",
+            borderColor: "rgb(31,31,31)",
+            cursor: "pointer",
+            borderRadius: "5px",
+            marginTop: "5px",
+            "&:hover": {
+              backgroundColor: "rgb(48,48,48)",
+              borderColor: "rgb(76,76,76)",
+            },
+          }}
+        >
+          <StarIcon />
+          <Typography
+            variant="span"
+            sx={{
+              color: "white",
+              fontSize: "20px",
+              fontWeight: "600",
+              letterSpacing: "2px",
+            }}
+          >
+            {ratings}
+            <Typography
+              variant="span"
+              sx={{ color: "rgb(128,128,128)", fontWeight: "400" }}
+            >
+              /10
+            </Typography>
+          </Typography>
         </Box>
+        }
+      
       </Box>
 
       <Box variant="div">
