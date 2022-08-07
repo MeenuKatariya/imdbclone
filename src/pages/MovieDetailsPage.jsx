@@ -37,6 +37,7 @@ export const MovieDetailsPage = () => {
   const dispatch = useDispatch();
 
   let {id} = useParams();
+  
 
   useEffect(() => {
     dispatch(loadingMovieDetails());
@@ -48,7 +49,7 @@ export const MovieDetailsPage = () => {
         dispatch(getMovieDetails(res.data));
       })
       .catch((err) => dispatch(errorMovieDetails()));
-  }, [dispatch]);
+  }, []);
   return (
     <>
     <Navbar/>
@@ -59,7 +60,7 @@ export const MovieDetailsPage = () => {
         <img
           src="https://m.media-amazon.com/images/I/51IfG+VoQ8L.jpg"
           alt="google ads"
-          style={{margin:"auto",marginLeft:"17%"}}
+          style={{margin:"auto",marginLeft:"20%"}}
         />
       </Box>
       {movieDetails.length === 0 ? (
