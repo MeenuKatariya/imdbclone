@@ -35,7 +35,20 @@ export const Watchlist = () => {
     const [sortCategory, setSortCategory] = React.useState("list_order")
     const [refine, setRefine] = React.useState(false);
     const [value, setValue] = React.useState(0);
-
+    const login = useSelector((state) => state.auth.user);
+    const handleRecentlyViewed = () => {
+        dispatch(recentlyViewedDelete())
+       
+        axios({
+            method:"PATCH",
+            url:`https://imdb-clone-database.herokuapp.com/user_profile/${login.id}`,
+            data:{
+                recently_viewed : []
+            }
+          }).then((res)=>{console.log(res)})
+          fetchRecentlyViewedData()
+        
+    }
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -76,7 +89,7 @@ export const Watchlist = () => {
 
     const fetchWatchListData = () => {
         dispatch(watchlistLoad());
-        axios.get(`http://localhost:8080/user_profile?login=true`).then(res => {
+        axios.get(`https://imdb-clone-database.herokuapp.com/user_profile?id=${login.id}`).then(res => {
             // console.log("first",res.data[0].watchlist)
             const payload = res.data[0].watchlist
             setLength(payload.length)
@@ -90,7 +103,7 @@ export const Watchlist = () => {
 
     const fetchRecentlyViewedData = () => {
 
-        axios.get(`http://localhost:8080/user_profile?login=true`).then(res => {
+        axios.get(`https://imdb-clone-database.herokuapp.com/user_profile?id=${login.id}`).then(res => {
             // console.log("Hello", res.data.recently_viewed)
             const payload = res.data[0].recently_viewed
             dispatch(recentlyViewedSuccess(payload))
@@ -560,7 +573,7 @@ export const Watchlist = () => {
                             spacing={1}
                         >
                             <p style={{ fontSize: "18px", color: "#5a5a5a", margin: "0px 10px" }}>Recently Viewed</p>
-                            <Button variant="text" onClick={() => dispatch(recentlyViewedDelete())} sx={{ fontSize: "10px", margin: "0px 10px" }}>Clear history</Button>
+                            <Button variant="text" onClick={() => handleRecentlyViewed()} sx={{ fontSize: "10px", margin: "0px 10px" }}>Clear history</Button>
                         </Stack>
 
                         {<Stack

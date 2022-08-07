@@ -25,7 +25,7 @@ export const CreateAccount = () => {
   const responseGoogle = async (res) => {
     console.log(res);
     try {
-      let result = await fetch("http://localhost:8080/user_profile");
+      let result = await fetch("https://imdb-clone-database.herokuapp.com/user_profile");
       let response = await result.json();
       let currUser = response.find((e) => e.email === res.profileObj.email);
 
@@ -53,7 +53,7 @@ export const CreateAccount = () => {
   const postData = async (data) => {
     try {
       dispatch(authLoading());
-      let res = await fetch(`http://localhost:8080/user_profile`, {
+      let res = await fetch(`https://imdb-clone-database.herokuapp.com/user_profile`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: { "Content-Type": "application/json" },
@@ -71,7 +71,7 @@ export const CreateAccount = () => {
   const getData = async () => {
     try {
       dispatch(authLoading());
-      let result = await fetch("http://localhost:8080/user_profile");
+      let result = await fetch("https://imdb-clone-database.herokuapp.com/user_profile");
       let response = await result.json();
       console.log(response);
 
