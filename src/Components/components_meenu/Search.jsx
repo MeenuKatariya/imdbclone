@@ -19,10 +19,10 @@ export const  SearchBar=({prop})=> {
        <div>
        <p>{el.Title}</p>
       <p>{el.Year}</p>
-      <p>{el.Type}</p>
-
+      <p>{el.Type}</p> 
+      <hr  style={{backgroundColor:"#1f1f1f", width:"100%" }} />
        </div>
-    
+
      </div>))
     }
   </div>

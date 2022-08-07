@@ -41,7 +41,7 @@
 .imagesAllDiv>div{
     display:flex;
     /* border:1px solid red; */
-    width:150px;
+    width: 180px;
       height: 50px;
       padding-left: 0;
       text-align: center;
@@ -72,9 +72,10 @@
 
 }
 .awards{
-    /* display:flex; */
+    display:flex;
     /* border:1px solid #ff0000; */
-    /* width:150px; */
+    width:300px;
+    /* border: 1px solid blue; */
       height: 50px;
       /* padding-left: 0; */
       /* text/-align: center; */
@@ -117,12 +118,12 @@
   
 }
 .awardsImg{
-    /* border: 1px solid black; */
+    /* border: 1px solid red; */
     height: 50px;
   display: flex;
   margin-top: 0;
   justify-content: space-around;
-    width: 240px;
+    width: 280px;
 }
 .awardsImg>h2{
     text-align :center;

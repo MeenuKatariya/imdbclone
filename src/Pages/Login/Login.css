@@ -50,14 +50,14 @@
 
 }
 .createButton>button{
-    width:97%;
+    width:94%;
     margin: 5px;
     height:25px;
     background-color:#f0c14b;
      font-family:"Amazon Ember",Arial,sans-serif;
      border:#a88734  ;
      margin-right: 15px;
-     border-radius: 2px;
+     border-radius: 4px;
      color:#111111;
      outline:0.2px solid #a88734;
      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

@@ -65,7 +65,7 @@ export const EditWatchlist = () => {
     return (
         <div>
             <Navbar/>
-            <Box sx={{ backgroundColor: "#E3E2DD", width: "100%", display: "flex", justifyContent: "center" }}>
+            <Box sx={{ marginTop: "64px", backgroundColor: "#E3E2DD", width: "100%", display: "flex", justifyContent: "center" }}>
 
                 <Box sx={{ backgroundColor: "#EEEEEE", height: "100%", width: "1010px", display: "flex", flexDirection: "column" }}>
                     {/* -----------------------------------Ad Poster----------------------------- */}

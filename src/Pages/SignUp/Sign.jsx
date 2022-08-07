@@ -131,7 +131,7 @@ export const Sign=()=> {
         <p className='signLabel'>Password</p>
        
         <input type="password"  className='SigninputBox'  value={password} onChange={(e)=>setPassword(e.target.value)}  placeholder='at least 8 characters' />
-        <p style={{marginTop:4,textAlign:"left",marginLeft:10 ,paddingLeft:5 ,fontSize:12, fontFamily:"Amazon Ember,Arial,sans-serif"}}> Passwords must be at least 8 characters.</p>
+        <p style={{marginTop:4,textAlign:"left",marginLeft:5 ,paddingLeft:5 ,fontSize:12, fontFamily:"Amazon Ember,Arial,sans-serif"}}> Passwords must be at least 8 characters.</p>
         <p className='signLabel'>Re-enter password</p>
         <input type="password"   value={reenterPassword} onChange={(e)=>setReEnterPassword(e.target.value)} className='SigninputBox' />
         <div className='createButton'>
@@ -156,7 +156,7 @@ export const Sign=()=> {
         <p>Conditions of Use</p>
         <p>Privacy Notice</p>
     </div>
-    <p className='copyright'>
+    <p className='copyright' style={{marginLeft:650}}>
     © 1996-2022,Amazon.com, Inc. or its affiliates
     </p>
 </div>

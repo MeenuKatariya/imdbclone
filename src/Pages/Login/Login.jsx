@@ -5,6 +5,7 @@ import "./Login.css";
 import { useDispatch, useSelector } from "react-redux";
 import { authData, authError, authLoading } from "../../Redux/Auth/Action";
 import { Alert, Button } from '@mui/material'
+import { useNavigate } from "react-router-dom";
 
 
 export const Login = () => {
@@ -13,6 +14,7 @@ export const Login = () => {
   const [alertEmail,setAlertEmail]=React.useState(false)
   const [userAlert,setUserAlert]=React.useState(false)
   const dispatch=useDispatch();
+ const navigate=useNavigate();
 
  
  
@@ -29,6 +31,7 @@ export const Login = () => {
     {
       dispatch(authData(element))
       // alert("Login Successful")
+      navigate("/")
       setAlertEmail(true)
       setTimeout(()=>{
         setAlertEmail(false)
@@ -108,7 +111,7 @@ const handleLogin=()=>{
         <p>Conditions of Use</p>
         <p>Privacy Notice</p>
       </div>
-      <p className="copyright">
+      <p className="copyright" style={{marginLeft:650}}>
         © 1996-2022,Amazon.com, Inc. or its affiliates
       </p>
     </div>

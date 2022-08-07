@@ -13,9 +13,9 @@ export const IMDbProImage=({prop}) =>{
             <img   src="https://image.scoopwhoop.com/q30/s3.scoopwhoop.com/anj2/614037c38a373a1f92942c76/0d2e3604-6f35-42e5-9e49-2041e0b07d26.jpg" style={{height:"100%",borderRadius:7, width:"100%"}} alt="" />
         </div>
         <div style={{marginTop:0}}>
-            <h3 style={{fontSize:16, marginTop:0 ,color:"#ffffff", height:20}} >The essential resource for entertainment professionals</h3>
+            <h3 style={{fontSize:16, marginTop:0 ,marginLeft:9,border:"1px solid red,",color:"#ffffff", height:20}} >The essential resource for entertainment professionals</h3>
              <div  style={{ textAlign:"left",paddingLeft:0}}>
-             <ul style={{marginTop:0,marginLeft:0, fontSize:14 ,color:"#ffffff"}} >
+             <ul style={{marginTop:4,marginLeft:0, fontSize:14 ,color:"#ffffff"}} >
                 <li>
                     Find industry contacts & talent representation
                 </li>

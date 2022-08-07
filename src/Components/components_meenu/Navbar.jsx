@@ -74,11 +74,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export const Navbar = () => {
-  // const [anchorEl, setAnchorEl] = React.useState();
-  // const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState();
+ 
   const navigate = useNavigate();
-  // const isMenuOpen = Boolean(anchorEl);
-  // const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+ 
   const [divHover, setDivHover] = React.useState(false);
   const [searchMovie, setSearchMovie] = React.useState("");
   const [inputSearch, setInputSearch] = React.useState([]);
@@ -86,49 +84,36 @@ export const Navbar = () => {
   const [loginBox, setLoginBox] = React.useState(false);
   const login = useSelector((state) => state.auth.user);
   console.log(login)
-  const name = useSelector((state) => state.auth.user);
+
   const dispatch = useDispatch();
   const [loginBoxShow, setLoginBoxshow] = React.useState(false);
   console.log(login);
-  // console.log(search)
-  // const handleProfileMenuOpen = (event) => {
-  //   setAnchorEl(event.currentTarget);
-  // };
+  
+  const handleSignOut=()=>{
+    dispatch(signOut());
+    setLoginBoxshow(prev=>!prev)
+    console.log(login.id)
+ 
 
-  // const handleMobileMenuClose = () => {
-  //   setMobileMoreAnchorEl(null);
-  // };
+    axios({
+      method:"PATCH",
+      url:`http://localhost:8080/user_profile/${login.id}`,
+      data:{
+        login:false
+      }
+    });
+    navigate("/")
+    
+  }
 
-  // const handleMenuClose = () => {
-  //   setAnchorEl(null);
-  //   handleMobileMenuClose();
-  // };
+  const handleWatchlist=()=>{
+    console.log("hello")
+    console.log(login.name)
+    {
+      login.name? navigate("/watchlist"):navigate("/createaccount")
+    }
+  }
 
-  // const handleMobileMenuOpen = (event) => {
-  //   setMobileMoreAnchorEl(event.currentTarget);
-  // };
-
-  // const menuId = "primary-search-account-menu";
-  // const renderMenu = (
-  //   <Menu
-  //     anchorEl={anchorEl}
-  //     anchorOrigin={{
-  //       vertical: "top",
-  //       horizontal: "right",
-  //     }}
-  //     id={menuId}
-  //     keepMounted
-  //     transformOrigin={{
-  //       vertical: "top",
-  //       horizontal: "right",
-  //     }}
-  //     open={isMenuOpen}
-  //     onClose={handleMenuClose}
-  //   >
-  //     <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-  //     <MenuItem onClick={handleMenuClose}>My account</MenuItem>
-  //   </Menu>
-  // );
 
   const searchData = () => {
     axios({
@@ -146,91 +131,97 @@ export const Navbar = () => {
   const handleSign = () => {
     navigate("/createaccount");
   };
-  const handleMenu = () => {
+  const handlemenu = () => {
+    console.log("1")
     navigate("/menu");
   };
 
-  // const mobileMenuId = "primary-search-account-menu-mobile";
-  // const renderMobileMenu = (
-  //   <Menu
-  //     anchorEl={mobileMoreAnchorEl}
-  //     anchorOrigin={{
-  //       vertical: "top",
-  //       horizontal: "right",
-  //     }}
-  //     id={mobileMenuId}
-  //     keepMounted
-  //     transformOrigin={{
-  //       vertical: "top",
-  //       horizontal: "right",
-  //     }}
-  //     open={isMobileMenuOpen}
-  //     onClose={handleMobileMenuClose}
-  //   >
-  //     <MenuItem>
-  //       <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-  //         <Badge badgeContent={4} color="error">
-  //           <MailIcon />
-  //         </Badge>
-  //       </IconButton>
-  //       <p>Messages</p>
-  //     </MenuItem>
-  //     <MenuItem>
-  //       <IconButton
-  //         size="large"
-  //         aria-label="show 17 new notifications"
-  //         color="inherit"
-  //       >
-  //         <Badge badgeContent={17} color="error">
-  //           <NotificationsIcon />
-  //         </Badge>
-  //       </IconButton>
-  //       <p>Notifications</p>
-  //     </MenuItem>
-  //     <MenuItem onClick={handleProfileMenuOpen}>
-  //       <IconButton
-  //         size="large"
-  //         aria-label="account of current user"
-  //         aria-controls="primary-search-account-menu"
-  //         aria-haspopup="true"
-  //         color="inherit"
-  //       >
-  //         <AccountCircle />
-  //       </IconButton>
-  //       <p>Profile</p>
-  //     </MenuItem>
-  //   </Menu>
-  // );
+ 
 
   return (
     <Box className="mainBox" style={{ position: "relative" }}>
       <AppBar className="appBar" style={{ backgroundColor: "#121212" }}>
         <Toolbar style={{ marginLeft: 40 }}>
-          {login.name ? (
-            //  {
-            //   loginBoxShow? (
-            //     <div className="loginBox"
+         
+            
+             
+            
 
-            //   style={{
-            //     position: "absolute",
-            //     top: 63,
+             
+             {
+              loginBoxShow?
 
-            //     height:250,
-            //     marginLeft: 1070,
-            //     backgroundColor: "#1f1f1f",
-            //     width: 150,
-            //   }}
-            // >
-            <div style={{ textAlign: "center" }}>
+              <div className="loginBox"
+
+            style={{
+              position: "absolute",
+              top: 63,
+
+              height:250,
+              marginLeft: 1070,
+              backgroundColor: "#1f1f1f",
+              width: 150,
+            }} >
+
+              <div style={{ textAlign: "center" }}>
               <p>Your Activity</p>
               <p>Your Watchlist</p>
               <p>Your ratings</p>
               <p>Your lists</p>
               <p>Account settings</p>
-              <button
-                className="signOutButton"
+              <button 
+                 className="signOutButton"
                 style={{
-                  backgroundColor: "#1f1f1f",
+                backgroundColor: "#1f1f1f",
+                  color: "white",
+                  border: "none",
+                  fontSize: 14,
+                }}
+                onClick={handleSignOut  }
+                
+              >
+                SignOut
+              </button>
+              </div>
+            </div>:null
+             
+            
+          
+         }
+
+
+
+
+
+
+
+
+
+          {/* {login.name ? (
+            
+            
+                <div className="loginBox"
+
+              style={{
+                position: "absolute",
+                top: 63,
+
+                height:250,
+                marginLeft: 1070,
+                backgroundColor: "#1f1f1f",
+                width: 150,
+              }} >
+            
+          <div style={{ textAlign: "center" }}>
+              <p>Your Activity</p>
+              <p>Your Watchlist</p>
+              <p>Your ratings</p>
+              <p>Your lists</p>
+              <p>Account settings</p>
+              <button 
+                 className="signOutButton"
+                style={{
+                backgroundColor: "#1f1f1f",
                   color: "white",
                   border: "none",
                   fontSize: 14,
@@ -239,10 +230,10 @@ export const Navbar = () => {
               >
                 SignOut
               </button>
-            </div>
-          ) : // </div>
+            </div>:null
+          } */}
 
-          null}
+        
           <div
             style={{
               display: "flex",
@@ -262,16 +253,17 @@ export const Navbar = () => {
                 display: "flex",
                 width: 80,
                 justifyContent: "space-between",
+                border:"1px solid red"
               }}
             >
               <MenuIcon
-                style={{ marginTop: 10, marginLeft: "10px", color: "grey" }}
+                style={{ marginTop: 10, color: "grey" }}
               />
 
               <p
                 className="menu"
-                onClick={()=>handleMenu}
-                style={{ textAlign: "center", marginTop: 10, fontWeight: 700 }}
+                onClick={handlemenu}
+                style={{ textAlign: "center", fontWeight: 700,fontSize:13,textAlign:"center" }}
               >
                 Menu
               </p>
@@ -379,9 +371,11 @@ export const Navbar = () => {
           >
             <div
               className="watchList"
+              onClick={handleWatchlist}
               style={{
                 display: "flex",
                 width: 94,
+                border:"1px solid red",
                 justifyContent: "space-between",
               }}
             >
@@ -399,8 +393,8 @@ export const Navbar = () => {
                 Watchlist
               </Typography>
             </div>
-            <div className="signIn">
-              onClick={()=>setLoginBoxshow(true)}
+            <div   onClick={()=>setLoginBoxshow(prev=>!prev)} className="signIn">
+              
               {login.imgUrl ? (
                 <div
                   className="imgName"
@@ -447,7 +441,7 @@ export const Navbar = () => {
                   fontFamily="Roboto,Helvetica,Arial,sans-serif"
                   noWrap
                   component="div"
-                  onClick={()=>handleSign}
+                  onClick={handleSign}
                   sx={{ display: { xs: "none", sm: "block" } }}
                 >
                   Sign In
@@ -488,7 +482,7 @@ export const Navbar = () => {
           <IMDbProImage prop={divHover} />
           <SearchBar prop={inputSearch} />
         </Toolbar>
-      </AppBar>
+       </AppBar>
       {/* {renderMobileMenu}
       {renderMenu}{" "} */}
     </Box>

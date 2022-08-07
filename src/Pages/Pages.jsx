@@ -18,7 +18,7 @@ export const Pages = () => {
         <Route path="/createaccount" element={<CreateAccount />}></Route>
         <Route path="/sign" element={<Sign />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/menu" element={<Menu />}></Route>
+        <Route path="/menu" element={<Menu/>}></Route>
         <Route path="/movieDetails/:id" element={<MovieDetailsPage />}></Route>
         <Route path="/watchlist" element={<Watchlist />} />
         <Route path="/edit_watchlist" element={<EditWatchlist />} />
