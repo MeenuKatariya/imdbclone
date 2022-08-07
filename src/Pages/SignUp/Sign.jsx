@@ -38,7 +38,7 @@ export const Sign=()=> {
     }
     try{
       dispatch(authLoading())
-      let res=await fetch(`http://localhost:8080/user_profile`,{
+      let res=await fetch(`https://imdb-clone-database.herokuapp.com/user_profile`,{
         method:"POST",
         body:JSON.stringify(data),
         headers:{"Content-Type":"application/json"}

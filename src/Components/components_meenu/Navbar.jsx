@@ -97,7 +97,7 @@ export const Navbar = () => {
 
     axios({
       method:"PATCH",
-      url:`http://localhost:8080/user_profile/${login.id}`,
+      url:`https://imdb-clone-database.herokuapp.com/user_profile/${login.id}`,
       data:{
         login:false
       }
