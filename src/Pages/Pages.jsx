@@ -3,13 +3,13 @@ import { Route, Routes } from "react-router-dom";
 import { Sign } from "./SignUp/Sign";
 import { Login } from "./Login/Login";
 import  Home  from "./Home";
-import  {Menu } from "../components/components_meenu/Menu";
+import  {Menu } from "../Components/components_meenu/Menu";
 import { MovieDetailsPage } from "./MovieDetailsPage";
 import { EditWatchlist } from "./EditWatchlist";
 import { Watchlist } from "./Watchlist";
 import { CreateAccount } from "./SignUp/CreateAccount";
-import {PhotoGallery} from "../components/components_sam/PhotoGallery"
-import { TrailerShow } from "../components/components_sam/TrailerShow";
+import {PhotoGallery} from "../Components/components_sam/PhotoGallery"
+import { TrailerShow } from "../Components/components_sam/TrailerShow";
 export const Pages = () => {
   return (
     <div>

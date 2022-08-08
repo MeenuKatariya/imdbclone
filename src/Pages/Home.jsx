@@ -1,19 +1,19 @@
 import React from 'react'
 import styled from "styled-components"
-import Banner from '../components/components_vishal/Banner';
-import TopPicks from '../components/components_vishal/TopPicks';
+import Banner from '../Components/components_vishal/Banner';
+import TopPicks from '../Components/components_vishal/TopPicks';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import FeaturedTodayBanner from '../components/components_vishal/FeaturedTodayBanner';
-import EmptyWatchList from '../components/components_vishal/EmptyWatchList';
-import Heading from '../components/components_vishal/Heading';
-import ListMovies from '../components/components_vishal/ListMovies';
+import FeaturedTodayBanner from '../Components/components_vishal/FeaturedTodayBanner';
+import EmptyWatchList from '../Components/components_vishal/EmptyWatchList';
+import Heading from '../Components/components_vishal/Heading';
+import ListMovies from '../Components/components_vishal/ListMovies';
 import Button from '@mui/material/Button';
-import IMDBOriginals from '../components/components_vishal/IMDBOriginals';
-import TabPanel from '../components/components_vishal/TabPanel';
-import BoxOffice from '../components/components_vishal/BoxOffice';
+import IMDBOriginals from '../Components/components_vishal/IMDBOriginals';
+import TabPanel from '../Components/components_vishal/TabPanel';
+import BoxOffice from '../Components/components_vishal/BoxOffice';
 import { Link } from 'react-router-dom';
-import { Navbar } from '../components/components_meenu/Navbar';
-import { Footer } from '../components/components_meenu/Footer';
+import { Navbar } from '../Components/components_meenu/Navbar';
+import { Footer } from '../Components/components_meenu/Footer';
 const HomeElement = styled.div`
     background-color:black;
     height:auto;
