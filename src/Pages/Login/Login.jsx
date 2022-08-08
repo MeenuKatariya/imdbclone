@@ -6,13 +6,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { authData, authError, authLoading } from "../../Redux/Auth/Action";
 import { Alert, Button } from '@mui/material'
 import { useNavigate } from "react-router-dom";
-
+import { axios } from "axios";
 
 export const Login = () => {
   const[email,setEmail]=React.useState("")
   const[password,setPassword]=React.useState("")
   const [alertEmail,setAlertEmail]=React.useState(false)
   const [userAlert,setUserAlert]=React.useState(false)
+  const login=useSelector(state=>state.auth.user)
   const dispatch=useDispatch();
  const navigate=useNavigate();
 
@@ -28,9 +29,27 @@ export const Login = () => {
    let userExist=false;
    output.forEach((element,i) => {
     if(element.password==password && element.email==email)
-    {
+     {
       dispatch(authData(element))
+      // axios({
+      //   method:"PATCH",
+      //   url:`https://imdb-clone-database.herokuapp.com/user_profile/${login.id}`,
+      //   data:{
+      //       login: true
+      //   }
+      // }).then((res)=>{console.log(res)})
+      
+     fetch(`https://imdb-clone-database.herokuapp.com/user_profile/${element.id}`,{
+      method:"PATCH",
+      body:JSON.stringify({login:true}),
+      headers:{"Content-Type":"application/json"}
+     }).then((res)=>res.json).then(res=>console.log(res))
+
+     
+    
       // alert("Login Successful")
+      
+
       navigate("/")
       setAlertEmail(true)
       setTimeout(()=>{
