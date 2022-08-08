@@ -6,6 +6,8 @@ import Modal from "@mui/material/Modal";
 import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import { Rating } from "@mui/material";
 import styled from "styled-components";
+import axios from "axios";
+import { RatingContext } from "./RatingContext";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
@@ -19,8 +21,10 @@ const StyledRating = styled(Rating)({
   },
 });
 
-export const RatingModal = ({ setOpen, open, title }) => {
+export const RatingModal = ({ setOpen, open, movieData}) => {
   const [value, setValue] = React.useState(0);
+  const {title, id}=movieData;
+  const {handleRating, handleUpdateRating}=  React.useContext(RatingContext)
 
   return (
     <div>
@@ -98,6 +102,8 @@ export const RatingModal = ({ setOpen, open, title }) => {
           <Button
             disabled={value === 0}
             variant="contained"
+            onClick={()=>{handleUpdateRating({id,value})
+                    setOpen(false)}}
             sx={{
               color: "rgb(170,170,170)",
               textTransform: "none",

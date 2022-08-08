@@ -21,7 +21,7 @@ export const RightPanel = () => {
     dispatch(loadingPopularMovie());
     axios({
       method: "get",
-      url: "http://localhost:8080/popularMovies",
+      url: "https://imdb-clone-database.herokuapp.com/popularMovies",
     })
       .then((res) => {
         dispatch(getPopularMovie(res.data));

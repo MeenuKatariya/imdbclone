@@ -315,7 +315,7 @@ const TopPicks = ({ data }) => {
                     marginTop: "7px",
                   }}
                 >
-                  <Link to={`/trailer/${el.id}`}>
+                  <Link to={`/trailer/${el.id}`}style={{textDecoration:"none"}}>
                     <TrailerButton>
                       <PlayArrowRoundedIcon
                         sx={{ fontSize: "25px", marginRight: "4px" }}

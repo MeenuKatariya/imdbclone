@@ -27,13 +27,13 @@ const Home = () => {
   const [Watchlist, setWatchlist] = React.useState([])
   const d = new Date().toDateString();
   const GetTopMovies = () => {
-    fetch(`http://localhost:8080/movies?`)
+    fetch(`https://imdb-clone-database.herokuapp.com/movies?`)
       .then((res) => res.json())
       .then((res) => setTopMovies(res))
       .catch((error) => console.log(error))
   }
   const GetInTheaters = () => {
-    fetch(`http://localhost:8080/theaters`)
+    fetch(`https://imdb-clone-database.herokuapp.com/theaters`)
       .then((res) => res.json())
       .then((res) => setInTheaters(res))
       .catch((error) => console.log(error))

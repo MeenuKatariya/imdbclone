@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import "../Components/components_sam/MovieDetails.css"
 import {
   errorMovieDetails,
   getMovieDetails,
@@ -43,7 +44,7 @@ export const MovieDetailsPage = () => {
     dispatch(loadingMovieDetails());
     axios({
       method: "get",
-      url: `http://localhost:8080/movieDetails?id=${id}`,
+      url: `https://imdb-clone-database.herokuapp.com/movieDetails?id=${id}`,
     })
       .then((res) => {
         dispatch(getMovieDetails(res.data));
@@ -67,7 +68,7 @@ export const MovieDetailsPage = () => {
         <Loading />
       ) : (
         <div style={{ width: "100%", backgroundColor: "rgb(31,31,31)" }}>
-           {open && <RatingModal setOpen={setOpen} open={open} title={movieData.title}/>}
+           {open && <RatingModal setOpen={setOpen} open={open} movieData={movieData}/>}
           <Box
             variant="div"
             sx={{ width: "90%", margin: "auto", marginBottom: "50px" }}

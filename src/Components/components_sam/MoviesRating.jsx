@@ -1,16 +1,19 @@
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import { RatingModal } from "./RatingModal";
+import axios from "axios";
+import { RatingContext } from "./RatingContext";
 
 export const MoviesRating = ({ movieData,setOpen }) => {
-  const { imDbRating } = movieData;
-
-  
+  let { imDbRating,id,ratings } = movieData;
+  let [mrating,setMRating]=useState(ratings)
+  const {rating, setRating}=useContext(RatingContext);
+  mrating=rating;
 
 
   return (
@@ -85,7 +88,8 @@ export const MoviesRating = ({ movieData,setOpen }) => {
         >
           YOUR RATING
         </Typography>
-        <Box
+        {
+          (mrating==null)?  <Box
           variant="outlined"
           onClick={()=>setOpen(true)}
           startIcon={<StarIcon />}
@@ -119,7 +123,50 @@ export const MoviesRating = ({ movieData,setOpen }) => {
           >
             Rate
           </Typography>
+        </Box>: <Box
+          variant="outlined"
+          onClick={()=>(setOpen(true))}
+          startIcon={<StarIcon />}
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "20px",
+            gap: "2px",
+            padding: "5px 0px",
+            textTransform: "none",
+            color: "rgb(87,153,239)",
+            borderColor: "rgb(31,31,31)",
+            cursor: "pointer",
+            borderRadius: "5px",
+            marginTop: "5px",
+            "&:hover": {
+              backgroundColor: "rgb(48,48,48)",
+              borderColor: "rgb(76,76,76)",
+            },
+          }}
+        >
+          <StarIcon />
+          <Typography
+            variant="span"
+            sx={{
+              color: "white",
+              fontSize: "20px",
+              fontWeight: "600",
+              letterSpacing: "2px",
+            }}
+          >
+            {mrating}
+            <Typography
+              variant="span"
+              sx={{ color: "rgb(128,128,128)", fontWeight: "400" }}
+            >
+              /10
+            </Typography>
+          </Typography>
         </Box>
+        }
+      
       </Box>
 
       <Box variant="div">

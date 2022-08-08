@@ -21,12 +21,12 @@ export const EditWatchlist = () => {
     const [watchlistLength, setLength] =React.useState(0)  
     const [order, setOrder] =React.useState(true);
     const [sortCategory, setSort] =React.useState("year")
-
+    const login = useSelector(state => state.auth.user)
     const fetchWatchListData = () => {
         dispatch(watchlistLoad());
-        axios.get(`http://localhost:8080/user_profile`).then(res => {
+        axios.get(`https://imdb-clone-database.herokuapp.com/user_profile?id=${login.id}`).then(res => {
             console.log(res.data.watchlist)
-            const watchlistData = res.data.watchlist
+            const watchlistData = res.data[0].watchlist
             {if(order){
                var payload =  watchlistData.sort((a, b) => parseFloat(b.year) - parseFloat(a.year)); 
             }
@@ -43,9 +43,9 @@ export const EditWatchlist = () => {
 
     const fetchRecentlyViewedData = () => {
      
-        axios.get(`http://localhost:8080/user_profile`).then(res => {
-            console.log("Hello",res.data.recently_viewed)
-            const payload = res.data.recently_viewed
+        axios.get(`https://imdb-clone-database.herokuapp.com/user_profile?id=${login.id}`).then(res => {
+            console.log("Hello",res.data[0].recently_viewed)
+            const payload = res.data[0].recently_viewed
             dispatch(recentlyViewedSuccess(payload))
         }).catch(err => {
             console.log(err)
