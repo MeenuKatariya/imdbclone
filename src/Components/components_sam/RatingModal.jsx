@@ -7,6 +7,7 @@ import StarRateRoundedIcon from "@mui/icons-material/StarRateRounded";
 import { Rating } from "@mui/material";
 import styled from "styled-components";
 import axios from "axios";
+import { RatingContext } from "./RatingContext";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
@@ -22,17 +23,8 @@ const StyledRating = styled(Rating)({
 
 export const RatingModal = ({ setOpen, open, movieData}) => {
   const [value, setValue] = React.useState(0);
-  console.log(value)
   const {title, id}=movieData;
-  const handleUpdateRating=()=>{
-    axios({
-      method:"PATCH",
-      url:`https://imdb-clone-database.herokuapp.com/movieDetails/${id}`,
-      data:{
-        ratings:value
-      }
-    }).then((res)=>{console.log(res)})
-  }
+  const {handleRating, handleUpdateRating}=  React.useContext(RatingContext)
 
   return (
     <div>
@@ -110,7 +102,8 @@ export const RatingModal = ({ setOpen, open, movieData}) => {
           <Button
             disabled={value === 0}
             variant="contained"
-            onClick={()=>handleUpdateRating()}
+            onClick={()=>{handleUpdateRating({id,value})
+                    setOpen(false)}}
             sx={{
               color: "rgb(170,170,170)",
               textTransform: "none",

@@ -1,24 +1,20 @@
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import { RatingModal } from "./RatingModal";
 import axios from "axios";
+import { RatingContext } from "./RatingContext";
 
 export const MoviesRating = ({ movieData,setOpen }) => {
-  let { imDbRating,ratings,id } = movieData;
-  // const [rating,setRating]=useState(ratings)
-  // useEffect(()=>{
+  let { imDbRating,id,ratings } = movieData;
+  let [mrating,setMRating]=useState(ratings)
+  const {rating, setRating}=useContext(RatingContext);
+  mrating=rating;
 
-  //   axios({
-  //     method: "get",
-  //     url: `https://imdb-clone-database.herokuapp.com/movieDetails?id=${id}`,
-  //   }).then((res) => setRating(res.data.ratings)).catch((err) => console.log(err));
-
-  // },[rating])
 
   return (
     <Box
@@ -93,7 +89,7 @@ export const MoviesRating = ({ movieData,setOpen }) => {
           YOUR RATING
         </Typography>
         {
-          ratings===null?  <Box
+          (mrating==null)?  <Box
           variant="outlined"
           onClick={()=>setOpen(true)}
           startIcon={<StarIcon />}
@@ -160,7 +156,7 @@ export const MoviesRating = ({ movieData,setOpen }) => {
               letterSpacing: "2px",
             }}
           >
-            {ratings}
+            {mrating}
             <Typography
               variant="span"
               sx={{ color: "rgb(128,128,128)", fontWeight: "400" }}
