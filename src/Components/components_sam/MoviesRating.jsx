@@ -11,10 +11,10 @@ import { RatingContext } from "./RatingContext";
 
 export const MoviesRating = ({ movieData,setOpen }) => {
   let { imDbRating,id,ratings } = movieData;
-  let [mrating,setMRating]=useState(ratings)
   const {rating, setRating}=useContext(RatingContext);
-  mrating=rating;
-
+  useEffect(()=>{
+    setRating(ratings)
+  },[])
 
   return (
     <Box
@@ -89,7 +89,7 @@ export const MoviesRating = ({ movieData,setOpen }) => {
           YOUR RATING
         </Typography>
         {
-          (mrating==null)?  <Box
+          (rating==null)?  <Box
           variant="outlined"
           onClick={()=>setOpen(true)}
           startIcon={<StarIcon />}
@@ -156,7 +156,7 @@ export const MoviesRating = ({ movieData,setOpen }) => {
               letterSpacing: "2px",
             }}
           >
-            {mrating}
+            {rating}
             <Typography
               variant="span"
               sx={{ color: "rgb(128,128,128)", fontWeight: "400" }}

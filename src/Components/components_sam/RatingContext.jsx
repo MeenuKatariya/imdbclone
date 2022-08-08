@@ -10,18 +10,21 @@ export const RatingProvider = ({ children }) => {
             url: `https://imdb-clone-database.herokuapp.com/movieDetails?id=${id}`,
           }).then((res) => {setRating(res.data[0].ratings)}).catch((err) => console.log(err));
       
-  };
+  }
 
   const handleUpdateRating=(body)=>{
-    const {id,value}=body;
-    axios({
-      method:"PATCH",
-      url:`https://imdb-clone-database.herokuapp.com/movieDetails/${id}`,
-      data:{
-        ratings:value
-      }
-    });
-
+    const {id,value,ratings}=body;
+    
+      axios({
+        method:"PATCH",
+        url:`https://imdb-clone-database.herokuapp.com/movieDetails/${id}`,
+        data:{
+          ratings:value
+        }
+      });
+     
+   
+   
     handleRating(id);
   }
 
