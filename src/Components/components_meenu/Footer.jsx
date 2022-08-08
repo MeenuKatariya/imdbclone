@@ -23,7 +23,7 @@ export const Footer=()=> {
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>IMDb Developer</p>
 
         </div>
-        <div  className="para" style={{display:"flex",justifyContent:"space-between" ,width:700,marginLeft:"430px" ,color:"#FFFFFFF"}} >
+        <div  className="para" style={{display:"flex",justifyContent:"space-between" ,width:700,margin:"auto" ,color:"#FFFFFFF"}} >
         <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Press Room</p>
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Advertising</p>
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Jobs</p>
@@ -31,10 +31,10 @@ export const Footer=()=> {
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Privacy Policy</p>
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Interest-Based Ads</p>
         </div>
-        <div>
+        <div  style={{marginLeft:700}}>
            <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>an amazon company</p> 
         </div>
-        <div>
+        <div style={{marginLeft:660}}>
             <p style={{color:"#ffffffB3",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>
             ©1990-2022 by IMDb.com, Inc.
             </p>

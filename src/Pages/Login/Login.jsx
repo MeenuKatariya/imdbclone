@@ -62,7 +62,9 @@ export const Login = () => {
 
 
 
- 
+ const handleNewAccount=()=>{
+  navigate("/sign")
+ }
 
 
 const handleLogin=()=>{
@@ -90,7 +92,7 @@ const handleLogin=()=>{
             <div className="inputBoxes">
               <div className="createAccount">
                 
-                <p>Login</p>
+                <p>Sign-In</p>
               </div>
 
               <p className="signLabel">Email</p>
@@ -100,7 +102,11 @@ const handleLogin=()=>{
               <input type="password" className="SigninputBox"  value={password} onChange={(e)=>setPassword(e.target.value)}  />
 
               <div className="createButton">
-                <button onClick={handleLogin}>Login</button>
+                <button onClick={handleLogin}>Sign-In</button>
+              </div>
+              <div>
+                <p style={{textAlign:"center",fontSize:12,fontFamily:"Amazon Ember,Arial ,sans-serif",color:"#767676"}}>New to IMDb?</p>
+                <button  style={{color:"#11111",fontSize:"12px",fontFamily:"Amazon Ember ,Arial,sans-serif",margin:"auto",width:"94%",height:30,borderRadius:7,border:"none"}}  onClick={handleNewAccount}>Create your IMDb account</button>
               </div>
             </div>
           </div>
