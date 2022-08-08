@@ -1,7 +1,8 @@
 .parentDiv{
     /* border: 1px solid red; */
     display: flex;
-    width:480px;
+    min-width:550px;
+    
     gap:20px;
     z-index:  20px ; 
    
@@ -13,16 +14,17 @@
 }
 .superPart{
     /* border: 1px solid red; */
-    left:300px;
+    left:270px;
     top:60px;
     position:absolute;
     height:280px;
     overflow-y: scroll;
-    
-
-
-
+    overflow-x: hidden;
 }
+.superPart::-webkit-scrollbar{
+    background-color:transparent
+}
+
 
 .parentDiv>div>img{
     width: 50px;

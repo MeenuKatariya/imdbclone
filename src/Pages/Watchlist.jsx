@@ -20,8 +20,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { useDispatch, useSelector } from 'react-redux';
 import { recentlyViewedSuccess, recentlyViewedDelete, watchlistError, watchlistLoad, watchlistSuccess, sortYearDesc, sortYearAsc, sortRuntimeDesc, sortRuntimeAsc,sortImdbRatingAsc,sortImdbRatingDesc, sortDefault } from '../Redux/Watchlist/action';
-import {Navbar} from "../Components/components_meenu/Navbar"
-import {Footer} from "../Components/components_meenu/Footer"
+import {Navbar} from "../components/components_meenu/Navbar"
+import {Footer} from "../components/components_meenu/Footer"
 
 export const Watchlist = () => {
 
@@ -495,9 +495,9 @@ export const Watchlist = () => {
                                                                             divider={<Divider orientation="vertical" flexItem />}
                                                                             spacing={1}
                                                                         >
-                                                                            <span><p style={{ color: "grey", margin: "0px", fontSize: "11px", paddingBottom: "5px" }}>{e.year}</p></span>
+                                                                            <span><p style={{ color: "grey", margin: "0px", fontSize: "11px", paddingBottom: "5px" }}>{e.description ? e.description.slice(1,5) : "N/A" }</p></span>
                                                                             <span><p style={{ color: "grey", margin: "0px", fontSize: "11px", paddingBottom: "5px" }}>{e.runtimeStr}</p></span>
-                                                                            <span><p style={{ color: "grey", margin: "0px", fontSize: "11px", paddingBottom: "5px" }}>Genre</p></span>
+                                                                            <span><p style={{ color: "grey", margin: "0px", fontSize: "11px", paddingBottom: "5px" }}>{e.genres}</p></span>
                                                                         </Stack>
                                                                         <Stack
                                                                             direction="row"
@@ -514,10 +514,10 @@ export const Watchlist = () => {
                                                                             spacing={1}
                                                                         >
                                                                             <span><p style={{ color: "#136cb2", margin: "0px", fontSize: "11px", paddingBottom: "7px" }}>Director</p></span>
-                                                                            <span><p style={{ color: "#136cb2", margin: "0px", fontSize: "11px", paddingBottom: "7px" }}>Cast names in the movie</p></span>
+                                                                            <span><p style={{ color: "#136cb2", margin: "0px", fontSize: "11px", paddingBottom: "7px" }}>{e.stars}</p></span>
 
                                                                         </Stack>
-                                                                        <p style={{ color: "#3d3d3d", margin: "0px", fontSize: "12px", paddingBottom: "7px" }}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, sapiente! Officiis assumenda nihil dolores odit ducimus vitae inventore incidunt similique, facilis mollitia quia dicta cumque labore. Obcaecati accusantium molestiae alias at debitis totam reiciendis facilis repellendus.</p>
+                                                                        <p style={{ color: "#3d3d3d", margin: "0px", fontSize: "12px", paddingBottom: "7px" }}>{e.plot}</p>
                                                                     </List>
                                                                 </Stack>
                                                                 <Divider /></> :

@@ -233,10 +233,11 @@ const Banner = () => {
     const [temp3, setTemp3] = React.useState(3)
 
     const GetPoster = () => {
-        fetch(`https://imdb-clone-database.herokuapp.com/banner`)
-            .then((res) => res.json())
-            .then((res) => setPosterData(res))
-            .catch((error) => console.log(error))
+        // fetch(`https://imdb-clone-database.herokuapp.com/banner`)
+        //     .then((res) => res.json())
+        //     .then((res) => setPosterData(res))
+        //     .catch((error) => console.log(error))
+            setPosterData(banner)
     }
 
      React.useEffect(() => {

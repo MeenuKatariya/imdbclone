@@ -251,9 +251,11 @@ export const Navbar = () => {
               className="menuDiv"
               style={{
                 display: "flex",
-                width: 80,
-                justifyContent: "space-between",
-                border:"1px solid red"
+                width: 70,
+                height:40,
+                marginTop:0,
+                justifyContent: "space-between"
+            
               }}
             >
               <MenuIcon
@@ -282,10 +284,10 @@ export const Navbar = () => {
                 style={{
                   fontSize: 15,
                   color: "black",
-                  marginTop: 3,
+                  marginTop: 5,
                   textAlign: "center",
                   marginLeft: 5,
-                  fontWeight: 700,
+                  fontWeight: 500,
                 }}
               >
                 All
@@ -294,7 +296,7 @@ export const Navbar = () => {
                 style={{
                   color: "black",
                   borderRadius: 10,
-                  marginTop: 1,
+                  marginTop: 3,
                   alignItems: "center",
                 }}
               />
@@ -375,7 +377,7 @@ export const Navbar = () => {
               style={{
                 display: "flex",
                 width: 94,
-                border:"1px solid red",
+                cursor:"pointer",
                 justifyContent: "space-between",
               }}
             >
@@ -401,7 +403,7 @@ export const Navbar = () => {
                   // onMouseOver={() => setLoginBoxshow(prev =>!prev)}
                   // onMouseLeave={() => setLoginBoxshow(false)}
 
-                  style={{ display: "flex", width: 100, height: 40, gap: 8 }}
+                  style={{ display: "flex", width: 100,cursor:"pointer", height: 40, gap: 8 }}
                 >
                   <img
                     style={{
@@ -413,7 +415,7 @@ export const Navbar = () => {
                     src={login.imgUrl}
                     alt=""
                   />
-                  <p style={{ fontSize: 14, marginTop: 0 }}>{login.name}</p>
+                  <p style={{ fontSize: 14, marginTop: 0, fontFamily:"Roboto,Helvetica,Arial,sans-serif" }}>{login.name}</p>
                 </div>
               ) : login.login ? (
                 <div
@@ -450,7 +452,7 @@ export const Navbar = () => {
               {/* <p style={{fontSize:14}} >Sign In</p> */}
             </div>
 
-            <div className="EN" style={{ display: "flex" }}>
+            <div className="EN" style={{ display: "flex",cursor:"pointer" }}>
               <Typography
                 fontSize={15}
                 color="ffffff"

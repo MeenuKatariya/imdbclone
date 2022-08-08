@@ -108,7 +108,7 @@ export const Sign=()=> {
 
   return (
 
-    <div   style={{ marginBottom:10, marginTop:70}}>
+    <div   style={{ marginBottom:10, margin:"auto"}}>
       {/* {success?<Alert onClose={()=>{setSuccess(false)}}>THis</Alert>:null} */}
       {checkPass?<Alert  style={{width:500, marginLeft:500}}   severity='error' onClose={()=>{setCheckPass(false)}}>Password must be 8 charactes</Alert>:null}
       {passwordAlert?<Alert  style={{width:500, marginLeft:500}}   severity='error' onClose={()=>{setPasswordAlert(false)}}>Please Enter Correct Password</Alert>:null}
@@ -130,8 +130,8 @@ export const Sign=()=> {
         <input type="email"   value={email} onChange={(e)=>setEmail(e.target.value)}  className='SigninputBox' />
         <p className='signLabel'>Password</p>
        
-        <input type="password"  className='SigninputBox'  value={password} onChange={(e)=>setPassword(e.target.value)}  placeholder='at least 8 characters' />
-        <p style={{marginTop:4,textAlign:"left",marginLeft:5 ,paddingLeft:5 ,fontSize:12, fontFamily:"Amazon Ember,Arial,sans-serif"}}> Passwords must be at least 8 characters.</p>
+        <input type="password"  className='SigninputBox' style={{paddingLeft:10}}  value={password} onChange={(e)=>setPassword(e.target.value)}  placeholder='at least 8 characters' />
+        <p style={{marginTop:4,textAlign:"left",marginLeft:5 ,paddingLeft:5 ,fontSize:12, fontFamily:"Amazon Ember,Arial,sans-serif"}}> <i style={{color:"#0066c0",fontSize:13,marginRight:"3px",fontWeight:'bold'}}>i</i> Passwords must be at least 8 characters.</p>
         <p className='signLabel'>Re-enter password</p>
         <input type="password"   value={reenterPassword} onChange={(e)=>setReEnterPassword(e.target.value)} className='SigninputBox' />
         <div className='createButton'>

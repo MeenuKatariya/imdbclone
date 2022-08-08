@@ -7,7 +7,7 @@ import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import "./Footer.css"
 export const Footer=()=> {
   return (
-    <div style={{backgroundColor:"#000000",height:300}}>
+    <div style={{backgroundColor:"#000000",height:300,textAlign:'center'}}>
         <div style={{display:"flex", paddingTop:30,margin:'auto' ,width:300,justifyContent:"space-around",fontSize:30}}>
          <RiFacebookBoxLine  style={{color:"#ffffff"}}/>
          <AiOutlineInstagram style={{color:"#ffffff"}}/>
@@ -23,7 +23,7 @@ export const Footer=()=> {
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>IMDb Developer</p>
 
         </div>
-        <div  className="para" style={{display:"flex",justifyContent:"space-between" ,width:700,marginLeft:"430px" ,color:"#FFFFFFF"}} >
+        <div  className="para" style={{display:"flex",justifyContent:"space-between" ,width:700,margin:"auto" ,color:"#FFFFFFF"}} >
         <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Press Room</p>
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Advertising</p>
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Jobs</p>
@@ -31,10 +31,10 @@ export const Footer=()=> {
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Privacy Policy</p>
             <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>Interest-Based Ads</p>
         </div>
-        <div>
+        <div  style={{textAlign:'center'}}>
            <p style={{color:"#ffffff",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>an amazon company</p> 
         </div>
-        <div>
+        <div style={{textAlign:'center'}}>
             <p style={{color:"#ffffffB3",fontFamily:"12px Roboto,Helvetica,Arial,sans-serif"}}>
             ©1990-2022 by IMDb.com, Inc.
             </p>

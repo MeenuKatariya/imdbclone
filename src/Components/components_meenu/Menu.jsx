@@ -28,7 +28,7 @@ const navigate=useNavigate()
   return (
     <>
        <div style={{height:"100%",width:"100%", backgroundColor:"#1f1f1f"}}>
-        <div className='imdbImages'  style={{marginTop:10}}>
+        <div className='imdbImages'  style={{marginTop:0}}>
 
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/1200px-IMDB_Logo_2016.svg.png" className='imdbMainImage' alt="" />
             <div   style={{backgroundColor:"#F5C518",height:40,width:50, borderRadius:"50%"}}  ><CloseIcon onClick={handleChange} style={{marginTop:8,marginLeft:13}}/>

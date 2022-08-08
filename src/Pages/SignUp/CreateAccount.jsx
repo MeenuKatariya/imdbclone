@@ -7,6 +7,8 @@ import GoogleLogin from "react-google-login";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import { authData, authError, authLoading } from "../../Redux/Auth/Action";
 import axios from "axios";
+import {Navbar} from "../../components/components_meenu/Navbar"
+import {Footer} from "../../components/components_meenu/Footer"
 
 export const CreateAccount = () => {
   const navigate = useNavigate();
@@ -101,8 +103,11 @@ export const CreateAccount = () => {
     gapi.load("client:auth2", start);
   }, []);
   return (
-    <div style={{ marginTop: "100px" }}>
-      <div className="BigPart">
+    <div>
+       <Navbar/>
+  
+    <div style={{ height:640,  marginTop:70,backgroundColor: "#E3E2DD"}}>
+      <div className="BigPart"  style={{ backgroundColor:"white"}} >
         <div className="signLeft">
           <h3 style={{ fontFamily: "Verdana,Arial,sans-serif" }}>Sign in</h3>
           <div className="imdb">
@@ -163,7 +168,7 @@ export const CreateAccount = () => {
               Show more Options ⮟
             </p>
           </div>
-          <div style={{ marginLeft: 160, color: "#555555" }} className="or">
+          <div style={{ marginLeft: 180, color: "#555555" }} className="or">
             {/* <hr  style={{width:100}}/> */}
             <p> Or </p>
             {/* <hr style={{width:100}} /> */}
@@ -231,9 +236,9 @@ export const CreateAccount = () => {
           </div>
         </div>
       </div>
-      <div className="recenttview">
+      <div className="recenttview"  style={{}}>
         {/* <div className="recenthistory"> */}
-        <div className="Recently_Viewed">
+        <div className="Recently_Viewed"  >
           <p style={{ fontFamily: "Verdana,Arial,sans-serif" }}>
             Recently Viewed
           </p>
@@ -246,5 +251,8 @@ export const CreateAccount = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </div>
+   
   );
 };
