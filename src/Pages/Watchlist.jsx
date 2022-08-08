@@ -20,8 +20,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { useDispatch, useSelector } from 'react-redux';
 import { recentlyViewedSuccess, recentlyViewedDelete, watchlistError, watchlistLoad, watchlistSuccess, sortYearDesc, sortYearAsc, sortRuntimeDesc, sortRuntimeAsc,sortImdbRatingAsc,sortImdbRatingDesc, sortDefault } from '../Redux/Watchlist/action';
-import {Navbar} from "../Components/components_meenu/Navbar"
-import {Footer} from "../Components/components_meenu/Footer"
+import {Navbar} from "../components/components_meenu/Navbar"
+import {Footer} from "../components/components_meenu/Footer"
 
 export const Watchlist = () => {
 

@@ -46,14 +46,14 @@ const TabPanel = ({data}) => {
               <Tab label='voot' />
         </Tabs>
 
-        <TabData value={TabValue} index={0} data={data.slice(25,50)}>included with Prime</TabData>
-        <TabData value={TabValue} index={1} data={data.slice(75,100)}>with subscription</TabData>
-        <TabData value={TabValue} index={2} data={data.slice(125,150)}>go to hotstar.com</TabData>
-        <TabData value={TabValue} index={3} data={data.slice(175,200)}>go to mxplayer.in</TabData>
-        <TabData value={TabValue} index={4} data={data.slice(40,65)}>go to jiocinema.com</TabData>
-        <TabData value={TabValue} index={5} data={data.slice(115,140)}>go to sonyliv.com</TabData>
-        <TabData value={TabValue} index={6} data={data.slice(145,170)}>go to erosnow.com</TabData>
-        <TabData value={TabValue} index={7} data={data.slice(165,190)}>got to voot.com</TabData>
+        <TabData value={TabValue} index={0} data={data.slice(25,50)}></TabData>
+        <TabData value={TabValue} index={1} data={data.slice(75,100)}></TabData>
+        <TabData value={TabValue} index={2} data={data.slice(125,150)}></TabData>
+        <TabData value={TabValue} index={3} data={data.slice(175,200)}></TabData>
+        <TabData value={TabValue} index={4} data={data.slice(40,65)}></TabData>
+        <TabData value={TabValue} index={5} data={data.slice(115,140)}></TabData>
+        <TabData value={TabValue} index={6} data={data.slice(145,170)}></TabData>
+        <TabData value={TabValue} index={7} data={data.slice(165,190)}></TabData>
     </div>
   )
 }

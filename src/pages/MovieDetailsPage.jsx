@@ -2,30 +2,30 @@ import { Box } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import "../Components/components_sam/MovieDetails.css"
+import "../components/components_sam/MovieDetails.css"
 import {
   errorMovieDetails,
   getMovieDetails,
   loadingMovieDetails,
 } from "../Redux/MovieDetails/action"
-import { MovieCard } from "../Components/components_sam/MovieCard";
-import { MoviesRating } from "../Components/components_sam/MoviesRating";
-import { MovieTopLinks } from "../Components/components_sam/MovieTopLinks";
-import { MovieTitle } from "../Components/components_sam/MovieTitle";
-import { MovieGenres } from "../Components/components_sam/MovieGenres";
-import { MovieInfo } from "../Components/components_sam/MovieInfo";
-import { Heading } from "../Components/components_sam/Heading";
-import { Cast } from "../Components/components_sam/Cast";
-import { Details } from "../Components/components_sam/Details";
-import { BoxOffice } from "../Components/components_sam/BoxOffice";
-import { RightPanel } from "../Components/components_sam/RightPanel";
-import { ImageSlider } from "../Components/components_sam/ImageSlider";
-import { Loading } from "../Components/components_sam/Loading";
-import { MovieSlider } from "../Components/components_sam/MovieSlider";
-import {Navbar} from "../Components/components_meenu/Navbar"
-import {Footer} from "../Components/components_meenu/Footer"
+import { MovieCard } from "../components/components_sam/MovieCard";
+import { MoviesRating } from "../components/components_sam/MoviesRating";
+import { MovieTopLinks } from "../components/components_sam/MovieTopLinks";
+import { MovieTitle } from "../components/components_sam/MovieTitle";
+import { MovieGenres } from "../components/components_sam/MovieGenres";
+import { MovieInfo } from "../components/components_sam/MovieInfo";
+import { Heading } from "../components/components_sam/Heading";
+import { Cast } from "../components/components_sam/Cast";
+import { Details } from "../components/components_sam/Details";
+import { BoxOffice } from "../components/components_sam/BoxOffice";
+import { RightPanel } from "../components/components_sam/RightPanel";
+import { ImageSlider } from "../components/components_sam/ImageSlider";
+import { Loading } from "../components/components_sam/Loading";
+import { MovieSlider } from "../components/components_sam/MovieSlider";
+import {Navbar} from "../components/components_meenu/Navbar"
+import {Footer} from "../components/components_meenu/Footer"
 import { useParams } from "react-router-dom";
-import { RatingModal } from "../Components/components_sam/RatingModal";
+import { RatingModal } from "../components/components_sam/RatingModal";
 
 
 export const MovieDetailsPage = () => {

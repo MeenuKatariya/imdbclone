@@ -7,8 +7,8 @@ import GoogleLogin from "react-google-login";
 import { useDispatch, useSelector } from "react-redux/es/exports";
 import { authData, authError, authLoading } from "../../Redux/Auth/Action";
 import axios from "axios";
-import {Navbar} from "../../Components/components_meenu/Navbar"
-import {Footer} from "../../Components/components_meenu/Footer"
+import {Navbar} from "../../components/components_meenu/Navbar"
+import {Footer} from "../../components/components_meenu/Footer"
 
 export const CreateAccount = () => {
   const navigate = useNavigate();
