@@ -5,35 +5,46 @@ import BookmarkAddIcon from '@mui/icons-material/BookmarkAdd';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import SouthIcon from '@mui/icons-material/South';
 import NorthIcon from '@mui/icons-material/North';
+import StarIcon from '@mui/icons-material/Star';
+
+import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios"
 import { useDispatch, useSelector } from 'react-redux';
-import { recentlyViewedSuccess, watchlistError, watchlistLoad, watchlistSuccess } from '../Redux/Watchlist/action';
+import { recentlyViewedSuccess, recentlyViewedDelete, watchlistError, watchlistLoad, watchlistSuccess, sortYearDesc, sortYearAsc, sortRuntimeDesc, sortRuntimeAsc,sortImdbRatingAsc,sortImdbRatingDesc, sortDefault } from '../Redux/Watchlist/action';
 import {Navbar} from "../Components/components_meenu/Navbar"
 import {Footer} from "../Components/components_meenu/Footer"
 export const EditWatchlist = () => {
 
     const dispatch = useDispatch();
-    const loading = useSelector(state => state.watchlist.loading)
-    const error = useSelector(state => state.watchlist.error)
-    const watchlist = useSelector(state => state.watchlist.watchlist)
-    const recently_viewed = useSelector(state => state.watchlist.recently_viewed)
+    const {loading} = useSelector(state => state.watchlist)
+    const {error} = useSelector(state => state.watchlist)
+    const {watchlist} = useSelector(state => state.watchlist)
+    const {recently_viewed} = useSelector(state => state.watchlist)
     const [watchlistLength, setLength] =React.useState(0)  
     const [order, setOrder] =React.useState(true);
     const [sortCategory, setSort] =React.useState("year")
     const login = useSelector(state => state.auth.user)
+    const handleRecentlyViewed = () => {
+        dispatch(recentlyViewedDelete())
+       
+        axios({
+            method:"PATCH",
+            url:`https://imdb-clone-database.herokuapp.com/user_profile/${login.id}`,
+            data:{
+                recently_viewed : []
+            }
+          }).then((res)=>{console.log(res)})
+          fetchRecentlyViewedData()
+        
+    }
     const fetchWatchListData = () => {
         dispatch(watchlistLoad());
         axios.get(`https://imdb-clone-database.herokuapp.com/user_profile?id=${login.id}`).then(res => {
-            console.log(res.data.watchlist)
-            const watchlistData = res.data[0].watchlist
-            {if(order){
-               var payload =  watchlistData.sort((a, b) => parseFloat(b.year) - parseFloat(a.year)); 
-            }
-            else{
-                 payload =  watchlistData.sort((a, b) => parseFloat(a.year) - parseFloat(b.year)); 
-            }}
+            // console.log("first",res.data[0].watchlist)
+            const payload = res.data[0].watchlist
             setLength(payload.length)
+            console.log("payload",payload)
             dispatch(watchlistSuccess(payload))
         }).catch(err => {
             dispatch(watchlistError());
@@ -52,14 +63,52 @@ export const EditWatchlist = () => {
         })
     }
 
+    const handleSort = () => {
+        console.log("Sorting ")
 
-    
+        if(order){
+
+            if(sortCategory === "year") {
+                dispatch(sortYearAsc())
+            }
+            else if(sortCategory === "imdb_ratings"){
+                dispatch(sortImdbRatingAsc())
+            }
+            else if(sortCategory === "runtime"){
+                dispatch(sortRuntimeAsc())
+            }
+            else{
+              dispatch(sortDefault())
+            }
+        }
+        else{
+
+            if(sortCategory === "year") {
+                dispatch(sortYearDesc())
+            }
+            else if(sortCategory === "imdb_ratings"){
+                dispatch(sortImdbRatingDesc())
+            }
+            else if(sortCategory === "runtime"){
+                dispatch(sortRuntimeDesc())
+            }
+            else{
+              dispatch(sortDefault())
+            }
+        }
+
+    }
+
+
     React.useEffect(() => {
         fetchWatchListData()
         fetchRecentlyViewedData()
         // eslint-disable-next-line
-    }, [order,sortCategory]);
-
+    }, [])
+   
+    React.useEffect(() => {
+        handleSort()
+    }, [order,sortCategory])
 
     const navigate = useNavigate()
     return (
@@ -115,7 +164,7 @@ export const EditWatchlist = () => {
                                         spacing={1}
                                     >
                                         <p style={{ fontSize: "12px", color: "#525252" }}>Sort by:</p>
-                                        <select defaultValue={"year"} onChange={(e) => setSort(e.target.value)} style={{
+                                        <select defaultValue={"list_order"} onChange={(e) => setSort(e.target.value)} style={{
                                             backgroundColor: "#f8f8f8",
                                             border: "1px solid #cccccc",
                                             borderRadius: "3px",
@@ -127,7 +176,7 @@ export const EditWatchlist = () => {
                                         }}>
                                             <option value="list_order">List Order</option>
                                             <option value="alphabetical">Alphabetical</option>
-                                            <option value="imbd_ratings">IMDb Ratings</option>
+                                            <option value="imdb_ratings">IMDb Ratings</option>
                                             <option value="popularity">Popularity</option>
                                             <option value="your_ratings">Your Rating</option>
                                             <option value="number_of_ratings">Number of Ratings</option>
@@ -144,6 +193,8 @@ export const EditWatchlist = () => {
 
                             </Box>
                             <Divider />
+                            {/* ------------------------------------Delete - Move - Copy---------------------------------------- */}
+                            
                             {/* -----------------------------------Container 3 -(Movie List Display)----------------------------- */}
                             <Box backgroundColor={"#F8F8F8"}>
                                 {watchlistLength === 0 ?
@@ -161,40 +212,44 @@ export const EditWatchlist = () => {
 
                                     </Box>
                                     : <Box>
-                                        {loading ? <h1>Loading...</h1> : error ? <h1>Something Went Wrong...</h1> :
+                                        {loading ? <h1 style={{backgroundColor: "#EEEEEE" , padding: "30px"}}>Loading...</h1> : error ? <h1>Something Went Wrong...</h1> :
                                             <Box padding={"10px"} >
-                                                {watchlist.map((e) => {
+                                                {watchlist.map((e,i) => {
                                                     return (
                                                        <Box margin={"10px"}>
                                                         {<>
-                                                        <Stack direction="row" >
-                                                            <input type="checkbox"/>
-                                                            <img src={e.image} alt="poster" style={{ height: "80px", marginRight: "8px", marginLeft: "15px" }} />
-                                                            <List sx={{padding:"0px"}} spacing={1}>
-                                                                <Link to="/" style={{textDecoration:"none", color:"#136cb2"}}><p style={{paddingBottom:"7px",fontWeight:"normal", color:"#136cb2", margin: "0px", fontSize:"13px"}}>{e.title}</p></Link>
+                                                        <Stack direction="row" alignItems={"center"}>
+                                                            <input type="checkbox" style={{height: "20px", width: "20px", border: "1px solid #a7a7a7",}}/>
+                                                            <input type="text" value={i+1} style={{marginLeft: "10px",padding: "4px", maxHeight: "23px", width: "45px", fontSize: "12px"}}/>
+                                                            <img src={e.image} alt="poster" style={{ maxHeight: "80px", width: "40px", marginRight: "8px", marginLeft: "15px" }} />
+                                                            <List sx={{padding:"0px"}} spacing={1} width={"385px!important"}>
+                                                                <Link to="/" style={{textDecoration:"none", color:"#136cb2"}}><p style={{paddingBottom:"7px",fontWeight:"normal", color:"#136cb2", margin: "0px",marginTop: "4px", fontSize:"13px", width: "383px"}}>{e.title}</p></Link>
+
                                                                 <Stack
                                                                     direction="row"
-                                                                    divider={<Divider orientation="vertical" flexItem />}
-                                                                    spacing={1} paddingBottom={"10px"}
+                                                                    spacing={13}
+                                                                    justifyContents={"space-between"} 
                                                                 >
-                                                                    <span><p style={{color:"grey", margin:"0px", fontSize:"11px", paddingBottom:"5px"}}>{e.year}</p></span>
-                                                                    <span><p style={{color:"grey", margin:"0px", fontSize:"11px", paddingBottom:"5px"}}>Runtime</p></span>
-                                                                    <span><p style={{color:"grey", margin:"0px", fontSize:"11px", paddingBottom:"5px"}}>Rated</p></span>
-                                                                    <span><p style={{color:"grey", margin:"0px", fontSize:"11px", paddingBottom:"5px"}}>Genre</p></span>
-                                                                </Stack>
-                                                                <Stack
+                                                                      <Stack
                                                                     direction="row"
                                                                     divider={<Divider orientation="vertical" flexItem />}
-                                                                    spacing={1}
+                                                                    spacing={1} padding={"0px"}
                                                                 >
-                                                                    <span><p style={{color:"#136cb2", margin:"0px", fontSize:"11px",paddingBottom:"7px"}}>Director</p></span>
-                                                                    <span><p style={{color:"#136cb2", margin:"0px", fontSize:"11px",paddingBottom:"7px"}}>Cast names in the movie</p></span>
-                                                                    
+                                                                    <span><p style={{color:"black", margin:"0px", fontSize:"12px", position: "relative", top:"3px", paddingBottom:"5px"}}>{e.year}</p></span>
+                                                                    <span><p style={{color:"black", margin:"0px", fontSize:"12px", paddingBottom:"5px", position: "relative", top:"3px"}}>{e.type}</p></span>
                                                                 </Stack>
-                                                            
+                                                                   <span><p style={{ color: "black", margin: "0px", fontSize: "12px", paddingBottom: "5px" }}><StarIcon sx={{fontSize: "15px", position: "relative", top:"3px", color: "#D4B557"}}/>{e.imDbRating}</p>
+                                                                   
+                                                                   </span>
+                                                                   <span><p style={{ color: "grey", margin: "0px", fontSize: "13px", paddingBottom: "5px" }}><StarBorderOutlinedIcon sx={{fontSize: "17px", position: "relative", top:"3px", color: "grey!important"}}/>Rate</p></span>
+                                                                
+                                                                </Stack>
+                                                              
+                                                                <input type="text" placeholder="Add a note" style={{border: "none", backgroundColor: "#F8F8F8", borderBottom: "0.5px solid #a7a7a7a9", width: "100%",color: '#a7a7a7a9', paddingBottom: "5px", fontSixe: "12px"}}/>
+                                                                
                                                             </List>
-                                                        </Stack>
-                                                        <Divider /></> 
+                                                            <p style={{fontSize: "13px", margin: "auto 5px auto 30px", textAlign: "center", color:"#363636"}}>Added <br/> 08 Aug 2022</p>
+                                                        </Stack></> 
                                                          }
                                                        
                                                         </Box>
@@ -241,7 +296,7 @@ export const EditWatchlist = () => {
                             spacing={1}
                         >
                             <p style={{ fontSize: "18px", color: "#5a5a5a", margin: "0px 10px" }}>Recently Viewed</p>
-                            <Button variant="text"  sx={{ fontSize: "10px", margin: "0px 10px" }}>Clear history</Button>
+                            <Button variant="text" onClick={() => handleRecentlyViewed()} sx={{ fontSize: "10px", margin: "0px 10px" }}>Clear history</Button>
                         </Stack>
 
                         {<Stack 
