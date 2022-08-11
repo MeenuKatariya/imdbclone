@@ -5,7 +5,7 @@ Cloned "https://imdb.com/" online website.
 A website in which user can watch trailers, give rating to trailers. 
 
 
-<img src="https://github.com/Jasmine-Shaikh/Banggood-Clone/blob/main/banggood-clone/src/Images/portfolio-1.PNG"/>
+<img src="https://github.com/MeenuKatariya/imdbclone/blob/main/IMDb%20clone.PNG"/>
 
 A collaborative project built by 4 Developers within 7 days.
 <h3>Tech Stack: React | Redux | JSON Server | Styled Components | Material Ui </h3>
