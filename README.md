@@ -21,7 +21,7 @@ Features :
 </ul>
  
  <ul>
- <li>App URL : https://62f1166bb465cf7b970869f9--imdbclone-masai.netlify.app/</li>
+ <li>App URL : https://imdbclone-masai.netlify.app/</li>
   <li>  Backend URL: https://imdb-clone-database.herokuapp.com</li>
 </li>
 </ul>
